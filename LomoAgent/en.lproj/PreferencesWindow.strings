@@ -1,0 +1,18 @@
+
+/* Class = "NSButtonCell"; title = "Debug Mode"; ObjectID = "439-ns-a3v"; */
+"439-ns-a3v.title" = "Debug Mode";
+
+/* Class = "NSButtonCell"; title = "Open"; ObjectID = "CTw-zS-X9b"; */
+"CTw-zS-X9b.title" = "Open";
+
+/* Class = "NSWindow"; title = "Settings"; ObjectID = "F0z-JX-Cv5"; */
+"F0z-JX-Cv5.title" = "Setttings";
+
+/* Class = "NSTextFieldCell"; title = "Port"; ObjectID = "VTa-Lr-Xxo"; */
+"VTa-Lr-Xxo.title" = "Port";
+
+/* Class = "NSTextFieldCell"; title = "Home Directory"; ObjectID = "lAc-fy-Miv"; */
+"lAc-fy-Miv.title" = "Home Directory";
+
+/* Class = "NSButtonCell"; title = "Select"; ObjectID = "o4F-iv-Nxx"; */
+"o4F-iv-Nxx.title" = "Select";

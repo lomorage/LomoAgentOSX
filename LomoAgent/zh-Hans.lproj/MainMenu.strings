@@ -1,0 +1,11 @@
+/* Class = "NSMenuItem"; title = "About"; ObjectID = "sKW-Ui-FWc"; */
+"sKW-Ui-FWc.title" = "关于";
+
+/* Class = "NSMenuItem"; title = "Quit"; ObjectID = "08L-oh-5eA"; */
+"08L-oh-5eA.title" = "退出";
+
+/* Class = "NSMenuItem"; title = "Settings"; ObjectID = "LpC-ob-T5O"; */
+"LpC-ob-T5O.title" = "设置";
+
+/* Class = "NSMenuItem"; title = "Restart"; ObjectID = "QEK-wS-71g"; */
+"QEK-wS-71g.title" = "重启";

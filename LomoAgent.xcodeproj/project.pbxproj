@@ -1,0 +1,465 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3A35C5D92240B5F30030FF1B /* avconv in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3A35C5D62240B5EA0030FF1B /* avconv */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		3A35C5DA2240B5F30030FF1B /* lomod in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3A35C5D52240B5E90030FF1B /* lomod */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		3A35C5DC2240B6040030FF1B /* avconv in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3A35C5CF2240B5A90030FF1B /* avconv */; };
+		3A35C5DD2240B6040030FF1B /* lomod in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3A35C5CE2240B5A90030FF1B /* lomod */; };
+		3A35C5E122435B710030FF1B /* PreferencesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A35C5E322435B710030FF1B /* PreferencesWindow.xib */; };
+		3A35C5EA224365340030FF1B /* AboutWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A35C5E8224365340030FF1B /* AboutWindow.swift */; };
+		3A35C5EC22436CBA0030FF1B /* AboutWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A35C5EE22436CBA0030FF1B /* AboutWindow.xib */; };
+		3A3896FC222F77FA004A2001 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3896FB222F77FA004A2001 /* AppDelegate.swift */; };
+		3A3896FE222F7801004A2001 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A3896FD222F7801004A2001 /* Assets.xcassets */; };
+		3A389701222F7801004A2001 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A3896FF222F7801004A2001 /* MainMenu.xib */; };
+		3A38970A222F8168004A2001 /* StatusMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A389709222F8168004A2001 /* StatusMenuController.swift */; };
+		3A38970F22321A03004A2001 /* PreferencesWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A38970D22321A03004A2001 /* PreferencesWindow.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3A35C5D22240B5C00030FF1B /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 6;
+			files = (
+				3A35C5D92240B5F30030FF1B /* avconv in CopyFiles */,
+				3A35C5DA2240B5F30030FF1B /* lomod in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A35C5DB2240B5F70030FF1B /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3A35C5DC2240B6040030FF1B /* avconv in CopyFiles */,
+				3A35C5DD2240B6040030FF1B /* lomod in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		3A35C5CE2240B5A90030FF1B /* lomod */ = {isa = PBXFileReference; lastKnownFileType = folder; name = lomod; path = dependencies/lomod/Contents/Frameworks/lomod; sourceTree = "<group>"; };
+		3A35C5CF2240B5A90030FF1B /* avconv */ = {isa = PBXFileReference; lastKnownFileType = folder; name = avconv; path = dependencies/lomod/Contents/Frameworks/avconv; sourceTree = "<group>"; };
+		3A35C5D52240B5E90030FF1B /* lomod */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = lomod; path = dependencies/lomod/Contents/MacOS/lomod; sourceTree = "<group>"; };
+		3A35C5D62240B5EA0030FF1B /* avconv */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = avconv; path = dependencies/lomod/Contents/MacOS/avconv; sourceTree = "<group>"; };
+		3A35C5DF224295B20030FF1B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MainMenu.strings; sourceTree = "<group>"; };
+		3A35C5E022435B250030FF1B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/MainMenu.strings"; sourceTree = "<group>"; };
+		3A35C5E222435B710030FF1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/PreferencesWindow.xib; sourceTree = "<group>"; };
+		3A35C5E522435B760030FF1B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/PreferencesWindow.strings; sourceTree = "<group>"; };
+		3A35C5E722435B770030FF1B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/PreferencesWindow.strings"; sourceTree = "<group>"; };
+		3A35C5E8224365340030FF1B /* AboutWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutWindow.swift; sourceTree = "<group>"; };
+		3A35C5ED22436CBA0030FF1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/AboutWindow.xib; sourceTree = "<group>"; };
+		3A35C5F022436CBC0030FF1B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/AboutWindow.strings; sourceTree = "<group>"; };
+		3A35C5F222436CBD0030FF1B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/AboutWindow.strings"; sourceTree = "<group>"; };
+		3A3896F8222F77FA004A2001 /* LomoAgent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LomoAgent.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A3896FB222F77FA004A2001 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3A3896FD222F7801004A2001 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3A389700222F7801004A2001 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		3A389702222F7801004A2001 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A389703222F7801004A2001 /* LomoAgent.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LomoAgent.entitlements; sourceTree = "<group>"; };
+		3A389709222F8168004A2001 /* StatusMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusMenuController.swift; sourceTree = "<group>"; };
+		3A38970D22321A03004A2001 /* PreferencesWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesWindow.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3A3896F5222F77FA004A2001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3A35C5B52240A01D0030FF1B /* dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				3A35C5BF2240A3840030FF1B /* MacOS */,
+				3A35C5BE2240A3730030FF1B /* Frameworks */,
+			);
+			name = dependencies;
+			sourceTree = "<group>";
+		};
+		3A35C5BE2240A3730030FF1B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3A35C5CF2240B5A90030FF1B /* avconv */,
+				3A35C5CE2240B5A90030FF1B /* lomod */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3A35C5BF2240A3840030FF1B /* MacOS */ = {
+			isa = PBXGroup;
+			children = (
+				3A35C5D62240B5EA0030FF1B /* avconv */,
+				3A35C5D52240B5E90030FF1B /* lomod */,
+			);
+			name = MacOS;
+			sourceTree = "<group>";
+		};
+		3A3896EF222F77FA004A2001 = {
+			isa = PBXGroup;
+			children = (
+				3A35C5B52240A01D0030FF1B /* dependencies */,
+				3A3896FA222F77FA004A2001 /* LomoAgent */,
+				3A3896F9222F77FA004A2001 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3A3896F9222F77FA004A2001 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3A3896F8222F77FA004A2001 /* LomoAgent.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3A3896FA222F77FA004A2001 /* LomoAgent */ = {
+			isa = PBXGroup;
+			children = (
+				3A3896FB222F77FA004A2001 /* AppDelegate.swift */,
+				3A389709222F8168004A2001 /* StatusMenuController.swift */,
+				3A3896FD222F7801004A2001 /* Assets.xcassets */,
+				3A3896FF222F7801004A2001 /* MainMenu.xib */,
+				3A38970D22321A03004A2001 /* PreferencesWindow.swift */,
+				3A35C5E322435B710030FF1B /* PreferencesWindow.xib */,
+				3A35C5E8224365340030FF1B /* AboutWindow.swift */,
+				3A35C5EE22436CBA0030FF1B /* AboutWindow.xib */,
+				3A389702222F7801004A2001 /* Info.plist */,
+				3A389703222F7801004A2001 /* LomoAgent.entitlements */,
+			);
+			path = LomoAgent;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3A3896F7222F77FA004A2001 /* LomoAgent */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A389706222F7801004A2001 /* Build configuration list for PBXNativeTarget "LomoAgent" */;
+			buildPhases = (
+				3A3896F4222F77FA004A2001 /* Sources */,
+				3A3896F5222F77FA004A2001 /* Frameworks */,
+				3A3896F6222F77FA004A2001 /* Resources */,
+				3A35C5CD2240A58B0030FF1B /* ShellScript */,
+				3A35C5D22240B5C00030FF1B /* CopyFiles */,
+				3A35C5DB2240B5F70030FF1B /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LomoAgent;
+			productName = LomoAgent;
+			productReference = 3A3896F8222F77FA004A2001 /* LomoAgent.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3A3896F0222F77FA004A2001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = lomoware;
+				TargetAttributes = {
+					3A3896F7222F77FA004A2001 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = 3A3896F3222F77FA004A2001 /* Build configuration list for PBXProject "LomoAgent" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				"zh-Hans",
+			);
+			mainGroup = 3A3896EF222F77FA004A2001;
+			productRefGroup = 3A3896F9222F77FA004A2001 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3A3896F7222F77FA004A2001 /* LomoAgent */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3A3896F6222F77FA004A2001 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A3896FE222F7801004A2001 /* Assets.xcassets in Resources */,
+				3A35C5E122435B710030FF1B /* PreferencesWindow.xib in Resources */,
+				3A389701222F7801004A2001 /* MainMenu.xib in Resources */,
+				3A35C5EC22436CBA0030FF1B /* AboutWindow.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3A35C5CD2240A58B0030FF1B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\necho $PROJECT_DIR\n$PROJECT_DIR/dependencies/build.sh\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3A3896F4222F77FA004A2001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A38970F22321A03004A2001 /* PreferencesWindow.swift in Sources */,
+				3A38970A222F8168004A2001 /* StatusMenuController.swift in Sources */,
+				3A3896FC222F77FA004A2001 /* AppDelegate.swift in Sources */,
+				3A35C5EA224365340030FF1B /* AboutWindow.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3A35C5E322435B710030FF1B /* PreferencesWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3A35C5E222435B710030FF1B /* Base */,
+				3A35C5E522435B760030FF1B /* en */,
+				3A35C5E722435B770030FF1B /* zh-Hans */,
+			);
+			name = PreferencesWindow.xib;
+			sourceTree = "<group>";
+		};
+		3A35C5EE22436CBA0030FF1B /* AboutWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3A35C5ED22436CBA0030FF1B /* Base */,
+				3A35C5F022436CBC0030FF1B /* en */,
+				3A35C5F222436CBD0030FF1B /* zh-Hans */,
+			);
+			name = AboutWindow.xib;
+			sourceTree = "<group>";
+		};
+		3A3896FF222F7801004A2001 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3A389700222F7801004A2001 /* Base */,
+				3A35C5DF224295B20030FF1B /* en */,
+				3A35C5E022435B250030FF1B /* zh-Hans */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3A389704222F7801004A2001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3A389705222F7801004A2001 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		3A389707222F7801004A2001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = LomoAgent/LomoAgent.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = U73LFJTY32;
+				INFOPLIST_FILE = LomoAgent/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				OTHER_CODE_SIGN_FLAGS = "--deep";
+				PRODUCT_BUNDLE_IDENTIFIER = lomoware.lomorage.LomoAgent;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		3A389708222F7801004A2001 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = LomoAgent/LomoAgent.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = U73LFJTY32;
+				INFOPLIST_FILE = LomoAgent/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				OTHER_CODE_SIGN_FLAGS = "--deep";
+				PRODUCT_BUNDLE_IDENTIFIER = lomoware.lomorage.LomoAgent;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3A3896F3222F77FA004A2001 /* Build configuration list for PBXProject "LomoAgent" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A389704222F7801004A2001 /* Debug */,
+				3A389705222F7801004A2001 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3A389706222F7801004A2001 /* Build configuration list for PBXNativeTarget "LomoAgent" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A389707222F7801004A2001 /* Debug */,
+				3A389708222F7801004A2001 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3A3896F0222F77FA004A2001 /* Project object */;
+}
