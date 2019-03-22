@@ -106,7 +106,11 @@ class StatusMenuController: NSObject {
                 os_log("Base Dir: %{public}s", log: .logic, baseDir)
 
                 task.launchPath = lomodPath
-                task.arguments = ["--mount-dir", homeDir, "--base", baseDir, "--port", port]
+                task.arguments = ["--mount-dir", homeDir,
+                                  "--base", baseDir,
+                                  "--port", port,
+                                  "--exe-dir", executablePath.path + "/",
+                                  "--enable-mdns"]
                 if UserDefaults.standard.bool(forKey: PREF_DEBUG_MODE) {
                     task.arguments?.append("--debug")
                 }
