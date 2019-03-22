@@ -123,6 +123,8 @@ class StatusMenuController: NSObject {
             } else {
                 os_log("Need set home directory first", log: .logic, type: .error)
                 lomodTask = nil
+                preferencesWindow.showWindow(nil)
+                NSApp.activate(ignoringOtherApps: true)
             }
         }
     }
