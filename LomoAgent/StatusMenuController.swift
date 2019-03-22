@@ -122,6 +122,7 @@ class StatusMenuController: NSObject {
                 os_log("lomod is running: %d, pid = %d", log: .logic, task.isRunning, task.processIdentifier)
             } else {
                 os_log("Need set home directory first", log: .logic, type: .error)
+                lomodTask = nil
             }
         }
     }
