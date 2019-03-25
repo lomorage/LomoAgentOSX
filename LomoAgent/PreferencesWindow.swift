@@ -13,6 +13,10 @@ let PREF_DEBUG_MODE = "PrefDebugMode"
 let PREF_HOME_DIR = "PrefHomeDir"
 let PREF_PORT = "PrefPort"
 
+extension Notification.Name {
+    static let NotifyHomeDirChanged = NSNotification.Name("NotifyHomeDirChanged")
+}
+
 class PreferencesWindow: NSWindowController, NSWindowDelegate {
 
     @IBOutlet weak var homeDirTextField: NSTextFieldCell!
@@ -51,8 +55,11 @@ class PreferencesWindow: NSWindowController, NSWindowDelegate {
         if (dialog.runModal() == NSApplication.ModalResponse.OK) {
             if let result = dialog.url {
                 homeDirTextField.stringValue = result.path
+                openButton.isEnabled = true
                 UserDefaults.standard.set(result.path, forKey: PREF_HOME_DIR)
                 os_log("Save home dir: %{public}s", log: .ui, homeDirTextField.stringValue)
+
+                NotificationCenter.default.post(name: .NotifyHomeDirChanged, object: self)
             }
         }
     }

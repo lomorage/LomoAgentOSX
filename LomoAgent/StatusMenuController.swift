@@ -35,6 +35,8 @@ class StatusMenuController: NSObject {
 
     @IBAction func quitClicked(_ sender: Any) {
         stopLomod()
+        NotificationCenter.default.removeObserver(self)
+        stateTimer.invalidate()
         NSApplication.shared.terminate(self)
     }
 
@@ -45,6 +47,11 @@ class StatusMenuController: NSObject {
         sender.isEnabled = true
     }
 
+    @objc func onNotification(_ notification: Notification) {
+        stopLomod()
+        startLomod()
+    }
+
     override func awakeFromNib() {
         // Insert code here to initialize your application
         let icon = NSImage(named: "statusIcon")
@@ -53,6 +60,11 @@ class StatusMenuController: NSObject {
 
         preferencesWindow = PreferencesWindow()
         aboutWindow = AboutWindow()
+
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(onNotification(_:)),
+                                               name: .NotifyHomeDirChanged,
+                                               object: nil)
 
         killLomod()
         startLomod()
@@ -110,7 +122,7 @@ class StatusMenuController: NSObject {
                                   "--base", baseDir,
                                   "--port", port,
                                   "--exe-dir", executablePath.path + "/",
-                                  "--enable-mdns"]
+                                  "--enable-mdns", "--no-mount"]
                 if UserDefaults.standard.bool(forKey: PREF_DEBUG_MODE) {
                     task.arguments?.append("--debug")
                 }
