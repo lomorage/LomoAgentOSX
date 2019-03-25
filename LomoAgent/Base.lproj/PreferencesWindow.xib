@@ -10,6 +10,7 @@
             <connections>
                 <outlet property="debugModeCheckBox" destination="6In-C0-Ox8" id="Elp-qb-8ve"/>
                 <outlet property="homeDirTextField" destination="eQt-yd-8Oh" id="iWN-ft-Og1"/>
+                <outlet property="openButton" destination="AyW-Hh-bcP" id="Dvx-Bf-pkk"/>
                 <outlet property="portTextField" destination="8OA-ER-QGA" id="gze-4u-eHl"/>
                 <outlet property="window" destination="F0z-JX-Cv5" id="gIp-Ho-8D9"/>
             </connections>

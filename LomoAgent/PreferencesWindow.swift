@@ -21,6 +21,8 @@ class PreferencesWindow: NSWindowController, NSWindowDelegate {
 
     @IBOutlet weak var debugModeCheckBox: NSButton!
 
+    @IBOutlet weak var openButton: NSButton!
+
     @IBAction func onDebugModeClick(_ sender: Any) {
         UserDefaults.standard.set(debugModeCheckBox.state == .on, forKey: PREF_DEBUG_MODE)
     }
@@ -73,9 +75,13 @@ class PreferencesWindow: NSWindowController, NSWindowDelegate {
         }
         os_log("Debug Mode: %d", log: .ui, debugModeCheckBox.state == .on)
 
+        homeDirTextField.isEditable = false
         if let homeDir = UserDefaults.standard.string(forKey: PREF_HOME_DIR) {
             homeDirTextField.stringValue = homeDir
             os_log("Home dir: %{public}s", log: .ui, homeDir)
+            openButton.isEnabled = true
+        } else {
+            openButton.isEnabled = false
         }
 
         if let port = UserDefaults.standard.string(forKey: PREF_PORT) {
