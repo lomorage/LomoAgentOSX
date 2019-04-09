@@ -16,7 +16,6 @@ class StatusMenuController: NSObject {
     var preferencesWindow: PreferencesWindow!
     var aboutWindow: AboutWindow!
     var lomodTask: Process?
-    var pipe: Pipe!
     var stateTimer: Timer!
 
     let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
@@ -126,9 +125,6 @@ class StatusMenuController: NSObject {
                 if UserDefaults.standard.bool(forKey: PREF_DEBUG_MODE) {
                     task.arguments?.append("--debug")
                 }
-                pipe = Pipe()
-                task.standardOutput = pipe
-                task.standardError = pipe
                 task.launch()
 
                 os_log("lomod is running: %d, pid = %d", log: .logic, task.isRunning, task.processIdentifier)
@@ -146,10 +142,7 @@ class StatusMenuController: NSObject {
             os_log("lomod terminate, pid = %d", log: .ui, task.processIdentifier)
             task.terminate()
         } else if lomodTask != nil {
-            let handle = pipe.fileHandleForReading
-            let data = handle.readDataToEndOfFile()
-            let output = String (data: data, encoding: String.Encoding.utf8)
-            os_log("lomod already terminate with error: %{public}s", log: .logic, type: .error,  output!)
+            os_log("lomod already terminate with error: %{public}s", log: .logic, type: .error)
         }
         lomodTask = nil
     }
