@@ -121,7 +121,7 @@ class StatusMenuController: NSObject {
                                   "--base", baseDir,
                                   "--port", port,
                                   "--exe-dir", executablePath.path + "/",
-                                  "--enable-mdns", "--no-mount"]
+                                  "--no-mount"]
                 if UserDefaults.standard.bool(forKey: PREF_DEBUG_MODE) {
                     task.arguments?.append("--debug")
                 }
