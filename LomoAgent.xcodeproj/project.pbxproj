@@ -19,6 +19,7 @@
 		3A389701222F7801004A2001 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A3896FF222F7801004A2001 /* MainMenu.xib */; };
 		3A38970A222F8168004A2001 /* StatusMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A389709222F8168004A2001 /* StatusMenuController.swift */; };
 		3A38970F22321A03004A2001 /* PreferencesWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A38970D22321A03004A2001 /* PreferencesWindow.swift */; };
+		3AC3E846229F9B60004EA1D7 /* HyperlinkTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC3E845229F9B60004EA1D7 /* HyperlinkTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -68,6 +69,7 @@
 		3A389703222F7801004A2001 /* LomoAgent.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LomoAgent.entitlements; sourceTree = "<group>"; };
 		3A389709222F8168004A2001 /* StatusMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusMenuController.swift; sourceTree = "<group>"; };
 		3A38970D22321A03004A2001 /* PreferencesWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesWindow.swift; sourceTree = "<group>"; };
+		3AC3E845229F9B60004EA1D7 /* HyperlinkTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HyperlinkTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 				3A38970D22321A03004A2001 /* PreferencesWindow.swift */,
 				3A35C5E322435B710030FF1B /* PreferencesWindow.xib */,
 				3A35C5E8224365340030FF1B /* AboutWindow.swift */,
+				3AC3E845229F9B60004EA1D7 /* HyperlinkTextField.swift */,
 				3A35C5EE22436CBA0030FF1B /* AboutWindow.xib */,
 				3A389702222F7801004A2001 /* Info.plist */,
 				3A389703222F7801004A2001 /* LomoAgent.entitlements */,
@@ -241,6 +244,7 @@
 				3A38970F22321A03004A2001 /* PreferencesWindow.swift in Sources */,
 				3A38970A222F8168004A2001 /* StatusMenuController.swift in Sources */,
 				3A3896FC222F77FA004A2001 /* AppDelegate.swift in Sources */,
+				3AC3E846229F9B60004EA1D7 /* HyperlinkTextField.swift in Sources */,
 				3A35C5EA224365340030FF1B /* AboutWindow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

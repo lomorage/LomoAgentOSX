@@ -18,19 +18,19 @@
         <window title="About LomoAgent" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="F0z-JX-Cv5">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="196" y="240" width="273" height="270"/>
+            <rect key="contentRect" x="196" y="240" width="273" height="307"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
             <view key="contentView" wantsLayer="YES" id="se5-gp-TjO">
-                <rect key="frame" x="0.0" y="0.0" width="273" height="270"/>
+                <rect key="frame" x="0.0" y="0.0" width="273" height="307"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Tv-tC-fIB">
-                        <rect key="frame" x="106" y="200" width="60" height="60"/>
+                        <rect key="frame" x="106" y="237" width="60" height="60"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="Yfb-gs-3ZE"/>
                     </imageView>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kld-v2-osl">
-                        <rect key="frame" x="88" y="162" width="97" height="30"/>
+                        <rect key="frame" x="88" y="198" width="97" height="30"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="LomoAgent" id="4AV-Bb-xpD">
                             <font key="font" size="18" name="ArialUnicodeMS"/>
@@ -39,7 +39,7 @@
                         </textFieldCell>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="whH-lp-w3F">
-                        <rect key="frame" x="112" y="144" width="48" height="17"/>
+                        <rect key="frame" x="112" y="180" width="48" height="17"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="version" id="Iox-9E-p6j">
                             <font key="font" metaFont="system"/>
@@ -48,7 +48,7 @@
                         </textFieldCell>
                     </textField>
                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="au3-O2-T7i">
-                        <rect key="frame" x="40" y="11" width="192" height="119"/>
+                        <rect key="frame" x="40" y="47" width="192" height="119"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textFieldCell key="cell" selectable="YES" alignment="center" id="y51-vr-zJM">
                             <font key="font" metaFont="system"/>
@@ -59,12 +59,24 @@
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
+                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BBQ-d8-HCL" customClass="HyperlinkTextField" customModule="LomoAgent" customModuleProvider="target">
+                        <rect key="frame" x="62" y="17" width="149" height="22"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textFieldCell key="cell" selectable="YES" alignment="center" title="https://lomorage.com" id="2vl-7W-7JA">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="href" value="https://lomorage.com/"/>
+                        </userDefinedRuntimeAttributes>
+                    </textField>
                 </subviews>
             </view>
             <connections>
                 <outlet property="delegate" destination="-2" id="0bl-1N-AYu"/>
             </connections>
-            <point key="canvasLocation" x="35.5" y="147"/>
+            <point key="canvasLocation" x="35.5" y="165.5"/>
         </window>
     </objects>
 </document>
