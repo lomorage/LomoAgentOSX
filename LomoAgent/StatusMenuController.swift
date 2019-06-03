@@ -97,6 +97,22 @@ class StatusMenuController: NSObject {
         return baseDir
     }
 
+    func getLogPath() -> String? {
+        let paths = NSSearchPathForDirectoriesInDomains(.libraryDirectory, .userDomainMask, true)
+        let logPath = NSURL(fileURLWithPath: paths[0]).appendingPathComponent("Logs")?.appendingPathComponent("lomod")
+        var logDir: String? = logPath!.path
+        if !FileManager.default.fileExists(atPath: logPath!.path) {
+            do {
+                try FileManager.default.createDirectory(atPath: logPath!.path, withIntermediateDirectories: true, attributes: nil)
+            } catch let error as NSError {
+                os_log("Unable to create directory %{public}s", log: .logic, type: .error, error.debugDescription)
+                logDir = nil
+            }
+        }
+
+        return logDir
+    }
+
     func startLomod() {
         guard lomodTask == nil else {
             os_log("lomod already started!")
@@ -111,14 +127,17 @@ class StatusMenuController: NSObject {
 
             if let homeDir = UserDefaults.standard.string(forKey: PREF_HOME_DIR),
                 let baseDir = getBasePath(),
+                let logDir = getLogPath(),
                 let port = UserDefaults.standard.string(forKey: PREF_PORT) {
 
                 os_log("Home Dir: %{public}s", log: .logic, homeDir)
                 os_log("Base Dir: %{public}s", log: .logic, baseDir)
+                os_log("Log Dir: %{public}s", log: .logic, logDir)
 
                 task.launchPath = lomodPath
                 task.arguments = ["--mount-dir", homeDir,
                                   "--base", baseDir,
+                                  "--log-dir", logDir,
                                   "--port", port,
                                   "--exe-dir", executablePath.path + "/",
                                   "--no-mount"]
