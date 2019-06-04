@@ -46,7 +46,16 @@ class StatusMenuController: NSObject {
         sender.isEnabled = true
     }
 
-    @objc func onNotification(_ notification: Notification) {
+    @objc func onStart(_ notification: Notification) {
+        killLomod()
+        startLomod()
+    }
+
+    @objc func onExit(_ notification: Notification) {
+        quitClicked(self)
+    }
+
+    @objc func onHomeDirChanged(_ notification: Notification) {
         stopLomod()
         startLomod()
     }
@@ -61,12 +70,20 @@ class StatusMenuController: NSObject {
         aboutWindow = AboutWindow()
 
         NotificationCenter.default.addObserver(self,
-                                               selector: #selector(onNotification(_:)),
+                                               selector: #selector(onHomeDirChanged(_:)),
                                                name: .NotifyHomeDirChanged,
                                                object: nil)
 
-        killLomod()
-        startLomod()
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(onStart(_:)),
+                                               name: .NotifyStart,
+                                               object: nil)
+
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(onExit(_:)),
+                                               name: .NotifyExit,
+                                               object: nil)
+
         stateTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(checkLomodState), userInfo: nil, repeats: true)
     }
 

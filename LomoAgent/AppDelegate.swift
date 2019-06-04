@@ -19,6 +19,25 @@ extension OSLog {
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
+    func applicationWillFinishLaunching(_ aNotification: Notification) {
+        let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as! String
+        let arguments = CommandLine.arguments
+        var exit = false
+        for arg in arguments {
+            if arg == "--version" {
+                print("\(version)")
+                NotificationCenter.default.post(name: .NotifyExit, object: self)
+                exit = true
+                break
+            }
+        }
+
+        if !exit {
+            os_log("LomoAgent version: %{public}s", log: .logic, version)
+            NotificationCenter.default.post(name: .NotifyStart, object: self)
+        }
+    }
+
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
     }

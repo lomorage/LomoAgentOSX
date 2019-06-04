@@ -15,6 +15,8 @@ let PREF_PORT = "PrefPort"
 
 extension Notification.Name {
     static let NotifyHomeDirChanged = NSNotification.Name("NotifyHomeDirChanged")
+    static let NotifyExit = NSNotification.Name("NotifyExit")
+    static let NotifyStart = NSNotification.Name("NotifyStart")
 }
 
 class PreferencesWindow: NSWindowController, NSWindowDelegate {
