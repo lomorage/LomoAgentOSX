@@ -20,7 +20,7 @@ extension OSLog {
 class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationWillFinishLaunching(_ aNotification: Notification) {
-        let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as! String
+        let version = Bundle.main.infoDictionary?["CFBundleVersion"] as! String
         let arguments = CommandLine.arguments
         var exit = false
         for arg in arguments {

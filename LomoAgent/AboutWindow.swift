@@ -27,7 +27,7 @@ class AboutWindow: NSWindowController {
         NSApp.activate(ignoringOtherApps: true)
 
         if let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
-            versionLabel.stringValue = "v\(version)"
+            versionLabel.stringValue = "ver: \(version)"
         }
 
     }
