@@ -55,7 +55,7 @@ class StatusMenuController: NSObject {
         quitClicked(self)
     }
 
-    @objc func onHomeDirChanged(_ notification: Notification) {
+    @objc func onSettingsChanged(_ notification: Notification) {
         stopLomod()
         startLomod()
     }
@@ -70,8 +70,8 @@ class StatusMenuController: NSObject {
         aboutWindow = AboutWindow()
 
         NotificationCenter.default.addObserver(self,
-                                               selector: #selector(onHomeDirChanged(_:)),
-                                               name: .NotifyHomeDirChanged,
+                                               selector: #selector(onSettingsChanged(_:)),
+                                               name: .NotifySettingsChanged,
                                                object: nil)
 
         NotificationCenter.default.addObserver(self,

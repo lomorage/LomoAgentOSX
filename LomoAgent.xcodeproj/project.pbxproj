@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A2FE40022E2B339000022B0 /* QRImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2FE3FF22E2B339000022B0 /* QRImage.swift */; };
 		3A35C5D92240B5F30030FF1B /* avconv in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3A35C5D62240B5EA0030FF1B /* avconv */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		3A35C5DA2240B5F30030FF1B /* lomod in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3A35C5D52240B5E90030FF1B /* lomod */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		3A35C5DC2240B6040030FF1B /* avconv in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3A35C5CF2240B5A90030FF1B /* avconv */; };
@@ -48,6 +49,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3A2FE3FF22E2B339000022B0 /* QRImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRImage.swift; sourceTree = "<group>"; };
+		3A2FE40122E2BC34000022B0 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		3A35C5CE2240B5A90030FF1B /* lomod */ = {isa = PBXFileReference; lastKnownFileType = folder; name = lomod; path = dependencies/lomod/Contents/Frameworks/lomod; sourceTree = "<group>"; };
 		3A35C5CF2240B5A90030FF1B /* avconv */ = {isa = PBXFileReference; lastKnownFileType = folder; name = avconv; path = dependencies/lomod/Contents/Frameworks/avconv; sourceTree = "<group>"; };
 		3A35C5D52240B5E90030FF1B /* lomod */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = lomod; path = dependencies/lomod/Contents/MacOS/lomod; sourceTree = "<group>"; };
@@ -131,11 +134,13 @@
 			isa = PBXGroup;
 			children = (
 				3A3896FB222F77FA004A2001 /* AppDelegate.swift */,
+				3A2FE3FF22E2B339000022B0 /* QRImage.swift */,
 				3A389709222F8168004A2001 /* StatusMenuController.swift */,
 				3A3896FD222F7801004A2001 /* Assets.xcassets */,
 				3A3896FF222F7801004A2001 /* MainMenu.xib */,
 				3A38970D22321A03004A2001 /* PreferencesWindow.swift */,
 				3A35C5E322435B710030FF1B /* PreferencesWindow.xib */,
+				3A2FE40122E2BC34000022B0 /* Bridging-Header.h */,
 				3A35C5E8224365340030FF1B /* AboutWindow.swift */,
 				3AC3E845229F9B60004EA1D7 /* HyperlinkTextField.swift */,
 				3A35C5EE22436CBA0030FF1B /* AboutWindow.xib */,
@@ -241,6 +246,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A2FE40022E2B339000022B0 /* QRImage.swift in Sources */,
 				3A38970F22321A03004A2001 /* PreferencesWindow.swift in Sources */,
 				3A38970A222F8168004A2001 /* StatusMenuController.swift in Sources */,
 				3A3896FC222F77FA004A2001 /* AppDelegate.swift in Sources */,
