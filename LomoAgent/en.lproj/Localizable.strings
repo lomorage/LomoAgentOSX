@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  LomoAgent
+
+  Created by Jiantao Fu on 7/20/19.
+  Copyright © 2019 lomoware. All rights reserved.
+*/
+
+"Choose the home directory" = "Choose the home directory";
+"Choose the backup directory" = "Choose the backup directory";
+"Error when choosing home directory" = "Error when choosing home directory";
+"Home directory should not be the same with backup directory" = "Home directory should not be the same with backup directory";
+"Error when choosing backup directory" = "Error when choosing backup directory";
+"Backup directory should not be the same with home directory" = "Backup directory should not be the same with home directory";
+"Last Backup: " = "Last Backup: ";

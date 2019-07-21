@@ -20,6 +20,9 @@
 		3A389701222F7801004A2001 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A3896FF222F7801004A2001 /* MainMenu.xib */; };
 		3A38970A222F8168004A2001 /* StatusMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A389709222F8168004A2001 /* StatusMenuController.swift */; };
 		3A38970F22321A03004A2001 /* PreferencesWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A38970D22321A03004A2001 /* PreferencesWindow.swift */; };
+		3A8BEF0A22E419BB00DAE39C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3A8BEF0C22E419BB00DAE39C /* Localizable.strings */; };
+		3A8BEF0F22E419F500DAE39C /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8BEF0E22E419F500DAE39C /* Localizable.swift */; };
+		3A94CC2E22E407A9002207D5 /* utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A94CC2D22E407A9002207D5 /* utils.swift */; };
 		3AC3E846229F9B60004EA1D7 /* HyperlinkTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC3E845229F9B60004EA1D7 /* HyperlinkTextField.swift */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +75,10 @@
 		3A389703222F7801004A2001 /* LomoAgent.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LomoAgent.entitlements; sourceTree = "<group>"; };
 		3A389709222F8168004A2001 /* StatusMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusMenuController.swift; sourceTree = "<group>"; };
 		3A38970D22321A03004A2001 /* PreferencesWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesWindow.swift; sourceTree = "<group>"; };
+		3A8BEF0B22E419BB00DAE39C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		3A8BEF0D22E419BD00DAE39C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		3A8BEF0E22E419F500DAE39C /* Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
+		3A94CC2D22E407A9002207D5 /* utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = utils.swift; sourceTree = "<group>"; };
 		3AC3E845229F9B60004EA1D7 /* HyperlinkTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HyperlinkTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -136,9 +143,12 @@
 				3A3896FB222F77FA004A2001 /* AppDelegate.swift */,
 				3A2FE3FF22E2B339000022B0 /* QRImage.swift */,
 				3A389709222F8168004A2001 /* StatusMenuController.swift */,
+				3A94CC2D22E407A9002207D5 /* utils.swift */,
 				3A3896FD222F7801004A2001 /* Assets.xcassets */,
 				3A3896FF222F7801004A2001 /* MainMenu.xib */,
 				3A38970D22321A03004A2001 /* PreferencesWindow.swift */,
+				3A8BEF0C22E419BB00DAE39C /* Localizable.strings */,
+				3A8BEF0E22E419F500DAE39C /* Localizable.swift */,
 				3A35C5E322435B710030FF1B /* PreferencesWindow.xib */,
 				3A2FE40122E2BC34000022B0 /* Bridging-Header.h */,
 				3A35C5E8224365340030FF1B /* AboutWindow.swift */,
@@ -212,6 +222,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A8BEF0A22E419BB00DAE39C /* Localizable.strings in Resources */,
 				3A3896FE222F7801004A2001 /* Assets.xcassets in Resources */,
 				3A35C5E122435B710030FF1B /* PreferencesWindow.xib in Resources */,
 				3A389701222F7801004A2001 /* MainMenu.xib in Resources */,
@@ -247,10 +258,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A2FE40022E2B339000022B0 /* QRImage.swift in Sources */,
+				3A94CC2E22E407A9002207D5 /* utils.swift in Sources */,
 				3A38970F22321A03004A2001 /* PreferencesWindow.swift in Sources */,
 				3A38970A222F8168004A2001 /* StatusMenuController.swift in Sources */,
 				3A3896FC222F77FA004A2001 /* AppDelegate.swift in Sources */,
 				3AC3E846229F9B60004EA1D7 /* HyperlinkTextField.swift in Sources */,
+				3A8BEF0F22E419F500DAE39C /* Localizable.swift in Sources */,
 				3A35C5EA224365340030FF1B /* AboutWindow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,6 +299,15 @@
 				3A35C5E022435B250030FF1B /* zh-Hans */,
 			);
 			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		3A8BEF0C22E419BB00DAE39C /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3A8BEF0B22E419BB00DAE39C /* en */,
+				3A8BEF0D22E419BD00DAE39C /* zh-Hans */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

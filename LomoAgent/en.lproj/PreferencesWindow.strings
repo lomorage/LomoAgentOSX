@@ -16,3 +16,12 @@
 
 /* Class = "NSButtonCell"; title = "Select"; ObjectID = "o4F-iv-Nxx"; */
 "o4F-iv-Nxx.title" = "Select";
+
+/* Class = "NSTextFieldCell"; title = "Home Directory"; ObjectID = "ewJ-OL-QHy"; */
+"ewJ-OL-QHy.title" = "Backup Directory";
+
+/* Class = "NSButtonCell"; title = "Open"; ObjectID = "uJs-cw-aLe"; */
+"uJs-cw-aLe.title" = "Open";
+
+/* Class = "NSButtonCell"; title = "Select"; ObjectID = "Jgq-Kj-pZS"; */
+"Jgq-Kj-pZS.title" = "Select";

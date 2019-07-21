@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  LomoAgent
+
+  Created by Jiantao Fu on 7/20/19.
+  Copyright © 2019 lomoware. All rights reserved.
+*/
+
+"Choose the home directory" = "选择主目录";
+"Choose the backup directory" = "选择冗余备份目录";
+"Error when choosing home directory" = "选择主目录出错";
+"Home directory should not be the same with backup directory" = "主目录不能和备份目录一样";
+"Error when choosing backup directory" = "选择备份目录出错";
+"Backup directory should not be the same with home directory" = "备份目录不能和主目录一样";
+"Last Backup: " = "上次备份: ";
