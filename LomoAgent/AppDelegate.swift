@@ -16,8 +16,19 @@ extension OSLog {
     static let logic = OSLog(subsystem: subsystem, category: "Logic")
 }
 
+func getLomodService() -> LomodService? {
+    guard let appDelegate = NSApplication.shared.delegate as? AppDelegate else {
+        os_log("getLomodService, error when getting AppDelegate", log: .logic, type: .error)
+        return nil
+    }
+
+    return appDelegate.lomodService
+}
+
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
+
+    var lomodService = LomodService()
 
     func applicationWillFinishLaunching(_ aNotification: Notification) {
         let version = Bundle.main.infoDictionary?["CFBundleVersion"] as! String
@@ -45,7 +56,5 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
     }
-
-
 }
 

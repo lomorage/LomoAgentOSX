@@ -17,6 +17,7 @@ class StatusMenuController: NSObject {
     var aboutWindow: AboutWindow!
     var lomodTask: Process?
     var stateTimer: Timer!
+    var pingTimer: Timer = Timer()
 
     let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
 
@@ -36,6 +37,7 @@ class StatusMenuController: NSObject {
         stopLomod()
         NotificationCenter.default.removeObserver(self)
         stateTimer.invalidate()
+        pingTimer.invalidate()
         NSApplication.shared.terminate(self)
     }
 
@@ -85,6 +87,7 @@ class StatusMenuController: NSObject {
                                                object: nil)
 
         stateTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(checkLomodState), userInfo: nil, repeats: true)
+        pingTimer = Timer.scheduledTimer(timeInterval: 30, target: self, selector: #selector(pingLomod), userInfo: nil, repeats: true)
     }
 
     @objc func checkLomodState() {
@@ -94,6 +97,20 @@ class StatusMenuController: NSObject {
             restartMenuItem.image = NSImage(named: NSImage.statusUnavailableName)
             if lomodTask != nil {
                 stopLomod()
+            }
+        }
+    }
+
+    @objc func pingLomod() {
+        if let lomodService = getLomodService() {
+            let (_, err) = lomodService.checkServerStatus()
+            if err == nil {
+                lomodService.getUserList()
+                if let backupDir = UserDefaults.standard.string(forKey: PREF_BACKUP_DIR) {
+                    _ = lomodService.setRedundancyBackup(backupDisk: backupDir)
+                }
+            } else {
+                os_log("pingLomod error!", log: .logic, type: .error)
             }
         }
     }
@@ -164,6 +181,12 @@ class StatusMenuController: NSObject {
                 task.launch()
 
                 os_log("lomod is running: %d, pid = %d", log: .logic, task.isRunning, task.processIdentifier)
+
+                if task.isRunning {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                        self.pingLomod()
+                    }
+                }
             } else {
                 os_log("Need set home directory first", log: .logic, type: .error)
                 lomodTask = nil
