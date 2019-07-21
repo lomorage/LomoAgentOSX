@@ -23,6 +23,7 @@
 		3A8BEF0A22E419BB00DAE39C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3A8BEF0C22E419BB00DAE39C /* Localizable.strings */; };
 		3A8BEF0F22E419F500DAE39C /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8BEF0E22E419F500DAE39C /* Localizable.swift */; };
 		3A8BEF1122E4BA0B00DAE39C /* LomodService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8BEF1022E4BA0B00DAE39C /* LomodService.swift */; };
+		3A8BEF1322E4D67D00DAE39C /* rsync in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3A8BEF1222E4D67D00DAE39C /* rsync */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		3A94CC2E22E407A9002207D5 /* utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A94CC2D22E407A9002207D5 /* utils.swift */; };
 		3AC3E846229F9B60004EA1D7 /* HyperlinkTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC3E845229F9B60004EA1D7 /* HyperlinkTextField.swift */; };
 /* End PBXBuildFile section */
@@ -34,6 +35,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 6;
 			files = (
+				3A8BEF1322E4D67D00DAE39C /* rsync in CopyFiles */,
 				3A35C5D92240B5F30030FF1B /* avconv in CopyFiles */,
 				3A35C5DA2240B5F30030FF1B /* lomod in CopyFiles */,
 			);
@@ -80,6 +82,7 @@
 		3A8BEF0D22E419BD00DAE39C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		3A8BEF0E22E419F500DAE39C /* Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
 		3A8BEF1022E4BA0B00DAE39C /* LomodService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LomodService.swift; sourceTree = "<group>"; };
+		3A8BEF1222E4D67D00DAE39C /* rsync */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = rsync; path = dependencies/lomod/Contents/MacOS/rsync; sourceTree = "<group>"; };
 		3A94CC2D22E407A9002207D5 /* utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = utils.swift; sourceTree = "<group>"; };
 		3AC3E845229F9B60004EA1D7 /* HyperlinkTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HyperlinkTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -125,6 +128,7 @@
 		3A3896EF222F77FA004A2001 = {
 			isa = PBXGroup;
 			children = (
+				3A8BEF1222E4D67D00DAE39C /* rsync */,
 				3A35C5B52240A01D0030FF1B /* dependencies */,
 				3A3896FA222F77FA004A2001 /* LomoAgent */,
 				3A3896F9222F77FA004A2001 /* Products */,

@@ -2,6 +2,7 @@
 
 AVCONV_PATH=/usr/local/bin/avconv
 LOMOD_PATH=/Users/jeromy/.go/src/bitbucket.org/lomoware/lomo-backend/cmd/lomod/lomod
+RSYNC_PATH=/Users/jeromy/work/playground/rsync-3.1.3/rsync
 
 FRAMEWORKS_DIR=lomod/Contents/Frameworks
 BINARY_DIR=lomod/Contents/MacOS
@@ -16,6 +17,7 @@ rm -rf $BINARY_DIR/*
 
 cp $AVCONV_PATH $BINARY_DIR
 cp $LOMOD_PATH $BINARY_DIR
+cp $RSYNC_PATH $BINARY_DIR
 
 cd $BINARY_DIR
 python ../../../matryoshka_name_tool.py  -L /usr/local/ -d ../Frameworks/lomod/ lomod
