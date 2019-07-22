@@ -17,3 +17,7 @@ let errorChooseBackupMsgLocalized = NSLocalizedString("Backup directory should n
 
 let lastBackupLocalized = NSLocalizedString("Last Backup: ", comment: "")
 let setBackupDirFailedLocalized = NSLocalizedString("Set backup directory failed", comment: "")
+
+let invalidPortLocalized = NSLocalizedString("Invalid port", comment: "")
+let invalidPortTipsLocalized = NSLocalizedString("The port should be a number in range [1024, 49151]", comment: "")
+let homeDirRequiredLocalized = NSLocalizedString("Home directory required!", comment: "")

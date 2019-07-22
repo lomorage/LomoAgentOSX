@@ -97,6 +97,11 @@ class PreferencesWindow: NSWindowController, NSWindowDelegate {
     @IBAction func onPortChange(_ sender: Any) {
         let oldPort = UserDefaults.standard.string(forKey: PREF_PORT)
         let port = portTextField.stringValue
+        let p = Int(port)
+        guard p != nil && p! >= 1024 && p! <= 49151 else {
+            dialogAlert(message: invalidPortLocalized, info: invalidPortTipsLocalized)
+            return
+        }
         if oldPort != port {
             os_log("Save port: %{public}s", log: .ui, port)
             UserDefaults.standard.set(port, forKey: PREF_PORT)
@@ -244,5 +249,14 @@ class PreferencesWindow: NSWindowController, NSWindowDelegate {
     }
 
     func windowWillClose(_ notification: Notification) {
+    }
+
+    func windowShouldClose(_ sender: NSWindow) -> Bool {
+        if homeDirTextField.stringValue == "" {
+            dialogAlert(message: homeDirRequiredLocalized, info: "")
+            return false
+        } else {
+            return true
+        }
     }
 }

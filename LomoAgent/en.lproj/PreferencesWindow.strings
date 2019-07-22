@@ -17,6 +17,8 @@
 /* Class = "NSButtonCell"; title = "Select"; ObjectID = "o4F-iv-Nxx"; */
 "o4F-iv-Nxx.title" = "Select";
 
+"iBo-mW-e8D.title" = "If the service can not be found automatically, you can scan the QR code to configure the service";
+
 /* Class = "NSTextFieldCell"; title = "Home Directory"; ObjectID = "ewJ-OL-QHy"; */
 "ewJ-OL-QHy.title" = "Backup Directory";
 

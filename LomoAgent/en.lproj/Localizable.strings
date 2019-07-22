@@ -13,3 +13,6 @@
 "Error when choosing backup directory" = "Error when choosing backup directory";
 "Backup directory should not be the same with home directory" = "Backup directory should not be the same with home directory";
 "Last Backup: " = "Last Backup: ";
+"Invalid port" = "Invalid port";
+"The port should be a number in range [1024, 49151]" = "The port should be a number in range [1024, 49151]";
+"Home directory required!" = "Home directory required!";
