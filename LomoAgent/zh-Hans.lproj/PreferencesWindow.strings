@@ -2,6 +2,9 @@
 /* Class = "NSButtonCell"; title = "Debug Mode"; ObjectID = "439-ns-a3v"; */
 "439-ns-a3v.title" = "调试模式";
 
+/* Class = "NSButtonCell"; title = "Auto Start when system boot"; ObjectID = "0kb-oT-IRY"; */
+"0kb-oT-IRY.title" = "系统启动时运行";
+
 /* Class = "NSButtonCell"; title = "Open"; ObjectID = "CTw-zS-X9b"; */
 "CTw-zS-X9b.title" = "打开";
 

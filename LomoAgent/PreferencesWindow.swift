@@ -7,8 +7,10 @@
 //
 
 import Cocoa
+import ServiceManagement
 import os.log
 
+let PREF_START_ON_BOOT = "PrefStartOnBoot"
 let PREF_DEBUG_MODE = "PrefDebugMode"
 let PREF_HOME_DIR = "PrefHomeDir"
 let PREF_BACKUP_DIR = "PrefBackupDir"
@@ -73,6 +75,8 @@ class PreferencesWindow: NSWindowController, NSWindowDelegate {
 
     @IBOutlet weak var debugModeCheckBox: NSButton!
 
+    @IBOutlet weak var startOnBootCheckBox: NSButton!
+
     @IBOutlet weak var openHomeButton: NSButton!
 
     @IBOutlet weak var selectHomeButton: NSButton!
@@ -91,6 +95,15 @@ class PreferencesWindow: NSWindowController, NSWindowDelegate {
         if newState != oldState {
             UserDefaults.standard.set(newState, forKey: PREF_DEBUG_MODE)
             NotificationCenter.default.post(name: .NotifySettingsChanged, object: self)
+        }
+    }
+
+    @IBAction func onStartOnBootClick(_ sender: Any) {
+        let oldState = UserDefaults.standard.bool(forKey: PREF_START_ON_BOOT)
+        let newState = (startOnBootCheckBox.state == .on)
+        if newState != oldState {
+            UserDefaults.standard.set(newState, forKey: PREF_START_ON_BOOT)
+            SMLoginItemSetEnabled(launcherAppId as CFString, newState)
         }
     }
 
@@ -198,6 +211,13 @@ class PreferencesWindow: NSWindowController, NSWindowDelegate {
             debugModeCheckBox.state = .off
         }
         os_log("Debug Mode: %d", log: .ui, debugModeCheckBox.state == .on)
+
+        if UserDefaults.standard.bool(forKey: PREF_START_ON_BOOT) {
+            startOnBootCheckBox.state = .on
+        } else {
+            startOnBootCheckBox.state = .off
+        }
+        os_log("Start on boot: %d", log: .ui, startOnBootCheckBox.state == .on)
 
         homeDirTextField.isEditable = false
         if let homeDir = UserDefaults.standard.string(forKey: PREF_HOME_DIR) {

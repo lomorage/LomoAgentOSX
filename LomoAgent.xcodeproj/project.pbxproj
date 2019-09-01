@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A16D9D2231C501F0092EADD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A16D9D1231C501F0092EADD /* AppDelegate.swift */; };
+		3A16D9D4231C50270092EADD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A16D9D3231C50270092EADD /* Assets.xcassets */; };
+		3A16D9DE231C52890092EADD /* LomoAgentLauncher.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3A16D9CF231C501F0092EADD /* LomoAgentLauncher.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3A16D9E1231C53290092EADD /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A16D9E0231C53290092EADD /* ServiceManagement.framework */; };
+		3A16D9E3231C605F0092EADD /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A16D9E2231C605F0092EADD /* main.swift */; };
 		3A2FE40022E2B339000022B0 /* QRImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2FE3FF22E2B339000022B0 /* QRImage.swift */; };
 		3A35C5D92240B5F30030FF1B /* avconv in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3A35C5D62240B5EA0030FF1B /* avconv */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		3A35C5DA2240B5F30030FF1B /* lomod in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3A35C5D52240B5E90030FF1B /* lomod */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
@@ -28,6 +33,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		3A16D9DD231C524E0092EADD /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/Library/LoginItems;
+			dstSubfolderSpec = 1;
+			files = (
+				3A16D9DE231C52890092EADD /* LomoAgentLauncher.app in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3A35C5D22240B5C00030FF1B /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -53,6 +68,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3A16D9CF231C501F0092EADD /* LomoAgentLauncher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LomoAgentLauncher.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A16D9D1231C501F0092EADD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3A16D9D3231C50270092EADD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3A16D9D8231C50270092EADD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A16D9D9231C50270092EADD /* LomoAgentLauncher.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LomoAgentLauncher.entitlements; sourceTree = "<group>"; };
+		3A16D9E0231C53290092EADD /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
+		3A16D9E2231C605F0092EADD /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		3A2FE3FF22E2B339000022B0 /* QRImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRImage.swift; sourceTree = "<group>"; };
 		3A2FE40122E2BC34000022B0 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		3A35C5CE2240B5A90030FF1B /* lomod */ = {isa = PBXFileReference; lastKnownFileType = folder; name = lomod; path = dependencies/lomod/Contents/Frameworks/lomod; sourceTree = "<group>"; };
@@ -85,16 +107,44 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		3A3896F5222F77FA004A2001 /* Frameworks */ = {
+		3A16D9CC231C501F0092EADD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3A3896F5222F77FA004A2001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A16D9E1231C53290092EADD /* ServiceManagement.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A16D9D0231C501F0092EADD /* LomoAgentLauncher */ = {
+			isa = PBXGroup;
+			children = (
+				3A16D9E2231C605F0092EADD /* main.swift */,
+				3A16D9D1231C501F0092EADD /* AppDelegate.swift */,
+				3A16D9D3231C50270092EADD /* Assets.xcassets */,
+				3A16D9D8231C50270092EADD /* Info.plist */,
+				3A16D9D9231C50270092EADD /* LomoAgentLauncher.entitlements */,
+			);
+			path = LomoAgentLauncher;
+			sourceTree = "<group>";
+		};
+		3A16D9DF231C53290092EADD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3A16D9E0231C53290092EADD /* ServiceManagement.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3A35C5B52240A01D0030FF1B /* dependencies */ = {
 			isa = PBXGroup;
 			children = (
@@ -127,7 +177,9 @@
 			children = (
 				3A35C5B52240A01D0030FF1B /* dependencies */,
 				3A3896FA222F77FA004A2001 /* LomoAgent */,
+				3A16D9D0231C501F0092EADD /* LomoAgentLauncher */,
 				3A3896F9222F77FA004A2001 /* Products */,
+				3A16D9DF231C53290092EADD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -135,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				3A3896F8222F77FA004A2001 /* LomoAgent.app */,
+				3A16D9CF231C501F0092EADD /* LomoAgentLauncher.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -166,6 +219,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		3A16D9CE231C501F0092EADD /* LomoAgentLauncher */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A16D9DC231C50270092EADD /* Build configuration list for PBXNativeTarget "LomoAgentLauncher" */;
+			buildPhases = (
+				3A16D9CB231C501F0092EADD /* Sources */,
+				3A16D9CC231C501F0092EADD /* Frameworks */,
+				3A16D9CD231C501F0092EADD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LomoAgentLauncher;
+			productName = LomoAgentLauncher;
+			productReference = 3A16D9CF231C501F0092EADD /* LomoAgentLauncher.app */;
+			productType = "com.apple.product-type.application";
+		};
 		3A3896F7222F77FA004A2001 /* LomoAgent */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3A389706222F7801004A2001 /* Build configuration list for PBXNativeTarget "LomoAgent" */;
@@ -175,6 +245,7 @@
 				3A3896F6222F77FA004A2001 /* Resources */,
 				3A35C5D22240B5C00030FF1B /* CopyFiles */,
 				3A35C5DB2240B5F70030FF1B /* CopyFiles */,
+				3A16D9DD231C524E0092EADD /* CopyFiles */,
 				3A4E7DF82248A3F700808EB0 /* ShellScript */,
 			);
 			buildRules = (
@@ -192,12 +263,20 @@
 		3A3896F0222F77FA004A2001 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1010;
+				LastSwiftUpdateCheck = 1030;
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = lomoware;
 				TargetAttributes = {
+					3A16D9CE231C501F0092EADD = {
+						CreatedOnToolsVersion = 10.3;
+					};
 					3A3896F7222F77FA004A2001 = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -216,11 +295,20 @@
 			projectRoot = "";
 			targets = (
 				3A3896F7222F77FA004A2001 /* LomoAgent */,
+				3A16D9CE231C501F0092EADD /* LomoAgentLauncher */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		3A16D9CD231C501F0092EADD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A16D9D4231C50270092EADD /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3A3896F6222F77FA004A2001 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -256,6 +344,15 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		3A16D9CB231C501F0092EADD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A16D9E3231C605F0092EADD /* main.swift in Sources */,
+				3A16D9D2231C501F0092EADD /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3A3896F4222F77FA004A2001 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -317,6 +414,48 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		3A16D9DA231C50270092EADD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = LomoAgentLauncher/LomoAgentLauncher.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = U73LFJTY32;
+				INFOPLIST_FILE = LomoAgentLauncher/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = lomoware.lomorage.LomoAgentLauncher;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		3A16D9DB231C50270092EADD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = LomoAgentLauncher/LomoAgentLauncher.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = U73LFJTY32;
+				INFOPLIST_FILE = LomoAgentLauncher/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = lomoware.lomorage.LomoAgentLauncher;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		3A389704222F7801004A2001 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -477,6 +616,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		3A16D9DC231C50270092EADD /* Build configuration list for PBXNativeTarget "LomoAgentLauncher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A16D9DA231C50270092EADD /* Debug */,
+				3A16D9DB231C50270092EADD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		3A3896F3222F77FA004A2001 /* Build configuration list for PBXProject "LomoAgent" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
