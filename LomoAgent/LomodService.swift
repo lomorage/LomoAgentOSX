@@ -20,6 +20,7 @@ struct SystemInfo {
     let apiVer: String
     let timezoneOffset: Int32
     let systemStatus: Int32
+    var listenIPs = [String]()
     var backupRecords = [String: BackupRecordItem]()
 
     init(os: String, apiVer: String, timezoneOffset: Int32, systemStatus: Int32) {
@@ -131,6 +132,10 @@ class LomodService
         return ret
     }
 
+    func getListenIPs() -> [String]? {
+        return self.systemInfo?.listenIPs
+    }
+
     func getUserList() {
         if let port = UserDefaults.standard.string(forKey: PREF_PORT) {
             if let url = URL(string: "http://\(LOCAL_HOST):\(port)/user") {
@@ -191,6 +196,12 @@ class LomodService
                                     let timeZoneOffset = jsonResult["TimezoneOffset"] as? Int32
                                 {
                                     self.systemInfo = SystemInfo(os: osSystem, apiVer: apiVer, timezoneOffset: timeZoneOffset, systemStatus: status)
+
+                                    if let listenIPs = jsonResult["ListenIPs"] as? [String] {
+                                        for ip in listenIPs {
+                                            self.systemInfo?.listenIPs.append(ip)
+                                        }
+                                    }
 
                                     if let lastBackup = jsonResult["LastBackup"] as? [String: Any] {
                                         for record in lastBackup {

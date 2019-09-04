@@ -16,3 +16,6 @@
 "Invalid port" = "无效端口";
 "The port should be a number in range [1024, 49151]" = "端口必须是在范围[1024, 49151]之内的数字";
 "Home directory required!" = "需要设置主目录!";
+
+"Please configure home directory for photo storage first" = "请先设置用于照片存储的主目录";
+"If the service can not be found automatically, you can use Lomorage APP to scan QR code to configure the service" = "如果不能自动发现服务，您也可以使用Lomorage手机应用扫码来配置服务";

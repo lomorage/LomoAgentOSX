@@ -19,6 +19,7 @@
                 <outlet property="selectBackupButton" destination="41g-Kx-m4R" id="W03-k1-4Ib"/>
                 <outlet property="selectHomeButton" destination="9j3-TC-mnI" id="feT-GR-Zey"/>
                 <outlet property="startOnBootCheckBox" destination="UpZ-2D-dVU" id="Ryv-fJ-4un"/>
+                <outlet property="userTipsLabel" destination="jL5-5g-WN8" id="YQ7-oV-miH"/>
                 <outlet property="window" destination="F0z-JX-Cv5" id="gIp-Ho-8D9"/>
             </connections>
         </customObject>

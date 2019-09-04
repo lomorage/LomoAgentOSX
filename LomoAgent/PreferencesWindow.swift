@@ -89,6 +89,8 @@ class PreferencesWindow: NSWindowController, NSWindowDelegate {
 
     @IBOutlet weak var lastBackupLabel: NSTextField!
 
+    @IBOutlet weak var userTipsLabel: NSTextField!
+
     @IBAction func onDebugModeClick(_ sender: Any) {
         let oldState = UserDefaults.standard.bool(forKey: PREF_DEBUG_MODE)
         let newState = (debugModeCheckBox.state == .on)
@@ -165,6 +167,9 @@ class PreferencesWindow: NSWindowController, NSWindowDelegate {
                         UserDefaults.standard.set(homeDirTextField.stringValue, forKey: PREF_HOME_DIR)
                         os_log("Save home dir: %{public}s", log: .ui, homeDirTextField.stringValue)
                         NotificationCenter.default.post(name: .NotifySettingsChanged, object: self)
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                            self.generateQRCode()
+                        }
                         // todo: move files in directory
                     }
                 } else if sender == selectBackupButton {
@@ -257,14 +262,22 @@ class PreferencesWindow: NSWindowController, NSWindowDelegate {
     }
 
     func generateQRCode() {
-        imageQRCode.wantsLayer = true
-        let addresses = getIFAddresses()
-        if let firstAddr = addresses.first {
-            let url = "http://\(firstAddr):\(portTextField.stringValue)"
-            guard let data = url.data(using: String.Encoding.utf8, allowLossyConversion: false) else {
-                return
+        if let lomodService = getLomodService() {
+            imageQRCode.wantsLayer = true
+            if let addresses = lomodService.getListenIPs() {
+                if let firstAddr = addresses.first {
+                    let url = "http://\(firstAddr):\(portTextField.stringValue)"
+                    guard let data = url.data(using: String.Encoding.utf8, allowLossyConversion: false) else {
+                        return
+                    }
+                    userTipsLabel.textColor = .black
+                    userTipsLabel.stringValue = userTipsScanQRCode
+                    imageQRCode.image = QRCodeImageWith(data: data, size: imageQRCode.frame.size.width)
+                }
+            } else {
+                userTipsLabel.textColor = .red
+                userTipsLabel.stringValue = userTipsNeedConfigureHomeDir
             }
-            imageQRCode.image = QRCodeImageWith(data: data, size: imageQRCode.frame.size.width)
         }
     }
 

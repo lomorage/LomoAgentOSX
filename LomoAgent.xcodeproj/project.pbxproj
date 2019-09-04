@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A14364F23201BF800E0F154 /* rsync in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3A14364E23201BF800E0F154 /* rsync */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		3A16D9D2231C501F0092EADD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A16D9D1231C501F0092EADD /* AppDelegate.swift */; };
 		3A16D9D4231C50270092EADD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A16D9D3231C50270092EADD /* Assets.xcassets */; };
 		3A16D9DE231C52890092EADD /* LomoAgentLauncher.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3A16D9CF231C501F0092EADD /* LomoAgentLauncher.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -51,6 +52,7 @@
 			files = (
 				3A35C5D92240B5F30030FF1B /* avconv in CopyFiles */,
 				3A35C5DA2240B5F30030FF1B /* lomod in CopyFiles */,
+				3A14364F23201BF800E0F154 /* rsync in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +70,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3A14364E23201BF800E0F154 /* rsync */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = rsync; path = dependencies/lomod/Contents/MacOS/rsync; sourceTree = "<group>"; };
 		3A16D9CF231C501F0092EADD /* LomoAgentLauncher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LomoAgentLauncher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A16D9D1231C501F0092EADD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3A16D9D3231C50270092EADD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -175,6 +178,7 @@
 		3A3896EF222F77FA004A2001 = {
 			isa = PBXGroup;
 			children = (
+				3A14364E23201BF800E0F154 /* rsync */,
 				3A35C5B52240A01D0030FF1B /* dependencies */,
 				3A3896FA222F77FA004A2001 /* LomoAgent */,
 				3A16D9D0231C501F0092EADD /* LomoAgentLauncher */,

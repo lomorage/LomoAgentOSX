@@ -16,3 +16,6 @@
 "Invalid port" = "Invalid port";
 "The port should be a number in range [1024, 49151]" = "The port should be a number in range [1024, 49151]";
 "Home directory required!" = "Home directory required!";
+
+"Please configure home directory for photo storage first" = "Please configure home directory for photo storage first";
+"If the service can not be found automatically, you can use Lomorage APP to scan QR code to configure the service" = "If the service can not be found automatically, you can use Lomorage APP to scan QR code to configure the service";
