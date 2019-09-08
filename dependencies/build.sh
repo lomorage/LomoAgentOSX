@@ -2,6 +2,9 @@
 
 AVCONV_PATH=/usr/local/bin/avconv
 LOMOD_PATH=/Users/jeromy/.go/src/bitbucket.org/lomoware/lomo-backend/cmd/lomod/lomod
+
+# lomoupg and rsync has no dependencies, just copy binaries
+LOMOUPG_PATH=/Users/jeromy/.go/src/bitbucket.org/lomoware/lomo-backend/cmd/lomoupg/lomoupg
 RSYNC_PATH=/Users/jeromy/work/playground/rsync-3.1.3/rsync
 
 FRAMEWORKS_DIR=lomod/Contents/Frameworks
@@ -17,6 +20,7 @@ rm -rf $BINARY_DIR/*
 
 cp $AVCONV_PATH $BINARY_DIR
 cp $LOMOD_PATH $BINARY_DIR
+cp $LOMOUPG_PATH $BINARY_DIR
 cp $RSYNC_PATH $BINARY_DIR
 
 cd $BINARY_DIR

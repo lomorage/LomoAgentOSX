@@ -18,6 +18,13 @@ extension OSLog {
     static let logic = OSLog(subsystem: subsystem, category: "Logic")
 }
 
+func setupSigHandler() {
+    signal(SIGTERM) { signal in
+        os_log("Interrupted! Cleaning up...", log: .logic, type: .info)
+        NotificationCenter.default.post(name: .NotifyExit, object: nil)
+    }
+}
+
 func getLomodService() -> LomodService? {
     guard let appDelegate = NSApplication.shared.delegate as? AppDelegate else {
         os_log("getLomodService, error when getting AppDelegate", log: .logic, type: .error)
@@ -34,7 +41,7 @@ extension Notification.Name {
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-    var lomodService = LomodService()
+    let lomodService = LomodService()
 
     func applicationWillFinishLaunching(_ aNotification: Notification) {
         let version = Bundle.main.infoDictionary?["CFBundleVersion"] as! String
@@ -56,12 +63,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
+        setupSigHandler()
         let runningApps = NSWorkspace.shared.runningApplications
         let isRunning = !runningApps.filter { $0.bundleIdentifier == launcherAppId }.isEmpty
 
         if isRunning {
-            DistributedNotificationCenter.default().post(name: .killLauncher,
-                                                         object: Bundle.main.bundleIdentifier!)
+            DistributedNotificationCenter.default().post(
+                name: .killLauncher,
+                object: Bundle.main.bundleIdentifier!
+            )
         }
     }
 

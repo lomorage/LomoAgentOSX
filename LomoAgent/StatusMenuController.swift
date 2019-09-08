@@ -18,8 +18,15 @@ class StatusMenuController: NSObject {
     var lomodTask: Process?
     var stateTimer: Timer!
     var pingTimer: Timer = Timer()
+    var updateTimer: Timer = Timer()
+    static let stateTimerIntervalSec = 1.0
+    static let pingTimerIntervalSec = 30.0
+    static let autoUpdateHour = 4
+    static let autoUpdateMinute = 0
 
     let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
+    let lomoUpdate = LomoUpgrade(url: LOMO_UPGRADE_URL)
+    let updateQueue = DispatchQueue(label: "lomo.update")
 
     @IBOutlet weak var restartMenuItem: NSMenuItem!
 
@@ -38,6 +45,7 @@ class StatusMenuController: NSObject {
         NotificationCenter.default.removeObserver(self)
         stateTimer.invalidate()
         pingTimer.invalidate()
+        updateTimer.invalidate()
         NSApplication.shared.terminate(self)
     }
 
@@ -51,6 +59,7 @@ class StatusMenuController: NSObject {
     @objc func onStart(_ notification: Notification) {
         killLomod()
         startLomod()
+        update()
     }
 
     @objc func onExit(_ notification: Notification) {
@@ -86,8 +95,36 @@ class StatusMenuController: NSObject {
                                                name: .NotifyExit,
                                                object: nil)
 
-        stateTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(checkLomodState), userInfo: nil, repeats: true)
-        pingTimer = Timer.scheduledTimer(timeInterval: 30, target: self, selector: #selector(pingLomod), userInfo: nil, repeats: true)
+        stateTimer = Timer.scheduledTimer(timeInterval: StatusMenuController.stateTimerIntervalSec, target: self, selector: #selector(checkLomodState), userInfo: nil, repeats: true)
+        pingTimer = Timer.scheduledTimer(timeInterval: StatusMenuController.pingTimerIntervalSec, target: self, selector: #selector(pingLomod), userInfo: nil, repeats: true)
+
+        scheduleAutoUpdate()
+    }
+
+    func getSecondsOffsetTo(hour: Int, minute: Int) -> Int {
+        let today = Date()
+        var calendar = Calendar.current
+        calendar.timeZone = .current
+        let components = calendar.dateComponents([.hour, .minute, .second], from: today)
+
+        let secondsSinceToday = components.hour! * 60 * 60 + components.minute! * 60 + components.second!
+        let targetSeconds = hour * 60 * 60 + minute * 60
+        if targetSeconds > secondsSinceToday {
+            return targetSeconds - secondsSinceToday
+        } else {
+            return 24 * 60 * 60 + targetSeconds - secondsSinceToday
+        }
+    }
+
+    func scheduleAutoUpdate() {
+        let offset = getSecondsOffsetTo(hour: StatusMenuController.autoUpdateHour, minute: StatusMenuController.autoUpdateMinute)
+
+        updateTimer = Timer.scheduledTimer(timeInterval: Double(offset), target: self, selector: #selector(pingLomod), userInfo: nil, repeats: false)
+    }
+
+    func autoUpdate() {
+        update()
+        scheduleAutoUpdate()
     }
 
     @objc func checkLomodState() {
@@ -209,5 +246,11 @@ class StatusMenuController: NSObject {
     func killLomod() {
         let p = Process.launchedProcess(launchPath: "/usr/bin/killall", arguments: ["lomod"])
         p.waitUntilExit()
+    }
+
+    @objc func update() {
+        updateQueue.async {
+            self.lomoUpdate.update()
+        }
     }
 }

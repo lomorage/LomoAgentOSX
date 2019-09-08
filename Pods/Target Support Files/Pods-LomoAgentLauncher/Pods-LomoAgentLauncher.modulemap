@@ -1,0 +1,6 @@
+framework module Pods_LomoAgentLauncher {
+  umbrella header "Pods-LomoAgentLauncher-umbrella.h"
+
+  export *
+  module * { export * }
+}
