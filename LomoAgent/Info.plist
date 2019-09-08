@@ -17,9 +17,9 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>2a7cc13</string>
+	<string>c0beee3</string>
 	<key>CFBundleVersion</key>
-	<string>2019_09_07.21_36_19.0.2a7cc13</string>
+	<string>2019_09_11.22_07_16.0.c0beee3</string>
 	<key>LSMinimumSystemVersion</key>
 	<string>$(MACOSX_DEPLOYMENT_TARGET)</string>
 	<key>LSUIElement</key>

@@ -24,6 +24,8 @@ class StatusMenuController: NSObject {
     static let autoUpdateHour = 4
     static let autoUpdateMinute = 0
 
+    var listenIp = ""
+
     let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
     let lomoUpdate = LomoUpgrade(url: LOMO_UPGRADE_URL)
     let updateQueue = DispatchQueue(label: "lomo.update")
@@ -146,42 +148,23 @@ class StatusMenuController: NSObject {
                 if let backupDir = UserDefaults.standard.string(forKey: PREF_BACKUP_DIR) {
                     _ = lomodService.setRedundancyBackup(backupDisk: backupDir)
                 }
+
+                if let ipList = lomodService.getListenIPs() {
+                    for ip in ipList {
+                        if ip == listenIp {
+                            return // still valid
+                        }
+                    }
+                    // not found!
+                    if let firstIp = ipList.first {
+                        listenIp = firstIp
+                        NotificationCenter.default.post(name: .NotifyIpChanged, object: self)
+                    }
+                }
             } else {
                 os_log("pingLomod error!", log: .logic, type: .error)
             }
         }
-    }
-
-    func getBasePath() -> String? {
-        let paths = NSSearchPathForDirectoriesInDomains(.applicationSupportDirectory, .userDomainMask, true)
-        let basePath = NSURL(fileURLWithPath: paths[0]).appendingPathComponent("lomod")
-        var baseDir: String? = basePath!.path
-        if !FileManager.default.fileExists(atPath: basePath!.path) {
-            do {
-                try FileManager.default.createDirectory(atPath: basePath!.path, withIntermediateDirectories: true, attributes: nil)
-            } catch let error as NSError {
-                os_log("Unable to create directory %{public}s", log: .logic, type: .error, error.debugDescription)
-                baseDir = nil
-            }
-        }
-
-        return baseDir
-    }
-
-    func getLogPath() -> String? {
-        let paths = NSSearchPathForDirectoriesInDomains(.libraryDirectory, .userDomainMask, true)
-        let logPath = NSURL(fileURLWithPath: paths[0]).appendingPathComponent("Logs")?.appendingPathComponent("lomod")
-        var logDir: String? = logPath!.path
-        if !FileManager.default.fileExists(atPath: logPath!.path) {
-            do {
-                try FileManager.default.createDirectory(atPath: logPath!.path, withIntermediateDirectories: true, attributes: nil)
-            } catch let error as NSError {
-                os_log("Unable to create directory %{public}s", log: .logic, type: .error, error.debugDescription)
-                logDir = nil
-            }
-        }
-
-        return logDir
     }
 
     func startLomod() {
@@ -198,7 +181,7 @@ class StatusMenuController: NSObject {
 
             if let homeDir = UserDefaults.standard.string(forKey: PREF_HOME_DIR),
                 let baseDir = getBasePath(),
-                let logDir = getLogPath(),
+                let logDir = getLogDir(),
                 let port = UserDefaults.standard.string(forKey: PREF_PORT) {
 
                 os_log("Home Dir: %{public}s", log: .logic, homeDir)

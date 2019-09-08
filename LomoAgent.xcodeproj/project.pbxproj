@@ -11,7 +11,6 @@
 		3A1436512320C86700E0F154 /* LomoUpgrade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1436502320C86700E0F154 /* LomoUpgrade.swift */; };
 		3A16D9D2231C501F0092EADD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A16D9D1231C501F0092EADD /* AppDelegate.swift */; };
 		3A16D9D4231C50270092EADD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A16D9D3231C50270092EADD /* Assets.xcassets */; };
-		3A16D9DE231C52890092EADD /* LomoAgentLauncher.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3A16D9CF231C501F0092EADD /* LomoAgentLauncher.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		3A16D9E1231C53290092EADD /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A16D9E0231C53290092EADD /* ServiceManagement.framework */; };
 		3A16D9E3231C605F0092EADD /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A16D9E2231C605F0092EADD /* main.swift */; };
 		3A2FE40022E2B339000022B0 /* QRImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2FE3FF22E2B339000022B0 /* QRImage.swift */; };
@@ -34,6 +33,7 @@
 		3AC3E846229F9B60004EA1D7 /* HyperlinkTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC3E845229F9B60004EA1D7 /* HyperlinkTextField.swift */; };
 		3AE33D3B23244F2E00B81C13 /* rsync in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3A818C152320D36A00B110B3 /* rsync */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		3AE33D3E23244F6400B81C13 /* lomoupg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3AE33D3C23244F5100B81C13 /* lomoupg */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		3AE33D422324CD9300B81C13 /* LomoAgentLauncher.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3A16D9CF231C501F0092EADD /* LomoAgentLauncher.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		4EC270328FC84ECCB0FA9CB1 /* Pods_LomoAgent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9542EC456060AE536C4531A /* Pods_LomoAgent.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,7 +44,7 @@
 			dstPath = Contents/Library/LoginItems;
 			dstSubfolderSpec = 1;
 			files = (
-				3A16D9DE231C52890092EADD /* LomoAgentLauncher.app in CopyFiles */,
+				3AE33D422324CD9300B81C13 /* LomoAgentLauncher.app in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,7 +283,6 @@
 				3A35C5D22240B5C00030FF1B /* CopyFiles */,
 				3A35C5DB2240B5F70030FF1B /* CopyFiles */,
 				3A16D9DD231C524E0092EADD /* CopyFiles */,
-				3A4E7DF82248A3F700808EB0 /* ShellScript */,
 				4C1BAAC71DEA636F9C18CFAE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
@@ -379,19 +378,6 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
-		};
-		3A4E7DF82248A3F700808EB0 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\necho $TARGET_BUILD_DIR\necho $PROJECT_DIR\necho $FULL_PRODUCT_NAME\nmkdir -p $PROJECT_DIR/build\nrm -rf $PROJECT_DIR/build/*\ncp -r $TARGET_BUILD_DIR/$FULL_PRODUCT_NAME $PROJECT_DIR/build\n#appdmg $PROJECT_DIR/LomoAgent/Assets.xcassets/dmg.json $PROJECT_DIR/build/LomoAgent.dmg\n";
 		};
 		45BD5E6229215F44609F8963 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -668,6 +654,7 @@
 			baseConfigurationReference = 116707D12FB1B16BD38492A2 /* Pods-LomoAgent.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = U73LFJTY32;
@@ -679,6 +666,7 @@
 				OTHER_CODE_SIGN_FLAGS = "--deep";
 				PRODUCT_BUNDLE_IDENTIFIER = lomoware.lomorage.LomoAgent;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
@@ -688,6 +676,7 @@
 			baseConfigurationReference = 7F29134117C52A44E7560EE1 /* Pods-LomoAgent.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = U73LFJTY32;
@@ -699,6 +688,7 @@
 				OTHER_CODE_SIGN_FLAGS = "--deep";
 				PRODUCT_BUNDLE_IDENTIFIER = lomoware.lomorage.LomoAgent;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 			};
 			name = Release;

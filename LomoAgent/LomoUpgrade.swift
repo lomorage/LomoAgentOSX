@@ -101,6 +101,10 @@ class LomoUpgrade {
 
             do {
                 try Zip.unzipFile(destinationFileUrl!, destination: lomoupgPath, overwrite: true, password: nil)
+                os_log("updateLomoUpg, unzip %{public}s to %{public}s succ",
+                       log: .logic, type: .error,
+                       destinationFileUrl!.absoluteString,
+                       lomoupgPath.absoluteString)
                 return true
             } catch let err as NSError  {
                 os_log("updateLomoUpg, unzip %{public}s to %{public}s failed with error: %{public}s",
@@ -137,7 +141,8 @@ class LomoUpgrade {
                 "--precmd", "/usr/bin/killall",
                 "--precmdarg", "LomoAgent",
                 "--postcmd", "open",
-                "--postcmdarg", Bundle.main.bundlePath
+                "--postcmdarg", Bundle.main.bundlePath,
+                "--log-dir", getLogDir()!
             ]
 
             // not able to get result now, will get reboot if succ
@@ -165,7 +170,7 @@ class LomoUpgrade {
     }
 
     func getCurrentAgentVer() -> String? {
-        return Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
+        return Bundle.main.infoDictionary?["CFBundleVersion"] as? String
     }
 
     func getCurrentLomoUpgVer() -> String? {

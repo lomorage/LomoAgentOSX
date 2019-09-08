@@ -19,6 +19,7 @@ let LOCAL_HOST = "127.0.0.1"
 
 extension Notification.Name {
     static let NotifySettingsChanged = NSNotification.Name("NotifySettingsChanged")
+    static let NotifyIpChanged = NSNotification.Name("NotifyIpChanged")
     static let NotifyExit = NSNotification.Name("NotifyExit")
     static let NotifyStart = NSNotification.Name("NotifyStart")
 }
@@ -205,6 +206,11 @@ class PreferencesWindow: NSWindowController, NSWindowDelegate {
     override func windowDidLoad() {
         super.windowDidLoad()
 
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(onIpChanged(_:)),
+                                               name: .NotifyIpChanged,
+                                               object: nil)
+
         // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
         self.window?.center()
         self.window?.makeKeyAndOrderFront(nil)
@@ -258,6 +264,10 @@ class PreferencesWindow: NSWindowController, NSWindowDelegate {
             UserDefaults.standard.set(portTextField.stringValue, forKey: PREF_PORT)
         }
 
+        generateQRCode()
+    }
+
+    @objc func onIpChanged(_ notification: Notification) {
         generateQRCode()
     }
 

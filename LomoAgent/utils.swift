@@ -7,6 +7,39 @@
 //
 
 import Foundation
+import os.log
+
+func getBasePath() -> String? {
+    let paths = NSSearchPathForDirectoriesInDomains(.applicationSupportDirectory, .userDomainMask, true)
+    let basePath = NSURL(fileURLWithPath: paths[0]).appendingPathComponent("lomod")
+    var baseDir: String? = basePath!.path
+    if !FileManager.default.fileExists(atPath: basePath!.path) {
+        do {
+            try FileManager.default.createDirectory(atPath: basePath!.path, withIntermediateDirectories: true, attributes: nil)
+        } catch let error as NSError {
+            os_log("Unable to create directory %{public}s", log: .logic, type: .error, error.debugDescription)
+            baseDir = nil
+        }
+    }
+
+    return baseDir
+}
+
+func getLogDir() -> String? {
+    let paths = NSSearchPathForDirectoriesInDomains(.libraryDirectory, .userDomainMask, true)
+    let logPath = NSURL(fileURLWithPath: paths[0]).appendingPathComponent("Logs")?.appendingPathComponent("lomod")
+    var logDir: String? = logPath!.path
+    if !FileManager.default.fileExists(atPath: logPath!.path) {
+        do {
+            try FileManager.default.createDirectory(atPath: logPath!.path, withIntermediateDirectories: true, attributes: nil)
+        } catch let error as NSError {
+            os_log("Unable to create directory %{public}s", log: .logic, type: .error, error.debugDescription)
+            logDir = nil
+        }
+    }
+
+    return logDir
+}
 
 protocol NetworkSession {
     func loadData(with url: URL, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Swift.Void, sync group: DispatchGroup?)
