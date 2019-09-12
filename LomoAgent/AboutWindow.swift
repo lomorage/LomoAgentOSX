@@ -24,6 +24,7 @@ class AboutWindow: NSWindowController {
         iconImage.image = NSImage(named: NSImage.Name("AppIcon"))
         self.window?.center()
         self.window?.makeKeyAndOrderFront(nil)
+        self.window?.level = .floating
         NSApp.activate(ignoringOtherApps: true)
 
         if let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
