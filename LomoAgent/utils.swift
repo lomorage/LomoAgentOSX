@@ -199,3 +199,95 @@ func runCommand(cmd : String, args : String...) -> (output: [String], error: [St
 
     return (output, error, status)
 }
+
+class Version {
+    var year: Int
+    var month: Int
+    var day: Int
+    var hour: Int
+    var min: Int
+    var sec: Int
+    var hash: String
+
+    init?(ver: String) {
+        let items = ver.split(separator: ".")
+        guard items.count == 4 else {
+            return nil
+        }
+        let dateStrs =  items[0].split(separator: "_")
+        guard dateStrs.count == 3 else {
+            return nil
+        }
+        guard let y = Int(dateStrs[0]),
+            let m = Int(dateStrs[1]),
+            let d = Int(dateStrs[2]) else {
+                return nil
+        }
+        guard m > 0 && m < 13 && d > 0 && d < 32 else {
+            return nil
+        }
+
+        let timeStrs =  items[1].split(separator: "_")
+        guard timeStrs.count == 3 else {
+            return nil
+        }
+        guard let hour = Int(timeStrs[0]),
+            let min = Int(timeStrs[1]),
+            let sec = Int(timeStrs[2]) else {
+                return nil
+        }
+        guard hour >= 0 && hour < 24
+            && min >= 0 && min < 61
+            && sec >= 0 && sec < 61 else {
+                return nil
+        }
+
+        self.year = y
+        self.month = m
+        self.day = d
+        self.hour = hour
+        self.min = min
+        self.sec = sec
+        self.hash = String(items[3])
+    }
+
+    static func < (lhs: Version, rhs: Version) -> Bool {
+        if lhs.year < rhs.year {
+            return true
+        } else if lhs.year > rhs.year {
+            return false
+        }
+
+        if lhs.month < rhs.month {
+            return true
+        } else if lhs.month > rhs.month {
+            return false
+        }
+
+        if lhs.day < rhs.day {
+            return true
+        } else if lhs.day > rhs.day {
+            return false
+        }
+
+        if lhs.hour < rhs.hour {
+            return true
+        } else if lhs.hour > rhs.hour {
+            return false
+        }
+
+        if lhs.min < rhs.min {
+            return true
+        } else if lhs.min > rhs.min {
+            return false
+        }
+
+        if lhs.sec < rhs.sec {
+            return true
+        } else if lhs.sec > rhs.sec {
+            return false
+        }
+
+        return false
+    }
+}

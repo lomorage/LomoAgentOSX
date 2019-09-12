@@ -154,7 +154,13 @@ class LomoUpgrade {
 
     func needUpdateAgent() -> Bool {
         if let c = config {
-            return c.agentVer != getCurrentAgentVer()
+            if let latestVer = Version(ver: c.agentVer),
+                let currentVer = getCurrentAgentVer(),
+                let currVer = Version(ver: currentVer) {
+                return currVer < latestVer
+            } else {
+                return false
+            }
         } else {
             return false // config not available yet
         }
@@ -162,8 +168,12 @@ class LomoUpgrade {
 
     func needUpdateLomoUpg() -> Bool {
         if let c = config {
-            if let currentVer = getCurrentLomoUpgVer() {
-                return c.updateVer != currentVer
+            if let latestVer = Version(ver: c.updateVer),
+                let currentVer = getCurrentLomoUpgVer(),
+                let currVer = Version(ver: currentVer) {
+                return currVer < latestVer
+            } else {
+                return false
             }
         }
         return false // config not available yet or LomoUpg not exist
