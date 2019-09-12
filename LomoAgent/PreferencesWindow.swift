@@ -56,16 +56,6 @@ func getIFAddresses() -> [String] {
     return addresses
 }
 
-func dialogAlert(message: String, info: String)
-{
-    let alert = NSAlert()
-    alert.messageText = message
-    alert.informativeText = info
-    alert.alertStyle = NSAlert.Style.warning
-    alert.addButton(withTitle: "OK")
-    alert.runModal()
-}
-
 class PreferencesWindow: NSWindowController, NSWindowDelegate {
 
     @IBOutlet weak var homeDirTextField: NSTextFieldCell!

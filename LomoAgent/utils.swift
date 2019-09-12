@@ -6,8 +6,29 @@
 //  Copyright © 2019 lomoware. All rights reserved.
 //
 
+import Cocoa
 import Foundation
 import os.log
+
+func dialogAlert(message: String, info: String)
+{
+    let alert = NSAlert()
+    alert.messageText = message
+    alert.informativeText = info
+    alert.alertStyle = NSAlert.Style.warning
+    alert.addButton(withTitle: alertOk)
+    alert.runModal()
+}
+
+func dialogOKCancel(message: String, info: String) -> Bool {
+    let alert = NSAlert()
+    alert.messageText = message
+    alert.informativeText = info
+    alert.alertStyle = .warning
+    alert.addButton(withTitle: alertOk)
+    alert.addButton(withTitle: alertCancel)
+    return alert.runModal() == .alertFirstButtonReturn
+}
 
 func getBasePath() -> String? {
     let paths = NSSearchPathForDirectoriesInDomains(.applicationSupportDirectory, .userDomainMask, true)

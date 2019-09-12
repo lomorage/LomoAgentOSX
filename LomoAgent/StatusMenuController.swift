@@ -42,13 +42,19 @@ class StatusMenuController: NSObject {
         NSApp.activate(ignoringOtherApps: true)
     }
 
-    @IBAction func quitClicked(_ sender: Any) {
+    fileprivate func doExit() {
         stopLomod()
         NotificationCenter.default.removeObserver(self)
         stateTimer.invalidate()
         pingTimer.invalidate()
         updateTimer.invalidate()
         NSApplication.shared.terminate(self)
+    }
+
+    @IBAction func quitClicked(_ sender: Any) {
+        if dialogOKCancel(message: quitApp, info: "") {
+            doExit()
+        }
     }
 
     @IBAction func restartClicked(_ sender: NSMenuItem) {
@@ -65,7 +71,7 @@ class StatusMenuController: NSObject {
     }
 
     @objc func onExit(_ notification: Notification) {
-        quitClicked(self)
+        doExit()
     }
 
     @objc func onSettingsChanged(_ notification: Notification) {

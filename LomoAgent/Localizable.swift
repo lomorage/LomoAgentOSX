@@ -24,3 +24,7 @@ let homeDirRequiredLocalized = NSLocalizedString("Home directory required!", com
 
 let userTipsNeedConfigureHomeDir = NSLocalizedString("Please configure home directory for photo storage first", comment: "")
 let userTipsScanQRCode = NSLocalizedString("If the service can not be found automatically, you can use Lomorage APP to scan QR code to configure the service", comment: "")
+
+let alertOk = NSLocalizedString("OK", comment: "")
+let alertCancel = NSLocalizedString("Cancel", comment: "")
+let quitApp = NSLocalizedString("Quit?", comment: "")
