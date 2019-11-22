@@ -73,7 +73,7 @@ CREATE_CHANGELOG() {
   FILTERED_PARAGRAPH=""
   for COMMIT in $PARAGRAPH
    do
-     TRIMMED_COMMIT="$(echo "$COMMIT" | xargs)"
+     TRIMMED_COMMIT="$(echo "$COMMIT" | xargs -0)"
     if [ ! -z "$TRIMMED_COMMIT" ] && ! echo "$TRIMMED_COMMIT" | grep -q "$TYPES_REGEX"
       then
         FILTERED_PARAGRAPH="$FILTERED_PARAGRAPH$TRIMMED_COMMIT\n"
