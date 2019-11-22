@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scheme
+   LastUpgradeVersion = "1010"
+   version = "1.7">
+   <BuildAction
+      parallelizeBuildables = "YES"
+      buildImplicitDependencies = "YES">
+      <PreActions>
+         <ExecutionAction
+            ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
+            <ActionContent
+               title = "Run Script"
+               scriptText = "# Type a script or drag a script file from your workspace to insert its path.&#10;#buildNumber=$(/usr/libexec/PlistBuddy -c &quot;Print CFBundleVersion&quot; &quot;${PROJECT_DIR}/${INFOPLIST_FILE}&quot;)&#10;#buildNumber=$(($buildNumber + 1))&#10;#/usr/libexec/PlistBuddy -c &quot;Set :CFBundleVersion $buildNumber&quot; &quot;${PROJECT_DIR}/${INFOPLIST_FILE}&quot;&#10;nowDate=$(date +&quot;%Y_%m_%d&quot;)&#10;nowTime=$(date +&quot;%H_%M_%S&quot;)&#10;cd &quot;${PROJECT_DIR}&quot;&#10;commitHash=$(git rev-parse --short HEAD)&#10;newVersionString=&quot;$nowDate.$nowTime.0.$commitHash&quot;&#10;/usr/libexec/PlistBuddy -c &quot;Set :CFBundleVersion $newVersionString&quot; &quot;${PROJECT_DIR}/${INFOPLIST_FILE}&quot;&#10;/usr/libexec/PlistBuddy -c &quot;Set :CFBundleShortVersionString $commitHash&quot; &quot;${PROJECT_DIR}/${INFOPLIST_FILE}&quot;&#10;">
+               <EnvironmentBuildable>
+                  <BuildableReference
+                     BuildableIdentifier = "primary"
+                     BlueprintIdentifier = "3A3896F7222F77FA004A2001"
+                     BuildableName = "LomoAgent.app"
+                     BlueprintName = "LomoAgent"
+                     ReferencedContainer = "container:LomoAgent.xcodeproj">
+                  </BuildableReference>
+               </EnvironmentBuildable>
+            </ActionContent>
+         </ExecutionAction>
+      </PreActions>
+      <PostActions>
+         <ExecutionAction
+            ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
+            <ActionContent
+               title = "Run Script"
+               scriptText = "# Type a script or drag a script file from your workspace to insert its path.&#10;set -x&#10;&#10;echo $TARGET_BUILD_DIR&#10;echo $PROJECT_DIR&#10;echo $FULL_PRODUCT_NAME&#10;mkdir -p $PROJECT_DIR/build&#10;rm -rf $PROJECT_DIR/build/*&#10;cp -r $TARGET_BUILD_DIR/$FULL_PRODUCT_NAME $PROJECT_DIR/build&#10;#appdmg $PROJECT_DIR/LomoAgent/Assets.xcassets/dmg.json $PROJECT_DIR/build/LomoAgent.dmg&#10;">
+               <EnvironmentBuildable>
+                  <BuildableReference
+                     BuildableIdentifier = "primary"
+                     BlueprintIdentifier = "3A3896F7222F77FA004A2001"
+                     BuildableName = "LomoAgent.app"
+                     BlueprintName = "LomoAgent"
+                     ReferencedContainer = "container:LomoAgent.xcodeproj">
+                  </BuildableReference>
+               </EnvironmentBuildable>
+            </ActionContent>
+         </ExecutionAction>
+      </PostActions>
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "3A3896F7222F77FA004A2001"
+               BuildableName = "LomoAgent.app"
+               BlueprintName = "LomoAgent"
+               ReferencedContainer = "container:LomoAgent.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
+   </BuildAction>
+   <TestAction
+      buildConfiguration = "Debug"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      shouldUseLaunchSchemeArgsEnv = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "3A3896F7222F77FA004A2001"
+            BuildableName = "LomoAgent.app"
+            BlueprintName = "LomoAgent"
+            ReferencedContainer = "container:LomoAgent.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
+      <Testables>
+      </Testables>
+   </TestAction>
+   <LaunchAction
+      buildConfiguration = "Release"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      language = "zh-Hans"
+      launchStyle = "0"
+      useCustomWorkingDirectory = "NO"
+      ignoresPersistentStateOnLaunch = "NO"
+      debugDocumentVersioning = "YES"
+      debugServiceExtension = "internal"
+      allowLocationSimulation = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "3A3896F7222F77FA004A2001"
+            BuildableName = "LomoAgent.app"
+            BlueprintName = "LomoAgent"
+            ReferencedContainer = "container:LomoAgent.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+      <CommandLineArguments>
+         <CommandLineArgument
+            argument = "--version"
+            isEnabled = "YES">
+         </CommandLineArgument>
+      </CommandLineArguments>
+   </LaunchAction>
+   <ProfileAction
+      buildConfiguration = "Release"
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      savedToolIdentifier = ""
+      useCustomWorkingDirectory = "NO"
+      debugDocumentVersioning = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "3A3896F7222F77FA004A2001"
+            BuildableName = "LomoAgent.app"
+            BlueprintName = "LomoAgent"
+            ReferencedContainer = "container:LomoAgent.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+   </ProfileAction>
+   <AnalyzeAction
+      buildConfiguration = "Debug">
+   </AnalyzeAction>
+   <ArchiveAction
+      buildConfiguration = "Release"
+      revealArchiveInOrganizer = "YES">
+   </ArchiveAction>
+</Scheme>
