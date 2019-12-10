@@ -129,12 +129,12 @@ class LomoUpgrade {
                 return
             }
             let cacheFilePathURL = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask)[0]
-            let appPath = Bundle.main.bundlePath
+            let appPath = Bundle.main.bundleURL
 
             let task = Process()
             task.launchPath = lomoupgPath
             task.arguments = [
-                "--app-dir", appPath,
+                "--app-dir", appPath.path,
                 "--backup-dir", cacheFilePathURL.path,
                 "--curr-version", getCurrentAgentVer()!,
                 "--precmd", "/usr/bin/killall",
