@@ -14,7 +14,7 @@ let PREF_START_ON_BOOT = "PrefStartOnBoot"
 let PREF_DEBUG_MODE = "PrefDebugMode"
 let PREF_HOME_DIR = "PrefHomeDir"
 let PREF_BACKUP_DIR = "PrefBackupDir"
-let PREF_PORT = "PrefPort"
+let PREF_LOMOD_PORT = "PrefPort"
 let LOCAL_HOST = "127.0.0.1"
 
 extension Notification.Name {
@@ -101,7 +101,7 @@ class PreferencesWindow: NSWindowController, NSWindowDelegate {
     }
 
     @IBAction func onPortChange(_ sender: Any) {
-        let oldPort = UserDefaults.standard.string(forKey: PREF_PORT)
+        let oldPort = UserDefaults.standard.string(forKey: PREF_LOMOD_PORT)
         let port = portTextField.stringValue
         let p = Int(port)
         guard p != nil && p! >= 1024 && p! <= 49151 else {
@@ -110,7 +110,7 @@ class PreferencesWindow: NSWindowController, NSWindowDelegate {
         }
         if oldPort != port {
             os_log("Save port: %{public}s", log: .ui, port)
-            UserDefaults.standard.set(port, forKey: PREF_PORT)
+            UserDefaults.standard.set(port, forKey: PREF_LOMOD_PORT)
             generateQRCode()
             NotificationCenter.default.post(name: .NotifySettingsChanged, object: self)
         }
@@ -246,12 +246,12 @@ class PreferencesWindow: NSWindowController, NSWindowDelegate {
             }
         }
 
-        if let port = UserDefaults.standard.string(forKey: PREF_PORT) {
+        if let port = UserDefaults.standard.string(forKey: PREF_LOMOD_PORT) {
             portTextField.stringValue = port
             os_log("Port: %{public}s", log: .ui, port)
         } else {
             portTextField.stringValue = "8000"
-            UserDefaults.standard.set(portTextField.stringValue, forKey: PREF_PORT)
+            UserDefaults.standard.set(portTextField.stringValue, forKey: PREF_LOMOD_PORT)
         }
 
         generateQRCode()

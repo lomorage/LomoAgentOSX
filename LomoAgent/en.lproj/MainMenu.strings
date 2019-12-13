@@ -9,3 +9,6 @@
 
 /* Class = "NSMenuItem"; title = "Restart"; ObjectID = "QEK-wS-71g"; */
 "QEK-wS-71g.title" = "Restart";
+
+/* Class = "NSMenuItem"; title = "Import"; ObjectID = "s1f-Vy-Kej"; */
+"s1f-Vy-Kej.title" = "Import";

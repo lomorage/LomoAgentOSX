@@ -86,7 +86,7 @@ class LomodService
             os_log("setRedundancyBackup, backupDisk empty", log: .logic, type: .error)
             return false
         }
-        let port = UserDefaults.standard.string(forKey: PREF_PORT)
+        let port = UserDefaults.standard.string(forKey: PREF_LOMOD_PORT)
         guard port != nil else {
             os_log("setRedundancyBackup, port not ready yet", log: .logic, type: .error)
             return false
@@ -137,7 +137,7 @@ class LomodService
     }
 
     func getUserList() {
-        if let port = UserDefaults.standard.string(forKey: PREF_PORT) {
+        if let port = UserDefaults.standard.string(forKey: PREF_LOMOD_PORT) {
             if let url = URL(string: "http://\(LOCAL_HOST):\(port)/user") {
                 let opGroup = DispatchGroup()
                 opGroup.enter()
@@ -175,7 +175,7 @@ class LomodService
 
     func checkServerStatus() -> (SystemInfo?, Error?) {
         var networkError: Error?
-        if let port = UserDefaults.standard.string(forKey: PREF_PORT) {
+        if let port = UserDefaults.standard.string(forKey: PREF_LOMOD_PORT) {
             if let url = URL(string: "http://\(LOCAL_HOST):\(port)/system") {
                 let opGroup = DispatchGroup()
                 opGroup.enter()
