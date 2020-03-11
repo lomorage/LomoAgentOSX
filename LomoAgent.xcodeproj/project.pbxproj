@@ -14,9 +14,7 @@
 		3A16D9E1231C53290092EADD /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A16D9E0231C53290092EADD /* ServiceManagement.framework */; };
 		3A16D9E3231C605F0092EADD /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A16D9E2231C605F0092EADD /* main.swift */; };
 		3A2FE40022E2B339000022B0 /* QRImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2FE3FF22E2B339000022B0 /* QRImage.swift */; };
-		3A35C5D92240B5F30030FF1B /* avconv in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3A35C5D62240B5EA0030FF1B /* avconv */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		3A35C5DA2240B5F30030FF1B /* lomod in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3A35C5D52240B5E90030FF1B /* lomod */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		3A35C5DC2240B6040030FF1B /* avconv in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3A35C5CF2240B5A90030FF1B /* avconv */; };
 		3A35C5DD2240B6040030FF1B /* lomod in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3A35C5CE2240B5A90030FF1B /* lomod */; };
 		3A35C5E122435B710030FF1B /* PreferencesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A35C5E322435B710030FF1B /* PreferencesWindow.xib */; };
 		3A35C5EA224365340030FF1B /* AboutWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A35C5E8224365340030FF1B /* AboutWindow.swift */; };
@@ -34,8 +32,10 @@
 		3AE33D3B23244F2E00B81C13 /* rsync in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3A818C152320D36A00B110B3 /* rsync */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		3AE33D3E23244F6400B81C13 /* lomoupg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3AE33D3C23244F5100B81C13 /* lomoupg */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		3AE33D422324CD9300B81C13 /* LomoAgentLauncher.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3A16D9CF231C501F0092EADD /* LomoAgentLauncher.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		3AE8C8A223A4464D009FA2E9 /* lomo-web in Resources */ = {isa = PBXBuildFile; fileRef = 3AE8C8A123A4464C009FA2E9 /* lomo-web */; };
 		3AE8C8A323A44924009FA2E9 /* lomo-web in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3AE8C8A123A4464C009FA2E9 /* lomo-web */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		3AEB69A92419673300F57177 /* ffmpeg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3AEB69A82419673300F57177 /* ffmpeg */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		3AEB69AB24196C6F00F57177 /* ffprobe in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3AEB69AA24196C6F00F57177 /* ffprobe */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		3AEB69AD24196C8700F57177 /* ffmpeg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3AEB69AC24196C8700F57177 /* ffmpeg */; };
 		4EC270328FC84ECCB0FA9CB1 /* Pods_LomoAgent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9542EC456060AE536C4531A /* Pods_LomoAgent.framework */; };
 /* End PBXBuildFile section */
 
@@ -56,10 +56,11 @@
 			dstPath = "";
 			dstSubfolderSpec = 6;
 			files = (
+				3AEB69AB24196C6F00F57177 /* ffprobe in CopyFiles */,
+				3AEB69A92419673300F57177 /* ffmpeg in CopyFiles */,
 				3AE8C8A323A44924009FA2E9 /* lomo-web in CopyFiles */,
 				3AE33D3E23244F6400B81C13 /* lomoupg in CopyFiles */,
 				3AE33D3B23244F2E00B81C13 /* rsync in CopyFiles */,
-				3A35C5D92240B5F30030FF1B /* avconv in CopyFiles */,
 				3A35C5DA2240B5F30030FF1B /* lomod in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -70,7 +71,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				3A35C5DC2240B6040030FF1B /* avconv in CopyFiles */,
+				3AEB69AD24196C8700F57177 /* ffmpeg in CopyFiles */,
 				3A35C5DD2240B6040030FF1B /* lomod in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -92,9 +93,7 @@
 		3A2FE3FF22E2B339000022B0 /* QRImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRImage.swift; sourceTree = "<group>"; };
 		3A2FE40122E2BC34000022B0 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		3A35C5CE2240B5A90030FF1B /* lomod */ = {isa = PBXFileReference; lastKnownFileType = folder; name = lomod; path = dependencies/lomod/Contents/Frameworks/lomod; sourceTree = "<group>"; };
-		3A35C5CF2240B5A90030FF1B /* avconv */ = {isa = PBXFileReference; lastKnownFileType = folder; name = avconv; path = dependencies/lomod/Contents/Frameworks/avconv; sourceTree = "<group>"; };
 		3A35C5D52240B5E90030FF1B /* lomod */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = lomod; path = dependencies/lomod/Contents/MacOS/lomod; sourceTree = "<group>"; };
-		3A35C5D62240B5EA0030FF1B /* avconv */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = avconv; path = dependencies/lomod/Contents/MacOS/avconv; sourceTree = "<group>"; };
 		3A35C5DF224295B20030FF1B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MainMenu.strings; sourceTree = "<group>"; };
 		3A35C5E022435B250030FF1B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/MainMenu.strings"; sourceTree = "<group>"; };
 		3A35C5E222435B710030FF1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/PreferencesWindow.xib; sourceTree = "<group>"; };
@@ -121,6 +120,9 @@
 		3AC3E845229F9B60004EA1D7 /* HyperlinkTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HyperlinkTextField.swift; sourceTree = "<group>"; };
 		3AE33D3C23244F5100B81C13 /* lomoupg */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = lomoupg; path = dependencies/lomod/Contents/MacOS/lomoupg; sourceTree = "<group>"; };
 		3AE8C8A123A4464C009FA2E9 /* lomo-web */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = "lomo-web"; path = "dependencies/lomod/Contents/MacOS/lomo-web"; sourceTree = "<group>"; };
+		3AEB69A82419673300F57177 /* ffmpeg */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = ffmpeg; path = dependencies/lomod/Contents/MacOS/ffmpeg; sourceTree = "<group>"; };
+		3AEB69AA24196C6F00F57177 /* ffprobe */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = ffprobe; path = dependencies/lomod/Contents/MacOS/ffprobe; sourceTree = "<group>"; };
+		3AEB69AC24196C8700F57177 /* ffmpeg */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ffmpeg; path = dependencies/lomod/Contents/Frameworks/ffmpeg; sourceTree = "<group>"; };
 		7F29134117C52A44E7560EE1 /* Pods-LomoAgent.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LomoAgent.release.xcconfig"; path = "Pods/Target Support Files/Pods-LomoAgent/Pods-LomoAgent.release.xcconfig"; sourceTree = "<group>"; };
 		A9542EC456060AE536C4531A /* Pods_LomoAgent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LomoAgent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEF4596F6EE46EA8DD33E70A /* Pods-LomoAgentLauncher.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LomoAgentLauncher.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LomoAgentLauncher/Pods-LomoAgentLauncher.debug.xcconfig"; sourceTree = "<group>"; };
@@ -192,7 +194,6 @@
 		3A35C5BE2240A3730030FF1B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3A35C5CF2240B5A90030FF1B /* avconv */,
 				3A35C5CE2240B5A90030FF1B /* lomod */,
 			);
 			name = Frameworks;
@@ -201,10 +202,11 @@
 		3A35C5BF2240A3840030FF1B /* MacOS */ = {
 			isa = PBXGroup;
 			children = (
+				3AEB69AA24196C6F00F57177 /* ffprobe */,
+				3AEB69A82419673300F57177 /* ffmpeg */,
 				3AE8C8A123A4464C009FA2E9 /* lomo-web */,
 				3AE33D3C23244F5100B81C13 /* lomoupg */,
 				3A818C152320D36A00B110B3 /* rsync */,
-				3A35C5D62240B5EA0030FF1B /* avconv */,
 				3A35C5D52240B5E90030FF1B /* lomod */,
 			);
 			name = MacOS;
@@ -213,6 +215,7 @@
 		3A3896EF222F77FA004A2001 = {
 			isa = PBXGroup;
 			children = (
+				3AEB69AC24196C8700F57177 /* ffmpeg */,
 				3A35C5B52240A01D0030FF1B /* dependencies */,
 				3A3896FA222F77FA004A2001 /* LomoAgent */,
 				3A16D9D0231C501F0092EADD /* LomoAgentLauncher */,
@@ -357,7 +360,6 @@
 			files = (
 				3A8BEF0A22E419BB00DAE39C /* Localizable.strings in Resources */,
 				3A3896FE222F7801004A2001 /* Assets.xcassets in Resources */,
-				3AE8C8A223A4464D009FA2E9 /* lomo-web in Resources */,
 				3A35C5E122435B710030FF1B /* PreferencesWindow.xib in Resources */,
 				3A389701222F7801004A2001 /* MainMenu.xib in Resources */,
 				3A35C5EC22436CBA0030FF1B /* AboutWindow.xib in Resources */,
@@ -660,7 +662,7 @@
 			baseConfigurationReference = 116707D12FB1B16BD38492A2 /* Pods-LomoAgent.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 2019_10_10.00_41_58.0.fc9ca86;
@@ -683,7 +685,7 @@
 			baseConfigurationReference = 7F29134117C52A44E7560EE1 /* Pods-LomoAgent.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 2019_10_10.00_41_58.0.fc9ca86;

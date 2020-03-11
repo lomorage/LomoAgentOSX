@@ -1,6 +1,14 @@
 #!/bin/bash
+set -e
 
-AVCONV_PATH=/usr/local/bin/avconv
+realpath() {
+    [[ $1 = /* ]] && echo "$1" || echo "$PWD/${1#./}"
+}
+
+FFMPEG_HOME_ABS=$(realpath "deps/ffmpeg")
+FFMPEG_PATH=$FFMPEG_HOME_ABS/ffmpeg
+FFPROBE_PATH=$FFMPEG_HOME_ABS/ffprobe
+
 LOMOD_PATH=/Users/jeromy/.go/src/bitbucket.org/lomoware/lomo-backend/cmd/lomod/lomod
 LOMOWEB_PATH=/Users/jeromy/.go/src/github.com/lomorage/lomo-web/lomo-web
 
@@ -12,14 +20,15 @@ FRAMEWORKS_DIR=lomod/Contents/Frameworks
 BINARY_DIR=lomod/Contents/MacOS
 
 mkdir -p $BINARY_DIR
-mkdir -p $FRAMEWORKS_DIR/avconv
+mkdir -p $FRAMEWORKS_DIR/ffmpeg
 mkdir -p $FRAMEWORKS_DIR/lomod
 
-rm -rf $FRAMEWORKS_DIR/avconv/*
+rm -rf $FRAMEWORKS_DIR/ffmpeg/*
 rm -rf $FRAMEWORKS_DIR/lomod/*
 rm -rf $BINARY_DIR/*
 
-cp $AVCONV_PATH $BINARY_DIR
+cp $FFMPEG_PATH $BINARY_DIR
+cp $FFPROBE_PATH $BINARY_DIR
 cp $LOMOD_PATH $BINARY_DIR
 cp $LOMOWEB_PATH $BINARY_DIR
 cp $LOMOUPG_PATH $BINARY_DIR
@@ -27,5 +36,6 @@ cp $RSYNC_PATH $BINARY_DIR
 
 cd $BINARY_DIR
 python ../../../matryoshka_name_tool.py  -L /usr/local/ -d ../Frameworks/lomod/ lomod
-python ../../../matryoshka_name_tool.py  -L /usr/local/ -d ../Frameworks/avconv/ avconv
+python ../../../matryoshka_name_tool.py  -L $FFMPEG_HOME_ABS -d ../Frameworks/ffmpeg/ ffmpeg
+python ../../../matryoshka_name_tool.py  -L $FFMPEG_HOME_ABS -d ../Frameworks/ffmpeg/ ffprobe
 cd -

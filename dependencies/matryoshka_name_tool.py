@@ -62,8 +62,14 @@ class MatryoshkaName:
         out, err = p.communicate()
         lines = out.splitlines()
         for line in lines[1:]:
-            if self.libdir_pattern.match(line):
-                dylib = self.dylib_pattern.sub(r'\1',line)
+            libdir_match = self.libdir_pattern.match(line)
+            loader_path = line.strip().startswith('@loader_path')
+            if libdir_match or loader_path:
+                if libdir_match:
+                    dylib = self.dylib_pattern.sub(r'\1',line)
+                else:
+                    dylib = line.strip().split(' ')[0].replace('@loader_path', self.args.libdir)
+
                 if dylib not in self.dylibs_copied:
                     if not self.args.update and not os.path.isfile(self.args.install_libdir + os.path.basename(dylib)):
                         shutil.copy(dylib, self.args.install_libdir)
@@ -71,9 +77,14 @@ class MatryoshkaName:
                 target = self.args.install_libdir + os.path.basename(object) \
                     if (os.path.splitext(os.path.basename(object))[1] == '.dylib') \
                     else object
-                cmd = [ 'sudo', 'install_name_tool', '-change', dylib,
-                         '@executable_path/' + self.args.install_libdir + os.path.basename(dylib),
-                         target ]
+                if libdir_match:
+                    cmd = [ 'sudo', 'install_name_tool', '-change', dylib,
+                             '@executable_path/' + self.args.install_libdir + os.path.basename(dylib),
+                             target ]
+                else:
+                    cmd = [ 'sudo', 'install_name_tool', '-change', line.strip().split(' ')[0],
+                             '@executable_path/' + self.args.install_libdir + os.path.basename(dylib),
+                             target ]
                 sp.call(cmd)
                 print "\t" + ' '.join(cmd)
                 if dylib not in self.dylibs_recursed and dylib != object: # recurse
