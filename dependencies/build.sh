@@ -9,6 +9,10 @@ FFMPEG_HOME_ABS=$(realpath "deps/ffmpeg")
 FFMPEG_PATH=$FFMPEG_HOME_ABS/ffmpeg
 FFPROBE_PATH=$FFMPEG_HOME_ABS/ffprobe
 
+EXIFTOOL_HOME_ABS=$(realpath "deps/exiftool")
+EXIFTOOL_PATH=$EXIFTOOL_HOME_ABS/exiftool
+EXIFTOOL_LIB=$EXIFTOOL_HOME_ABS/lib
+
 LOMOD_PATH=/Users/jeromy/.go/src/bitbucket.org/lomoware/lomo-backend/cmd/lomod/lomod
 LOMOWEB_PATH=/Users/jeromy/.go/src/github.com/lomorage/lomo-web/lomo-web
 
@@ -29,6 +33,8 @@ rm -rf $BINARY_DIR/*
 
 cp $FFMPEG_PATH $BINARY_DIR
 cp $FFPROBE_PATH $BINARY_DIR
+cp $EXIFTOOL_PATH $BINARY_DIR
+cp -R $EXIFTOOL_LIB $BINARY_DIR
 cp $LOMOD_PATH $BINARY_DIR
 cp $LOMOWEB_PATH $BINARY_DIR
 cp $LOMOUPG_PATH $BINARY_DIR
