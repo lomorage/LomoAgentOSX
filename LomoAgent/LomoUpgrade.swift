@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import os.log
+import CocoaLumberjack
 import Zip
 
 let LOMO_UPGRADE_URL = "https://lomorage.com/release.json"
@@ -43,7 +43,7 @@ class LomoUpgrade {
         if needUpdateLomoUpg() {
             let succ = updateLomoUpg()
             guard succ else {
-                os_log("update LomoUpg failed!", log: .logic, type: .error)
+                DDLogError("update LomoUpg failed!")
                 return
             }
         }
@@ -61,7 +61,7 @@ class LomoUpgrade {
         let cacheFilePath = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask)[0]
         var destinationFileUrl: URL? = cacheFilePath.appendingPathComponent("LomoUpg.zip")
         guard destinationFileUrl != nil else {
-            os_log("updateLomoUpg, destinationFileUrl is nil", log: .logic, type: .error)
+            DDLogError("updateLomoUpg, destinationFileUrl is nil")
             return false
         }
 
@@ -79,12 +79,12 @@ class LomoUpgrade {
                     do {
                         try FileManager.default.copyItem(at: tempLocalUrl, to: destinationFileUrl!)
                     } catch (let writeError) {
-                        os_log("updateLomoUpg, Error copying file from %{public}s to %{public}s, err: %{public}s", log: .logic, type: .error, tempLocalUrl.absoluteString, destinationFileUrl!.absoluteString, writeError.localizedDescription)
+                        DDLogError("updateLomoUpg, Error copying file from \(tempLocalUrl.absoluteString) to \(destinationFileUrl!.absoluteString), err: \(writeError.localizedDescription)")
                         try? FileManager.default.removeItem(at: destinationFileUrl!)
                         destinationFileUrl = nil
                     }
                 } else {
-                    os_log("updateLomoUpg, Error took place while downloading a file. Error description: %{public}s", log: .logic, type: .error, String(describing: error?.localizedDescription))
+                    DDLogError("updateLomoUpg, Error took place while downloading a file. Error description: \(String(describing: error?.localizedDescription))")
                     destinationFileUrl = nil
                 }
                 opGroup.leave()
@@ -95,23 +95,16 @@ class LomoUpgrade {
 
         if destinationFileUrl != nil {
             guard let executablePath = Bundle.main.executableURL?.deletingLastPathComponent(), let lomoupgPath = URL(string: executablePath.path) else {
-                os_log("updateLomoUpg, can't get lomoupgPath", log: .logic, type: .error)
+                DDLogError("updateLomoUpg, can't get lomoupgPath")
                 return false
             }
 
             do {
                 try Zip.unzipFile(destinationFileUrl!, destination: lomoupgPath, overwrite: true, password: nil)
-                os_log("updateLomoUpg, unzip %{public}s to %{public}s succ",
-                       log: .logic, type: .error,
-                       destinationFileUrl!.absoluteString,
-                       lomoupgPath.absoluteString)
+                DDLogError("updateLomoUpg, unzip \(destinationFileUrl!.absoluteString) to \(lomoupgPath.absoluteString) succ")
                 return true
             } catch let err as NSError  {
-                os_log("updateLomoUpg, unzip %{public}s to %{public}s failed with error: %{public}s",
-                       log: .logic, type: .error,
-                       destinationFileUrl!.absoluteString,
-                       lomoupgPath.absoluteString,
-                       err.localizedDescription)
+                DDLogError("updateLomoUpg, unzip \(destinationFileUrl!.absoluteString) to \(lomoupgPath.absoluteString) failed with error: \(err.localizedDescription)")
             }
 
             try? FileManager.default.removeItem(at: destinationFileUrl!)
@@ -123,9 +116,9 @@ class LomoUpgrade {
     func updateAgent() {
         if let executablePath = Bundle.main.executableURL?.deletingLastPathComponent() {
             let lomoupgPath = executablePath.path + "/lomoupg"
-            os_log("lomoupg Path: %{public}s", log: .logic, lomoupgPath)
+            DDLogInfo("lomoupg Path: \(lomoupgPath)")
             guard FileManager.default.fileExists(atPath: lomoupgPath) else {
-                os_log("lomoupgPath not found: %{public}s", log: .logic, type: .error, lomoupgPath)
+                DDLogError("lomoupgPath not found: \(lomoupgPath)")
                 return
             }
             let cacheFilePathURL = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask)[0]
@@ -147,7 +140,7 @@ class LomoUpgrade {
             // not able to get result now, will get reboot if succ
             task.launch()
         } else {
-            os_log("updateAgent error, not able to get lomoupg path", log: .logic, type: .error)
+            DDLogError("updateAgent error, not able to get lomoupg path")
         }
     }
 
@@ -185,20 +178,20 @@ class LomoUpgrade {
     func getCurrentLomoUpgVer() -> String? {
         if let executablePath = Bundle.main.executableURL?.deletingLastPathComponent() {
             let lomoupgPath = executablePath.path + "/lomoupg"
-            os_log("lomoupg Path: %{public}s", log: .logic, lomoupgPath)
+            DDLogInfo("lomoupg Path: \(lomoupgPath)")
             guard FileManager.default.fileExists(atPath: lomoupgPath) else {
-                os_log("getCurrentLomoUpgVer, lomoupg not found: %{public}s", log: .logic, type: .error, lomoupgPath)
+                DDLogError("getCurrentLomoUpgVer, lomoupg not found: \(lomoupgPath)")
                 return nil
             }
             let (output, error, status) = runCommand(cmd: lomoupgPath, args: "--version")
             if status == 0 {
                 return output.first
             } else {
-                os_log("getCurrentLomoUpgVer error: %{public}s", log: .logic, type: .error, error)
+                DDLogError("getCurrentLomoUpgVer error: \(error)")
                 return nil
             }
         } else {
-            os_log("getCurrentLomoUpgVer error, not able to get lomoupg path", log: .logic, type: .error)
+            DDLogError("getCurrentLomoUpgVer error, not able to get lomoupg path")
             return nil
         }
     }
@@ -209,10 +202,10 @@ class LomoUpgrade {
             opGroup.enter()
             self.networkSession.loadData(with: url, completionHandler: { (data, response, error) in
                 if let error = error {
-                    os_log("needUpdateLomoupgAndLomoAgent request error: %{public}s", log: .logic, type: .error, error.localizedDescription)
+                    DDLogError("needUpdateLomoupgAndLomoAgent request error: \(error.localizedDescription)")
                 } else if let data = data, let httpresp = response as? HTTPURLResponse {
                     if httpresp.statusCode == 200, let jsonResult = try? JSONSerialization.jsonObject(with: data) as? [String: Any] {
-                        os_log("needUpdateLomoupgAndLomoAgent, json response:  %{public}@", log: .logic, jsonResult!)
+                        DDLogInfo("needUpdateLomoupgAndLomoAgent, json response:  \(jsonResult!)")
 
                         if let osxConf = jsonResult?["darwin"] as? [String: Any] {
 
@@ -221,20 +214,20 @@ class LomoUpgrade {
                                 let agentUrl = osxConf["URL"] as? String,
                                 let updateVer = osxConf["LomoUpgVer"] as? String,
                                 let updateUrl = osxConf["LomoUpdateURL"] as? String else {
-                                    os_log("fetchContactList, malformed format!", log: .logic, type: .error)
+                                    DDLogError("fetchContactList, malformed format!")
                                     return
                             }
 
                             self.config = UpgradeConfig(agentSha256: agentSha256, agentVer: agentVer, agentUrl: agentUrl, updateVer: updateVer, updateUrl: updateUrl)
                         } else {
-                            os_log("fetchContactList, osx version not available", log: .logic, type: .error)
+                            DDLogError("fetchContactList, osx version not available")
                         }
 
                     } else {
-                        os_log("fetchContactList, userList error: %{public}s\n%{public}@", log: .logic, type: .error, String(data: data, encoding: .utf8)!, httpresp)
+                        DDLogError("fetchContactList, userList error: \(String(data: data, encoding: .utf8)!)\n\(httpresp)")
                     }
                 } else {
-                    os_log("needUpdateLomoupgAndLomoAgent, error: %{public}s", log: .logic, type: .error, String(describing: response))
+                    DDLogError("needUpdateLomoupgAndLomoAgent, error: \(String(describing: response))")
                 }
             }, sync: opGroup)
             opGroup.wait()

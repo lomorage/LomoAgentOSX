@@ -7,27 +7,56 @@
 //
 
 import Cocoa
-import os.log
+import CocoaLumberjack
 
 let launcherAppId = "lomoware.lomorage.LomoAgentLauncher"
 
-extension OSLog {
-    private static var subsystem = Bundle.main.bundleIdentifier!
+class LogFormatter: NSObject, DDLogFormatter {
+    let threadUnsafeDateFormatter: DateFormatter
 
-    static let ui = OSLog(subsystem: subsystem, category: "UI")
-    static let logic = OSLog(subsystem: subsystem, category: "Logic")
+    override init() {
+        threadUnsafeDateFormatter = DateFormatter()
+        threadUnsafeDateFormatter.formatterBehavior = .behavior10_4
+        threadUnsafeDateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss:SSS"
+
+        super.init()
+    }
+
+    func format(message logMessage: DDLogMessage) -> String? {
+        let dateAndTime = threadUnsafeDateFormatter.string(from: logMessage.timestamp)
+
+        var logLevel: String
+        let logFlag = logMessage.flag
+        if logFlag.contains(.error) {
+            logLevel = "E"
+        } else if logFlag.contains(.warning){
+            logLevel = "W"
+        } else if logFlag.contains(.info) {
+            logLevel = "I"
+        } else if logFlag.contains(.debug) {
+            logLevel = "D"
+        } else if logFlag.contains(.verbose) {
+            logLevel = "V"
+        } else {
+            logLevel = "?"
+        }
+
+        let formattedLog = "\(dateAndTime) [\(logMessage.threadID)] |\(logLevel)| [\(logMessage.fileName) \(logMessage.function ?? "nil")] #\(logMessage.line): \(logMessage.message)"
+
+        return formattedLog;
+    }
 }
 
 func setupSigHandler() {
     signal(SIGTERM) { signal in
-        os_log("Interrupted! Cleaning up...", log: .logic, type: .info)
+        DDLogInfo("Interrupted! Cleaning up...")
         NotificationCenter.default.post(name: .NotifyExit, object: nil)
     }
 }
 
 func getLomodService() -> LomodService? {
     guard let appDelegate = NSApplication.shared.delegate as? AppDelegate else {
-        os_log("getLomodService, error when getting AppDelegate", log: .logic, type: .error)
+        DDLogError("getLomodService, error when getting AppDelegate")
         return nil
     }
 
@@ -43,6 +72,39 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     let lomodService = LomodService()
 
+    private var fileLogger: DDFileLogger!
+
+    func setFileLoggerLevel(_ loglevel: DDLogLevel) {
+        DDLogInfo("set log level to: \(loglevel.rawValue)")
+        DDLog.remove(fileLogger)
+        DDLog.add(fileLogger, with: loglevel)
+        DDLog.remove(DDASLLogger.sharedInstance)
+        DDLog.add(DDASLLogger.sharedInstance, with: loglevel)
+    }
+
+    func setupLogger() {
+        // console app
+        DDASLLogger.sharedInstance.logFormatter = LogFormatter()
+        DDLog.add(DDASLLogger.sharedInstance, with: .info)
+
+        let logFileManager = DDLogFileManagerDefault.init(logsDirectory: getLogDir())
+        fileLogger = DDFileLogger.init(logFileManager: logFileManager)
+        fileLogger.rollingFrequency = TimeInterval(60*60*24)
+        fileLogger.logFileManager.maximumNumberOfLogFiles = 7
+        fileLogger.maximumFileSize = 10*1024*1024
+        fileLogger.logFileManager.logFilesDiskQuota = 50*1024*1024
+        fileLogger.logFormatter = LogFormatter()
+        DDLog.add(fileLogger, with: .warning)
+
+        var logLevel = DDLogLevel.info;
+        if UserDefaults.standard.bool(forKey: PREF_DEBUG_MODE) {
+            logLevel = DDLogLevel.verbose;
+        }
+        setFileLoggerLevel(logLevel)
+
+        DDLogInfo("logging to \(String(describing: fileLogger.logFileManager.logsDirectory))")
+    }
+
     func applicationWillFinishLaunching(_ aNotification: Notification) {
         let version = Bundle.main.infoDictionary?["CFBundleVersion"] as! String
         let arguments = CommandLine.arguments
@@ -57,7 +119,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
 
         if !exit {
-            os_log("LomoAgent version: %{public}s", log: .logic, version)
+            setupLogger()
+            DDLogInfo("LomoAgent version: \(version)")
             NotificationCenter.default.post(name: .NotifyStart, object: self)
         }
     }

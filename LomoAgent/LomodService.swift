@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import os.log
+import CocoaLumberjack
 
 struct BackupRecordItem {
     let backupOutput: String
@@ -57,7 +57,7 @@ class LomodService
 
     func setRedundancyBackup(backupDisk: String) -> Bool {
         guard backupDisk != "" else {
-            os_log("setRedundancyBackup, backupDisk empty", log: .logic, type: .error)
+            DDLogError("setRedundancyBackup, backupDisk empty")
             return false
         }
         if members.count > 0 {
@@ -76,24 +76,24 @@ class LomodService
             }
             return allSucc
         } else {
-            os_log("setRedundancyBackup, no members ready yet, will retry later", log: .logic, type: .error)
+            DDLogError("setRedundancyBackup, no members ready yet, will retry later")
             return false
         }
     }
 
     func setRedundancyBackup(username: String, backupDisk: String) -> Bool {
         guard backupDisk != "" else {
-            os_log("setRedundancyBackup, backupDisk empty", log: .logic, type: .error)
+            DDLogError("setRedundancyBackup, backupDisk empty")
             return false
         }
         let port = UserDefaults.standard.string(forKey: PREF_LOMOD_PORT)
         guard port != nil else {
-            os_log("setRedundancyBackup, port not ready yet", log: .logic, type: .error)
+            DDLogError("setRedundancyBackup, port not ready yet")
             return false
         }
 
         var ret = false
-        os_log("setRedundancyBackup for %{public}s to %{public}s", log: .logic, username, backupDisk)
+        DDLogInfo("setRedundancyBackup for \(username) to \(backupDisk)")
 
         if let url = URL(string: "http://\(LOCAL_HOST):\(port!)/system/backup") {
             var json = [String:Any]()
@@ -112,21 +112,21 @@ class LomodService
                 opGroup.enter()
                 self.networkSession.reqData(with: urlRequest, completionHandler: { (data, response, error) in
                     if let error = error {
-                        os_log("setRedundancyBackup, error: %{public}s", log: .logic, type: .error, error.localizedDescription)
+                        DDLogError("setRedundancyBackup, error: \(error.localizedDescription)")
                     } else if let httpresp = response as? HTTPURLResponse {
                         if httpresp.statusCode == 200 {
-                            os_log("setRedundancyBackup for %{public}s succ", log: .logic, username)
+                            DDLogInfo("setRedundancyBackup for \(username) succ")
                             ret = true
                         } else {
-                            os_log("setRedundancyBackup, error: %{public}s", log: .logic, type: .error, String(describing: response))
+                            DDLogError("setRedundancyBackup, error: \(String(describing: response))")
                         }
                     } else {
-                        os_log("setRedundancyBackup, error: %{public}s", log: .logic, type: .error, String(describing: response))
+                        DDLogError("setRedundancyBackup, error: \(String(describing: response))")
                     }
                 }, sync: opGroup)
                 opGroup.wait()
             } catch {
-                os_log("setRedundancyBackup, failed: %{public}s", log: .logic, type: .error, error.localizedDescription)
+                DDLogError("setRedundancyBackup, failed: \(error.localizedDescription)")
             }
         }
         return ret
@@ -143,10 +143,10 @@ class LomodService
                 opGroup.enter()
                 networkSession.reqData(with: URLRequest(url: url), completionHandler: { (data, response, error) in
                     if let error = error {
-                        os_log("fetchContactList, userList error: %{public}s", log: .logic, type: .error, error.localizedDescription)
+                        DDLogError("fetchContactList, userList error: \(error.localizedDescription)")
                     } else if let data = data, let httpresp = response as? HTTPURLResponse {
                         if httpresp.statusCode == 200, let jsonResult = try? JSONSerialization.jsonObject(with: data) as? [String: Any] {
-                            os_log("fetchContactList, json response:  %{public}@", log: .logic, jsonResult!)
+                            DDLogInfo("fetchContactList, json response:  \(jsonResult!)")
 
                             if let userList = jsonResult?["Users"] as? [Any] {
                                 for userItem in userList {
@@ -162,10 +162,10 @@ class LomodService
                             }
 
                         } else {
-                            os_log("fetchContactList, userList error: %{public}s\n%{public}@", log: .logic, type: .error, String(data: data, encoding: .utf8)!, httpresp)
+                            DDLogError("fetchContactList, userList error: \(String(data: data, encoding: .utf8)!)\n\(httpresp)")
                         }
                     } else {
-                        os_log("fetchContactList, userList error: %{public}@", log: .logic, type: .error, String(describing: response))
+                        DDLogError("fetchContactList, userList error: \(String(describing: response))" )
                     }
                 }, sync: opGroup)
                 opGroup.wait()
@@ -179,17 +179,17 @@ class LomodService
             if let url = URL(string: "http://\(LOCAL_HOST):\(port)/system") {
                 let opGroup = DispatchGroup()
                 opGroup.enter()
-                os_log("check server status: %{public}s", log: .logic, String(describing: url))
+                DDLogInfo("check server status: \(String(describing: url))")
                 networkSession.loadData(with: url, completionHandler: { (data, response, error) in
                     if let error = error {
                         networkError = error
-                        os_log("check server status error: %{public}s", log: .logic, type: .error, error.localizedDescription)
+                        DDLogError("check server status error: \(error.localizedDescription)")
                     } else if let httpresp = response as? HTTPURLResponse,
                         httpresp.statusCode == 200 {
                         if let data = data {
                             do {
                                 let jsonResult = try JSONSerialization.jsonObject(with: data) as! [String: Any]
-                                os_log("check server status, json response:  %{public}@", log: .logic, jsonResult)
+                                DDLogInfo("check server status, json response:  \(jsonResult)")
                                 if let osSystem = jsonResult["OS"] as? String,
                                     let apiVer = jsonResult["APIVersion"] as? String,
                                     let status = jsonResult["SystemStatus"] as? Int32,
@@ -218,20 +218,20 @@ class LomodService
                                                             lastBackupSuccTime: lastBackupSuccTime
                                                     )
                                                 } else {
-                                                    os_log("checkServerStatus, wrong \"LastBackup\" format", log: .logic, type: .error)
+                                                    DDLogError("checkServerStatus, wrong \"LastBackup\" format")
                                                 }
                                             }
                                         }
                                     }
                                 }
                             } catch let error as NSError {
-                                print("Failed to load: \(error.localizedDescription), \(String(describing: data))")
+                                DDLogError("Failed to load: \(error.localizedDescription), \(String(describing: data))")
                             }
                         } else {
-                            os_log("checkServerStatus, not able to convert %{public}s to String", log: .logic, type: .error, String(describing: data))
+                            DDLogError("checkServerStatus, not able to convert \(String(describing: data)) to String")
                         }
                     } else {
-                        os_log("check server status failure:", log: .logic, type: .error, String(describing: response))
+                        DDLogError("check server status failure: \(String(describing: response))")
                     }
                 }, sync: opGroup)
                 opGroup.wait()

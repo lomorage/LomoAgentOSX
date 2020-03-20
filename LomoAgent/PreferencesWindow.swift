@@ -8,7 +8,7 @@
 
 import Cocoa
 import ServiceManagement
-import os.log
+import CocoaLumberjack
 
 let PREF_START_ON_BOOT = "PrefStartOnBoot"
 let PREF_DEBUG_MODE = "PrefDebugMode"
@@ -109,7 +109,7 @@ class PreferencesWindow: NSWindowController, NSWindowDelegate {
             return
         }
         if oldPort != port {
-            os_log("Save port: %{public}s", log: .ui, port)
+            DDLogInfo("Save port: \(port)")
             UserDefaults.standard.set(port, forKey: PREF_LOMOD_PORT)
             generateQRCode()
             NotificationCenter.default.post(name: .NotifySettingsChanged, object: self)
@@ -156,7 +156,7 @@ class PreferencesWindow: NSWindowController, NSWindowDelegate {
                     let oldHomeDir = UserDefaults.standard.string(forKey: PREF_HOME_DIR)
                     if oldHomeDir != homeDirTextField.stringValue {
                         UserDefaults.standard.set(homeDirTextField.stringValue, forKey: PREF_HOME_DIR)
-                        os_log("Save home dir: %{public}s", log: .ui, homeDirTextField.stringValue)
+                        DDLogInfo("Save home dir: \(homeDirTextField.stringValue)")
                         NotificationCenter.default.post(name: .NotifySettingsChanged, object: self)
                         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
                             self.generateQRCode()
@@ -178,7 +178,7 @@ class PreferencesWindow: NSWindowController, NSWindowDelegate {
                     let oldBackupDir = UserDefaults.standard.string(forKey: PREF_BACKUP_DIR)
                     if oldBackupDir != backupDirTextField.stringValue {
                         UserDefaults.standard.set(backupDirTextField.stringValue, forKey: PREF_BACKUP_DIR)
-                        os_log("Save backup dir: %{public}s", log: .ui, backupDirTextField.stringValue)
+                        DDLogInfo("Save backup dir: \(backupDirTextField.stringValue)")
 
                         if let lomodService = getLomodService() {
                             _ = lomodService.setRedundancyBackup(backupDisk: backupDirTextField.stringValue)
@@ -211,19 +211,19 @@ class PreferencesWindow: NSWindowController, NSWindowDelegate {
         } else {
             debugModeCheckBox.state = .off
         }
-        os_log("Debug Mode: %d", log: .ui, debugModeCheckBox.state == .on)
+        DDLogInfo("Debug Mode: \(debugModeCheckBox.state == .on)")
 
         if UserDefaults.standard.bool(forKey: PREF_START_ON_BOOT) {
             startOnBootCheckBox.state = .on
         } else {
             startOnBootCheckBox.state = .off
         }
-        os_log("Start on boot: %d", log: .ui, startOnBootCheckBox.state == .on)
+        DDLogInfo("Start on boot: \(startOnBootCheckBox.state == .on)")
 
         homeDirTextField.isEditable = false
         if let homeDir = UserDefaults.standard.string(forKey: PREF_HOME_DIR) {
             homeDirTextField.stringValue = homeDir
-            os_log("Home dir: %{public}s", log: .ui, homeDir)
+            DDLogInfo("Home dir: \(homeDir)")
             openHomeButton.isEnabled = true
         } else {
             openHomeButton.isEnabled = false
@@ -232,7 +232,7 @@ class PreferencesWindow: NSWindowController, NSWindowDelegate {
         backupDirTextField.isEditable = false
         if let backupDir = UserDefaults.standard.string(forKey: PREF_BACKUP_DIR) {
             backupDirTextField.stringValue = backupDir
-            os_log("Backup dir: %{public}s", log: .ui, backupDir)
+            DDLogInfo("Backup dir: \(backupDir)")
             openBackupButton.isEnabled = true
         } else {
             openBackupButton.isEnabled = false
@@ -248,7 +248,7 @@ class PreferencesWindow: NSWindowController, NSWindowDelegate {
 
         if let port = UserDefaults.standard.string(forKey: PREF_LOMOD_PORT) {
             portTextField.stringValue = port
-            os_log("Port: %{public}s", log: .ui, port)
+            DDLogInfo("Port: \(port)")
         } else {
             portTextField.stringValue = "8000"
             UserDefaults.standard.set(portTextField.stringValue, forKey: PREF_LOMOD_PORT)

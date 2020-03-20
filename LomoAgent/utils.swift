@@ -8,7 +8,7 @@
 
 import Cocoa
 import Foundation
-import os.log
+import CocoaLumberjack
 
 func dialogAlert(message: String, info: String)
 {
@@ -38,7 +38,7 @@ func getBasePath() -> String? {
         do {
             try FileManager.default.createDirectory(atPath: basePath!.path, withIntermediateDirectories: true, attributes: nil)
         } catch let error as NSError {
-            os_log("Unable to create directory %{public}s", log: .logic, type: .error, error.debugDescription)
+            DDLogError("Unable to create directory \(error.debugDescription)")
             baseDir = nil
         }
     }
@@ -54,7 +54,7 @@ func getLogDir() -> String? {
         do {
             try FileManager.default.createDirectory(atPath: logPath!.path, withIntermediateDirectories: true, attributes: nil)
         } catch let error as NSError {
-            os_log("Unable to create directory %{public}s", log: .logic, type: .error, error.debugDescription)
+            DDLogError("Unable to create directory \(error.debugDescription)")
             logDir = nil
         }
     }

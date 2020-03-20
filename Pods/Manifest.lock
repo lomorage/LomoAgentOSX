@@ -1,16 +1,23 @@
 PODS:
+  - CocoaLumberjack/Core (3.6.1)
+  - CocoaLumberjack/Swift (3.6.1):
+    - CocoaLumberjack/Core
   - Zip (1.1.0)
 
 DEPENDENCIES:
+  - CocoaLumberjack/Swift
   - Zip (~> 1.1)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - Zip
+  trunk:
+    - CocoaLumberjack
 
 SPEC CHECKSUMS:
+  CocoaLumberjack: b17ae15142558d08bbacf69775fa10c4abbebcc9
   Zip: 8877eede3dda76bcac281225c20e71c25270774c
 
-PODFILE CHECKSUM: e2987a4222eb039ba729193c9ab5a266f0ac6721
+PODFILE CHECKSUM: 018d2b2f7d3c4de3ca441225ab47806e6fb1c171
 
-COCOAPODS: 1.7.5
+COCOAPODS: 1.9.1
