@@ -121,6 +121,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         if !exit {
             setupLogger()
             DDLogInfo("LomoAgent version: \(version)")
+            UserDefaults.standard.set(UUID().uuidString, forKey: PREF_ADMIN_TOKEN)
             NotificationCenter.default.post(name: .NotifyStart, object: self)
         }
     }

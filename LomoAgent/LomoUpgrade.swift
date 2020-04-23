@@ -214,17 +214,17 @@ class LomoUpgrade {
                                 let agentUrl = osxConf["URL"] as? String,
                                 let updateVer = osxConf["LomoUpgVer"] as? String,
                                 let updateUrl = osxConf["LomoUpdateURL"] as? String else {
-                                    DDLogError("fetchContactList, malformed format!")
+                                    DDLogError("fetchUpdateConf, malformed format!")
                                     return
                             }
 
                             self.config = UpgradeConfig(agentSha256: agentSha256, agentVer: agentVer, agentUrl: agentUrl, updateVer: updateVer, updateUrl: updateUrl)
                         } else {
-                            DDLogError("fetchContactList, osx version not available")
+                            DDLogError("fetchUpdateConf, osx version not available")
                         }
 
                     } else {
-                        DDLogError("fetchContactList, userList error: \(String(data: data, encoding: .utf8)!)\n\(httpresp)")
+                        DDLogError("fetchUpdateConf error: \(String(data: data, encoding: .utf8)!)\n\(httpresp)")
                     }
                 } else {
                     DDLogError("needUpdateLomoupgAndLomoAgent, error: \(String(describing: response))")

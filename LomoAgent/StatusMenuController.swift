@@ -161,9 +161,6 @@ class StatusMenuController: NSObject {
             let (_, err) = lomodService.checkServerStatus()
             if err == nil {
                 lomodService.getUserList()
-                if let backupDir = UserDefaults.standard.string(forKey: PREF_BACKUP_DIR) {
-                    _ = lomodService.setRedundancyBackup(backupDisk: backupDir)
-                }
 
                 if let ipList = lomodService.getListenIPs() {
                     for ip in ipList {
@@ -201,7 +198,8 @@ class StatusMenuController: NSObject {
             if let homeDir = UserDefaults.standard.string(forKey: PREF_HOME_DIR),
                 let baseDir = getBasePath(),
                 let logDir = getLogDir(),
-                let port = UserDefaults.standard.string(forKey: PREF_LOMOD_PORT) {
+                let port = UserDefaults.standard.string(forKey: PREF_LOMOD_PORT),
+                let uuid = UserDefaults.standard.string(forKey: PREF_ADMIN_TOKEN) {
 
                 DDLogInfo("Home Dir: \(homeDir)")
                 DDLogInfo("Base Dir: \(baseDir)")
@@ -212,6 +210,7 @@ class StatusMenuController: NSObject {
                                   "--base", baseDir,
                                   "--log-dir", logDir,
                                   "--port", port,
+                                  "--admin-token", uuid,
                                   "--exe-dir", executablePath.path + "/",
                                   "--no-mount"]
                 if UserDefaults.standard.bool(forKey: PREF_DEBUG_MODE) {

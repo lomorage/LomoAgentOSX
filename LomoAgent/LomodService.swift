@@ -95,7 +95,8 @@ class LomodService
         var ret = false
         DDLogInfo("setRedundancyBackup for \(username) to \(backupDisk)")
 
-        if let url = URL(string: "http://\(LOCAL_HOST):\(port!)/system/backup") {
+        if let url = URL(string: "http://\(LOCAL_HOST):\(port!)/system/backup"),
+            let uuid = UserDefaults.standard.string(forKey: PREF_ADMIN_TOKEN) {
             var json = [String:Any]()
             json["Username"] = username
             json["DestDisk"] = backupDisk
@@ -107,6 +108,7 @@ class LomodService
                 urlRequest.httpBody = data
                 urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
                 urlRequest.addValue("application/json", forHTTPHeaderField: "Accept")
+                urlRequest.setValue("token=\(uuid)", forHTTPHeaderField: "Authorization")
 
                 let opGroup = DispatchGroup()
                 opGroup.enter()
@@ -128,6 +130,8 @@ class LomodService
             } catch {
                 DDLogError("setRedundancyBackup, failed: \(error.localizedDescription)")
             }
+        } else {
+
         }
         return ret
     }
@@ -137,11 +141,14 @@ class LomodService
     }
 
     func getUserList() {
-        if let port = UserDefaults.standard.string(forKey: PREF_LOMOD_PORT) {
+        if let port = UserDefaults.standard.string(forKey: PREF_LOMOD_PORT),
+            let uuid = UserDefaults.standard.string(forKey: PREF_ADMIN_TOKEN) {
             if let url = URL(string: "http://\(LOCAL_HOST):\(port)/user") {
                 let opGroup = DispatchGroup()
                 opGroup.enter()
-                networkSession.reqData(with: URLRequest(url: url), completionHandler: { (data, response, error) in
+                var urlRequest = URLRequest(url: url)
+                urlRequest.setValue("token=\(uuid)", forHTTPHeaderField: "Authorization")
+                networkSession.reqData(with: urlRequest, completionHandler: { (data, response, error) in
                     if let error = error {
                         DDLogError("fetchContactList, userList error: \(error.localizedDescription)")
                     } else if let data = data, let httpresp = response as? HTTPURLResponse {
@@ -176,11 +183,14 @@ class LomodService
     func checkServerStatus() -> (SystemInfo?, Error?) {
         var networkError: Error?
         if let port = UserDefaults.standard.string(forKey: PREF_LOMOD_PORT) {
-            if let url = URL(string: "http://\(LOCAL_HOST):\(port)/system") {
+            if let url = URL(string: "http://\(LOCAL_HOST):\(port)/system"),
+                let uuid = UserDefaults.standard.string(forKey: PREF_ADMIN_TOKEN){
                 let opGroup = DispatchGroup()
                 opGroup.enter()
                 DDLogInfo("check server status: \(String(describing: url))")
-                networkSession.loadData(with: url, completionHandler: { (data, response, error) in
+                var urlRequest = URLRequest(url: url)
+                urlRequest.setValue("token=\(uuid)", forHTTPHeaderField: "Authorization")
+                networkSession.reqData(with: urlRequest, completionHandler: { (data, response, error) in
                     if let error = error {
                         networkError = error
                         DDLogError("check server status error: \(error.localizedDescription)")

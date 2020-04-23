@@ -15,6 +15,7 @@ let PREF_DEBUG_MODE = "PrefDebugMode"
 let PREF_HOME_DIR = "PrefHomeDir"
 let PREF_BACKUP_DIR = "PrefBackupDir"
 let PREF_LOMOD_PORT = "PrefPort"
+let PREF_ADMIN_TOKEN = "PrefAdminToken"
 let LOCAL_HOST = "127.0.0.1"
 
 extension Notification.Name {
@@ -181,7 +182,10 @@ class PreferencesWindow: NSWindowController, NSWindowDelegate {
                         DDLogInfo("Save backup dir: \(backupDirTextField.stringValue)")
 
                         if let lomodService = getLomodService() {
-                            _ = lomodService.setRedundancyBackup(backupDisk: backupDirTextField.stringValue)
+                            let succ = lomodService.setRedundancyBackup(backupDisk: backupDirTextField.stringValue)
+                            if (!succ) {
+                                backupDirTextField.stringValue = ""
+                            }
                         }
                     }
                 }
