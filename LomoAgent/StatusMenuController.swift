@@ -14,6 +14,7 @@ class StatusMenuController: NSObject {
     @IBOutlet weak var statusMenu: NSMenu!
     var settingsMenuItem: NSMenuItem!
     var preferencesWindow: PreferencesWindow!
+    var userWindow: UserWindow!
     var aboutWindow: AboutWindow!
     var lomodTask: Process?
     var lomoWebTask: Process?
@@ -35,6 +36,12 @@ class StatusMenuController: NSObject {
 
     @IBAction func settingsClicked(_ sender: Any) {
         preferencesWindow.showWindow(nil)
+        NSApp.activate(ignoringOtherApps: true)
+    }
+
+
+    @IBAction func usersClicked(_ sender: Any) {
+        userWindow.showWindow(nil)
         NSApp.activate(ignoringOtherApps: true)
     }
 
@@ -96,6 +103,7 @@ class StatusMenuController: NSObject {
         statusItem.menu = statusMenu
 
         preferencesWindow = PreferencesWindow()
+        userWindow = UserWindow()
         aboutWindow = AboutWindow()
 
         NotificationCenter.default.addObserver(self,

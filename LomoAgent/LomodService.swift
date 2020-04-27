@@ -42,7 +42,7 @@ class LomodService
 {
     private var networkSession: NetworkSession!
 
-    private var members = [Member]()
+    private(set) var members = [Member]()
 
     private var systemInfo: SystemInfo?
 
@@ -54,6 +54,8 @@ class LomodService
         defaultConfiguration.timeoutIntervalForRequest = 20
         networkSession = URLSession(configuration: defaultConfiguration)
     }
+
+
 
     func setRedundancyBackup(backupDisk: String) -> Bool {
         guard backupDisk != "" else {
@@ -141,6 +143,7 @@ class LomodService
     }
 
     func getUserList() {
+        self.members.removeAll()
         if let port = UserDefaults.standard.string(forKey: PREF_LOMOD_PORT),
             let uuid = UserDefaults.standard.string(forKey: PREF_ADMIN_TOKEN) {
             if let url = URL(string: "http://\(LOCAL_HOST):\(port)/user") {

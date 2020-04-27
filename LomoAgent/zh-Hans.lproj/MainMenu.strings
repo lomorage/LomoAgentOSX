@@ -12,3 +12,6 @@
 
 /* Class = "NSMenuItem"; title = "Import"; ObjectID = "s1f-Vy-Kej"; */
 "s1f-Vy-Kej.title" = "导入";
+
+/* Class = "NSMenuItem"; title = "Users"; ObjectID = "RE4-Dz-g6K"; */
+"RE4-Dz-g6K.title" = "用户"
