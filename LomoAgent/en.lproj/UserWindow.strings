@@ -1,3 +1,30 @@
 
+/* Class = "NSTextFieldCell"; title = "Table View Cell"; ObjectID = "28n-3k-9PH"; */
+"28n-3k-9PH.title" = "Table View Cell";
+
+/* Class = "NSTextFieldCell"; title = "Table View Cell"; ObjectID = "5Nt-ZB-VnB"; */
+"5Nt-ZB-VnB.title" = "Table View Cell";
+
 /* Class = "NSWindow"; title = "Users"; ObjectID = "QvC-M9-y7g"; */
 "QvC-M9-y7g.title" = "Users";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "Tac-7r-RAC"; */
+"Tac-7r-RAC.title" = "Text Cell";
+
+/* Class = "NSTableColumn"; headerCell.title = "Home Directory"; ObjectID = "WJ7-N8-nWB"; */
+"WJ7-N8-nWB.headerCell.title" = "Home Directory";
+
+/* Class = "NSTableColumn"; headerCell.title = "Password"; ObjectID = "aQe-md-L0Z"; */
+"aQe-md-L0Z.headerCell.title" = "Password";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "dTA-fH-v7R"; */
+"dTA-fH-v7R.title" = "Text Cell";
+
+/* Class = "NSTableColumn"; headerCell.title = "UserName"; ObjectID = "fyC-kO-xXt"; */
+"fyC-kO-xXt.headerCell.title" = "UserName";
+
+/* Class = "NSTextFieldCell"; title = "Table View Cell"; ObjectID = "p3n-Ig-GE0"; */
+"p3n-Ig-GE0.title" = "Table View Cell";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "ueC-gr-uaD"; */
+"ueC-gr-uaD.title" = "Text Cell";

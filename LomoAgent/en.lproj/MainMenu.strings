@@ -1,5 +1,3 @@
-/* Class = "NSMenuItem"; title = "About"; ObjectID = "sKW-Ui-FWc"; */
-"sKW-Ui-FWc.title" = "About";
 
 /* Class = "NSMenuItem"; title = "Quit"; ObjectID = "08L-oh-5eA"; */
 "08L-oh-5eA.title" = "Quit";
@@ -10,8 +8,11 @@
 /* Class = "NSMenuItem"; title = "Restart"; ObjectID = "QEK-wS-71g"; */
 "QEK-wS-71g.title" = "Restart";
 
+/* Class = "NSMenuItem"; title = "Users"; ObjectID = "RE4-Dz-g6K"; */
+"RE4-Dz-g6K.title" = "Users";
+
 /* Class = "NSMenuItem"; title = "Import"; ObjectID = "s1f-Vy-Kej"; */
 "s1f-Vy-Kej.title" = "Import";
 
-/* Class = "NSMenuItem"; title = "Users"; ObjectID = "RE4-Dz-g6K"; */
-"RE4-Dz-g6K.title" = "Users"
+/* Class = "NSMenuItem"; title = "About"; ObjectID = "sKW-Ui-FWc"; */
+"sKW-Ui-FWc.title" = "About";

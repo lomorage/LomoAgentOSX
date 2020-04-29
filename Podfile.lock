@@ -1,10 +1,12 @@
 PODS:
+  - CatCrypto (0.3.2)
   - CocoaLumberjack/Core (3.6.1)
   - CocoaLumberjack/Swift (3.6.1):
     - CocoaLumberjack/Core
   - Zip (1.1.0)
 
 DEPENDENCIES:
+  - CatCrypto (from `https://github.com/ImKcat/CatCrypto.git`)
   - CocoaLumberjack/Swift
   - Zip (~> 1.1)
 
@@ -14,10 +16,20 @@ SPEC REPOS:
   trunk:
     - CocoaLumberjack
 
+EXTERNAL SOURCES:
+  CatCrypto:
+    :git: https://github.com/ImKcat/CatCrypto.git
+
+CHECKOUT OPTIONS:
+  CatCrypto:
+    :commit: 00fc794202b7a516b3b87b4831c0d3d430c96ff5
+    :git: https://github.com/ImKcat/CatCrypto.git
+
 SPEC CHECKSUMS:
+  CatCrypto: a477899b6be4954e75be4897e732da098cc0a5a8
   CocoaLumberjack: b17ae15142558d08bbacf69775fa10c4abbebcc9
   Zip: 8877eede3dda76bcac281225c20e71c25270774c
 
-PODFILE CHECKSUM: 018d2b2f7d3c4de3ca441225ab47806e6fb1c171
+PODFILE CHECKSUM: ae35c3c897b2c414c4c2dc4b810b0648ffcda88b
 
 COCOAPODS: 1.9.1

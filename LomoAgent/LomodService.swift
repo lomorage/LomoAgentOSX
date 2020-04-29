@@ -36,6 +36,7 @@ class Member {
     var userId: Int!
     var backupDir: String!
     var homeDir: String!
+    var password: String!
 }
 
 class LomodService
@@ -54,8 +55,6 @@ class LomodService
         defaultConfiguration.timeoutIntervalForRequest = 20
         networkSession = URLSession(configuration: defaultConfiguration)
     }
-
-
 
     func setRedundancyBackup(backupDisk: String) -> Bool {
         guard backupDisk != "" else {
@@ -81,6 +80,56 @@ class LomodService
             DDLogError("setRedundancyBackup, no members ready yet, will retry later")
             return false
         }
+    }
+
+    func changePassword(for username: String, with password: String) -> Bool {
+        DDLogInfo("changePassword for \(username)")
+        let port = UserDefaults.standard.string(forKey: PREF_LOMOD_PORT)
+        guard port != nil else {
+            DDLogError("setRedundancyBackup, port not ready yet")
+            return false
+        }
+
+        var ret = false;
+        if let url = URL(string: "http://\(LOCAL_HOST):\(port!)/user"),
+            let uuid = UserDefaults.standard.string(forKey: PREF_ADMIN_TOKEN) {
+            var json = [String:Any]()
+            json["Name"] = username
+            json["Password"] = password
+
+            do {
+                let data = try JSONSerialization.data(withJSONObject: json, options: [])
+                var urlRequest = URLRequest(url: url)
+                urlRequest.httpMethod = "PUT"
+                urlRequest.httpBody = data
+                urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
+                urlRequest.addValue("application/json", forHTTPHeaderField: "Accept")
+                urlRequest.setValue("token=\(uuid)", forHTTPHeaderField: "Authorization")
+
+                let opGroup = DispatchGroup()
+                opGroup.enter()
+                self.networkSession.reqData(with: urlRequest, completionHandler: { (data, response, error) in
+                    if let error = error {
+                        DDLogError("changePassword, error: \(error.localizedDescription)")
+                    } else if let httpresp = response as? HTTPURLResponse {
+                        if httpresp.statusCode == 200 {
+                            DDLogInfo("changePassword for \(username) succ")
+                            ret = true
+                        } else {
+                            DDLogError("changePassword, error: \(String(describing: response))")
+                        }
+                    } else {
+                        DDLogError("changePassword, error: \(String(describing: response))")
+                    }
+                }, sync: opGroup)
+                opGroup.wait()
+            } catch {
+                DDLogError("changePassword, failed: \(error.localizedDescription)")
+            }
+        } else {
+            DDLogError("changePassword, failed")
+        }
+        return ret
     }
 
     func setRedundancyBackup(username: String, backupDisk: String) -> Bool {
@@ -133,7 +182,7 @@ class LomodService
                 DDLogError("setRedundancyBackup, failed: \(error.localizedDescription)")
             }
         } else {
-
+            DDLogError("setRedundancyBackup, failed")
         }
         return ret
     }
@@ -190,7 +239,7 @@ class LomodService
                 let uuid = UserDefaults.standard.string(forKey: PREF_ADMIN_TOKEN){
                 let opGroup = DispatchGroup()
                 opGroup.enter()
-                DDLogInfo("check server status: \(String(describing: url))")
+                DDLogInfo("check server status: \(String(describing: url)), token: \(uuid)")
                 var urlRequest = URLRequest(url: url)
                 urlRequest.setValue("token=\(uuid)", forHTTPHeaderField: "Authorization")
                 networkSession.reqData(with: urlRequest, completionHandler: { (data, response, error) in

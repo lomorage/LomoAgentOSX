@@ -20,17 +20,17 @@
             <rect key="contentRect" x="196" y="240" width="480" height="270"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1792" height="1097"/>
             <view key="contentView" wantsLayer="YES" misplaced="YES" id="EiT-Mj-1SZ">
-                <rect key="frame" x="0.0" y="0.0" width="480" height="245"/>
+                <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SjM-dc-6dC">
-                        <rect key="frame" x="20" y="20" width="440" height="205"/>
+                        <rect key="frame" x="20" y="20" width="440" height="155"/>
                         <clipView key="contentView" id="8KW-8j-QB2">
-                            <rect key="frame" x="1" y="0.0" width="438" height="204"/>
+                            <rect key="frame" x="1" y="0.0" width="438" height="154"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="hbc-PO-dIP" viewBased="YES" id="XMx-5B-EIh">
-                                    <rect key="frame" x="0.0" y="0.0" width="438" height="179"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="438" height="129"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <size key="intercellSpacing" width="3" height="2"/>
                                     <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -38,7 +38,7 @@
                                     <tableColumns>
                                         <tableColumn width="100" minWidth="40" maxWidth="1000" id="fyC-kO-xXt">
                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="UserName">
-                                                <font key="font" metaFont="message" size="11"/>
+                                                <font key="font" metaFont="label" size="11"/>
                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                             </tableHeaderCell>
@@ -78,7 +78,7 @@
                                         </tableColumn>
                                         <tableColumn width="100" minWidth="40" maxWidth="1000" id="aQe-md-L0Z">
                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Password">
-                                                <font key="font" metaFont="message" size="11"/>
+                                                <font key="font" metaFont="label" size="11"/>
                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                             </tableHeaderCell>
@@ -93,12 +93,12 @@
                                                     <rect key="frame" x="104" y="1" width="100" height="17"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <subviews>
-                                                        <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="hU1-FP-gLb">
+                                                        <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="hU1-FP-gLb" customClass="PasswordTextField" customModule="LomoAgent" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="0.0" width="100" height="17"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="17" id="m83-bD-6XF"/>
                                                             </constraints>
-                                                            <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="28n-3k-9PH">
+                                                            <textFieldCell key="cell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" title="Table View Cell" id="28n-3k-9PH">
                                                                 <font key="font" metaFont="system"/>
                                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -118,7 +118,7 @@
                                         </tableColumn>
                                         <tableColumn width="229" minWidth="10" maxWidth="3.4028234663852886e+38" id="WJ7-N8-nWB">
                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Home Directory">
-                                                <font key="font" metaFont="message" size="11"/>
+                                                <font key="font" metaFont="label" size="11"/>
                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </tableHeaderCell>

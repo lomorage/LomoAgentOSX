@@ -8,7 +8,7 @@ target 'LomoAgent' do
   # Pods for LomoAgent
   pod 'CocoaLumberjack/Swift'
   pod 'Zip', '~> 1.1'
-
+  pod 'CatCrypto', :git => 'https://github.com/ImKcat/CatCrypto.git'
 end
 
 target 'LomoAgentLauncher' do

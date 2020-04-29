@@ -102,8 +102,6 @@
 		3A2FE40122E2BC34000022B0 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		3A35C5CE2240B5A90030FF1B /* lomod */ = {isa = PBXFileReference; lastKnownFileType = folder; name = lomod; path = dependencies/lomod/Contents/Frameworks/lomod; sourceTree = "<group>"; };
 		3A35C5D52240B5E90030FF1B /* lomod */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = lomod; path = dependencies/lomod/Contents/MacOS/lomod; sourceTree = "<group>"; };
-		3A35C5DF224295B20030FF1B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MainMenu.strings; sourceTree = "<group>"; };
-		3A35C5E022435B250030FF1B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/MainMenu.strings"; sourceTree = "<group>"; };
 		3A35C5E222435B710030FF1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/PreferencesWindow.xib; sourceTree = "<group>"; };
 		3A35C5E522435B760030FF1B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/PreferencesWindow.strings; sourceTree = "<group>"; };
 		3A35C5E722435B770030FF1B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/PreferencesWindow.strings"; sourceTree = "<group>"; };
@@ -129,8 +127,10 @@
 		3AE33D3C23244F5100B81C13 /* lomoupg */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = lomoupg; path = dependencies/lomod/Contents/MacOS/lomoupg; sourceTree = "<group>"; };
 		3AE5886524569FD40079CB36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/UserWindow.xib; sourceTree = "<group>"; };
 		3AE5886824569FDB0079CB36 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/UserWindow.strings; sourceTree = "<group>"; };
-		3AE5886A24569FDF0079CB36 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/UserWindow.strings"; sourceTree = "<group>"; };
 		3AE5886B2456A0F60079CB36 /* UserWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserWindow.swift; sourceTree = "<group>"; };
+		3AE5886E245948990079CB36 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/UserWindow.strings"; sourceTree = "<group>"; };
+		3AE58870245949350079CB36 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/MainMenu.strings"; sourceTree = "<group>"; };
+		3AE5887224594A270079CB36 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MainMenu.strings; sourceTree = "<group>"; };
 		3AE8C8A123A4464C009FA2E9 /* lomo-web */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = "lomo-web"; path = "dependencies/lomod/Contents/MacOS/lomo-web"; sourceTree = "<group>"; };
 		3AEB69A82419673300F57177 /* ffmpeg */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = ffmpeg; path = dependencies/lomod/Contents/MacOS/ffmpeg; sourceTree = "<group>"; };
 		3AEB69AA24196C6F00F57177 /* ffprobe */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = ffprobe; path = dependencies/lomod/Contents/MacOS/ffprobe; sourceTree = "<group>"; };
@@ -496,8 +496,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				3A389700222F7801004A2001 /* Base */,
-				3A35C5DF224295B20030FF1B /* en */,
-				3A35C5E022435B250030FF1B /* zh-Hans */,
+				3AE58870245949350079CB36 /* zh-Hans */,
+				3AE5887224594A270079CB36 /* en */,
 			);
 			name = MainMenu.xib;
 			sourceTree = "<group>";
@@ -516,7 +516,7 @@
 			children = (
 				3AE5886524569FD40079CB36 /* Base */,
 				3AE5886824569FDB0079CB36 /* en */,
-				3AE5886A24569FDF0079CB36 /* zh-Hans */,
+				3AE5886E245948990079CB36 /* zh-Hans */,
 			);
 			name = UserWindow.xib;
 			sourceTree = "<group>";

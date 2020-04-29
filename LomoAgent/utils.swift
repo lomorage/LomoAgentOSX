@@ -9,6 +9,7 @@
 import Cocoa
 import Foundation
 import CocoaLumberjack
+import CatCrypto
 
 func dialogAlert(message: String, info: String)
 {
@@ -198,6 +199,24 @@ func runCommand(cmd : String, args : String...) -> (output: [String], error: [St
     let status = task.terminationStatus
 
     return (output, error, status)
+}
+
+func getEncryptPassword(_ username: String, _ password: String) -> String? {
+    let SALT_POSTFIX = "@lomorage.lomoware" // salt length need at least 8
+    let argon2Crypto = CatArgon2Crypto()
+    argon2Crypto.context.mode = .argon2id
+    argon2Crypto.context.salt = username + SALT_POSTFIX
+    let methodStart = Date()
+    let hashResult = argon2Crypto.hash(password: password)
+    let methodFinish = Date()
+    let executionTime = methodFinish.timeIntervalSince(methodStart)
+    DDLogInfo("getEncryptPassword time: \(executionTime)")
+    guard hashResult.error == nil else {
+        DDLogError("getEncryptPassword error: \(hashResult.error!.errorDescription!))")
+        return nil
+    }
+
+    return hashResult.hexStringValue()
 }
 
 class Version {
