@@ -12,11 +12,14 @@ let chooseHomeDirLocalized = NSLocalizedString("Choose the home directory", comm
 let chooseBackupDirLocalized = NSLocalizedString("Choose the backup directory", comment: "")
 let errorChooseHomeLocalized = NSLocalizedString("Error when choosing home directory", comment: "")
 let errorChooseHomeMsgLocalized = NSLocalizedString("Home directory should not be the same with backup directory", comment: "")
-let errorChooseBackupLocalized = NSLocalizedString("Error when choosing backup directory", comment: "")
+let errorChooseBackupLocalized = NSLocalizedString("Error when setting backup directory", comment: "")
 let errorChooseBackupMsgLocalized = NSLocalizedString("Backup directory should not be the same with home directory", comment: "")
 
 let lastBackupLocalized = NSLocalizedString("Last Backup: ", comment: "")
 let setBackupDirFailedLocalized = NSLocalizedString("Set backup directory failed", comment: "")
+
+let errorUnsetBackupLocalized = NSLocalizedString("Error when unsetting backup directory", comment: "")
+let succUnsetBackupLocalized = NSLocalizedString("Unset backup directory succeed", comment: "")
 
 let invalidPortLocalized = NSLocalizedString("Invalid port", comment: "")
 let invalidPortTipsLocalized = NSLocalizedString("The port should be a number in range [1024, 49151]", comment: "")
@@ -32,3 +35,4 @@ let userTipsScanQRCode = NSLocalizedString("If the service can not be found auto
 let alertOk = NSLocalizedString("OK", comment: "")
 let alertCancel = NSLocalizedString("Cancel", comment: "")
 let quitApp = NSLocalizedString("Quit?", comment: "")
+let unsetBackup = NSLocalizedString("Unset backup directory?", comment: "")

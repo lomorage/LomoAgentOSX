@@ -10,9 +10,12 @@
 "Choose the backup directory" = "Choose the backup directory";
 "Error when choosing home directory" = "Error when choosing home directory";
 "Home directory should not be the same with backup directory" = "Home directory should not be the same with backup directory";
-"Error when choosing backup directory" = "Error when choosing backup directory";
+"Error when setting backup directory" = "Error when setting backup directory";
+"Error when unsetting backup directory" = "Error when unsetting backup directory";
+"Unset backup directory succeed" = "Unset backup directory succeed";
 "Backup directory should not be the same with home directory" = "Backup directory should not be the same with home directory";
 "Last Backup: " = "Last Backup: ";
+"Set backup directory failed" = "Set backup directory failed";
 "Invalid port" = "Invalid port";
 "The port should be a number in range [1024, 49151]" = "The port should be a number in range [1024, 49151]";
 "Home directory required!" = "Home directory required!";
@@ -27,3 +30,5 @@
 "OK" = "OK";
 "Cancel" = "Cancel";
 "Quit?" = "Quit?";
+
+"Unset backup directory?" = "Unset backup directory?";

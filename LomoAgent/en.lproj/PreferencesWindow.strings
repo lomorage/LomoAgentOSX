@@ -28,5 +28,8 @@
 /* Class = "NSButtonCell"; title = "Open"; ObjectID = "uJs-cw-aLe"; */
 "uJs-cw-aLe.title" = "Open";
 
+/* Class = "NSButtonCell"; title = "Unset"; ObjectID = "QT6-33-VBs"; */
+"QT6-33-VBs.title" = "Unset";
+
 /* Class = "NSButtonCell"; title = "Select"; ObjectID = "Jgq-Kj-pZS"; */
 "Jgq-Kj-pZS.title" = "Select";

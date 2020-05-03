@@ -14,10 +14,10 @@
 		3A16D9E1231C53290092EADD /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A16D9E0231C53290092EADD /* ServiceManagement.framework */; };
 		3A16D9E3231C605F0092EADD /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A16D9E2231C605F0092EADD /* main.swift */; };
 		3A23EFCC2422FD3100906032 /* exiftool in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3A23EFCB2422FD3100906032 /* exiftool */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		3A23EFCF2422FDC400906032 /* lib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3A23EFCD2422FD4E00906032 /* lib */; };
+		3A23EFCF2422FDC400906032 /* lib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3A23EFCD2422FD4E00906032 /* lib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		3A2FE40022E2B339000022B0 /* QRImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2FE3FF22E2B339000022B0 /* QRImage.swift */; };
 		3A35C5DA2240B5F30030FF1B /* lomod in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3A35C5D52240B5E90030FF1B /* lomod */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		3A35C5DD2240B6040030FF1B /* lomod in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3A35C5CE2240B5A90030FF1B /* lomod */; };
+		3A35C5DD2240B6040030FF1B /* lomod in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3A35C5CE2240B5A90030FF1B /* lomod */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		3A35C5E122435B710030FF1B /* PreferencesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A35C5E322435B710030FF1B /* PreferencesWindow.xib */; };
 		3A35C5EA224365340030FF1B /* AboutWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A35C5E8224365340030FF1B /* AboutWindow.swift */; };
 		3A35C5EC22436CBA0030FF1B /* AboutWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A35C5EE22436CBA0030FF1B /* AboutWindow.xib */; };
@@ -39,7 +39,7 @@
 		3AE8C8A323A44924009FA2E9 /* lomo-web in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3AE8C8A123A4464C009FA2E9 /* lomo-web */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		3AEB69A92419673300F57177 /* ffmpeg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3AEB69A82419673300F57177 /* ffmpeg */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		3AEB69AB24196C6F00F57177 /* ffprobe in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3AEB69AA24196C6F00F57177 /* ffprobe */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		3AEB69AD24196C8700F57177 /* ffmpeg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3AEB69AC24196C8700F57177 /* ffmpeg */; };
+		3AEB69AD24196C8700F57177 /* ffmpeg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3AEB69AC24196C8700F57177 /* ffmpeg */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		4EC270328FC84ECCB0FA9CB1 /* Pods_LomoAgent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9542EC456060AE536C4531A /* Pods_LomoAgent.framework */; };
 /* End PBXBuildFile section */
 

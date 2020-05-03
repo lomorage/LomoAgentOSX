@@ -57,10 +57,6 @@ class LomodService
     }
 
     func setRedundancyBackup(backupDisk: String) -> Bool {
-        guard backupDisk != "" else {
-            DDLogError("setRedundancyBackup, backupDisk empty")
-            return false
-        }
         if members.count > 0 {
             var allSucc = true
             for m in members {
@@ -133,10 +129,6 @@ class LomodService
     }
 
     func setRedundancyBackup(username: String, backupDisk: String) -> Bool {
-        guard backupDisk != "" else {
-            DDLogError("setRedundancyBackup, backupDisk empty")
-            return false
-        }
         let port = UserDefaults.standard.string(forKey: PREF_LOMOD_PORT)
         guard port != nil else {
             DDLogError("setRedundancyBackup, port not ready yet")

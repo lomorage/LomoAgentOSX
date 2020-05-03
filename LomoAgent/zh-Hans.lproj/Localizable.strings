@@ -10,9 +10,12 @@
 "Choose the backup directory" = "选择冗余备份目录";
 "Error when choosing home directory" = "选择主目录出错";
 "Home directory should not be the same with backup directory" = "主目录不能和备份目录一样";
-"Error when choosing backup directory" = "选择备份目录出错";
+"Error when setting backup directory" = "选择备份目录出错";
+"Error when unsetting backup directory" = "取消备份目录设置出错";
+"Unset backup directory succeed" = "取消备份目录设置成功";
 "Backup directory should not be the same with home directory" = "备份目录不能和主目录一样";
 "Last Backup: " = "上次备份: ";
+"Set backup directory failed" = "设置备份目录失败";
 "Invalid port" = "无效端口";
 "The port should be a number in range [1024, 49151]" = "端口必须是在范围[1024, 49151]之内的数字";
 "Home directory required!" = "需要设置主目录!";
@@ -27,3 +30,5 @@
 "OK" = "确定";
 "Cancel" = "取消";
 "Quit?" = "退出应用?";
+
+"Unset backup directory?" = "取消备份目录设置?";

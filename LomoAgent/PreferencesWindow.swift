@@ -125,6 +125,32 @@ class PreferencesWindow: NSWindowController, NSWindowDelegate {
         }
     }
 
+    @IBAction func onUnsetBackupPath(_ sender: NSButton) {
+        guard backupDirTextField.stringValue != "" else {
+            DDLogError("onUnsetBackupPath, backupDisk empty")
+            dialogAlert(message: errorUnsetBackupLocalized, info: "")
+            return
+        }
+
+        if dialogOKCancel(message: unsetBackup, info: "") {
+            let backupDir = backupDirTextField.stringValue
+            backupDirTextField.stringValue = ""
+            DDLogInfo("Unset backup dir: \(backupDir)")
+
+            if let lomodService = getLomodService() {
+                let succ = lomodService.setRedundancyBackup(backupDisk: backupDirTextField.stringValue)
+                if (succ) {
+                    UserDefaults.standard.set(backupDirTextField.stringValue, forKey: PREF_BACKUP_DIR)
+                    dialogAlert(message: succUnsetBackupLocalized, info: "")
+                } else {
+                    DDLogError("unset \(backupDir) failed")
+                    backupDirTextField.stringValue = backupDir
+                    dialogAlert(message: errorUnsetBackupLocalized, info: "")
+                }
+            }
+        }
+    }
+
     @IBAction func onSelectPath(_ sender: NSButton) {
         let dialog = NSOpenPanel();
 
@@ -166,10 +192,16 @@ class PreferencesWindow: NSWindowController, NSWindowDelegate {
                     }
                 } else if sender == selectBackupButton {
                     guard result.path != homeDirTextField.stringValue else {
+                        DDLogError("setRedundancyBackup, backupDisk can't be the same as homeDir")
                         dialogAlert(
                             message: errorChooseBackupLocalized,
                             info: errorChooseBackupMsgLocalized
                         )
+                        return
+                    }
+
+                    guard result.path != "" else {
+                        DDLogError("setRedundancyBackup, backupDisk empty")
                         return
                     }
 
