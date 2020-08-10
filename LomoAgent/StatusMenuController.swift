@@ -259,7 +259,7 @@ class StatusMenuController: NSObject {
             if let lomodPort = UserDefaults.standard.string(forKey: PREF_LOMOD_PORT) {
                 let lomoWebPort = UserDefaults.standard.integer(forKey: PREF_LOMOD_PORT) + 1
                 task.launchPath = lomoWebPath
-                task.arguments = ["--baseport", lomodPort,
+                task.arguments = ["--baseurl", "http://" + listenIp + ":" + lomodPort,
                                   "--port", String(lomoWebPort)]
                 task.launch()
 
