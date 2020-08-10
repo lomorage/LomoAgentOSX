@@ -224,6 +224,8 @@ class StatusMenuController: NSObject {
                 if UserDefaults.standard.bool(forKey: PREF_DEBUG_MODE) {
                     task.arguments?.append("--debug")
                 }
+
+                DDLogInfo("lomod args: \(task.arguments)")
                 task.launch()
 
                 DDLogInfo("lomod is running: \(task.isRunning), pid = \(task.processIdentifier)")
