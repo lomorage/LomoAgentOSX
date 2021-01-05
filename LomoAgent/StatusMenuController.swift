@@ -219,8 +219,7 @@ class StatusMenuController: NSObject {
                                   "--log-dir", logDir,
                                   "--port", port,
                                   "--admin-token", uuid,
-                                  "--exe-dir", executablePath.path + "/",
-                                  "--no-mount"]
+                                  "--exe-dir", executablePath.path + "/"]
                 if UserDefaults.standard.bool(forKey: PREF_DEBUG_MODE) {
                     task.arguments?.append("--debug")
                 }
