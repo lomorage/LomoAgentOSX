@@ -215,6 +215,7 @@
 		3A35C5BF2240A3840030FF1B /* MacOS */ = {
 			isa = PBXGroup;
 			children = (
+				3A23EFCB2422FD3100906032 /* exiftool */,
 				3A23EFCD2422FD4E00906032 /* lib */,
 				3AEB69AA24196C6F00F57177 /* ffprobe */,
 				3AEB69A82419673300F57177 /* ffmpeg */,
@@ -229,7 +230,6 @@
 		3A3896EF222F77FA004A2001 = {
 			isa = PBXGroup;
 			children = (
-				3A23EFCB2422FD3100906032 /* exiftool */,
 				3A35C5B52240A01D0030FF1B /* dependencies */,
 				3A3896FA222F77FA004A2001 /* LomoAgent */,
 				3A16D9D0231C501F0092EADD /* LomoAgentLauncher */,
