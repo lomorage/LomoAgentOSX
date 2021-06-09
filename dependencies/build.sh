@@ -44,4 +44,8 @@ cd $BINARY_DIR
 python ../../../matryoshka_name_tool.py  -L /usr/local/ -d ../Frameworks/lomod/ lomod
 python ../../../matryoshka_name_tool.py  -L $FFMPEG_HOME_ABS -d ../Frameworks/ffmpeg/ ffmpeg
 python ../../../matryoshka_name_tool.py  -L $FFMPEG_HOME_ABS -d ../Frameworks/ffmpeg/ ffprobe
+
+install_name_tool -add_rpath @executable_path/../Frameworks/lomod lomod
+install_name_tool -add_rpath @executable_path/../Frameworks/ffmpeg ffmpeg
+install_name_tool -add_rpath @executable_path/../Frameworks/ffmpeg ffprobe
 cd -
