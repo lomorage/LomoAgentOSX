@@ -65,6 +65,8 @@ class PreferencesWindow: NSWindowController, NSWindowDelegate {
 
     @IBOutlet weak var portTextField: NSTextField!
 
+    @IBOutlet weak var ipTextField: NSTextField!
+
     @IBOutlet weak var debugModeCheckBox: NSButton!
 
     @IBOutlet weak var startOnBootCheckBox: NSButton!
@@ -306,6 +308,7 @@ class PreferencesWindow: NSWindowController, NSWindowDelegate {
                     guard let data = url.data(using: String.Encoding.utf8, allowLossyConversion: false) else {
                         return
                     }
+                    ipTextField.stringValue = firstAddr
                     userTipsLabel.textColor = .black
                     userTipsLabel.stringValue = userTipsScanQRCode
                     imageQRCode.image = QRCodeImageWith(data: data, size: imageQRCode.frame.size.width)
