@@ -128,6 +128,45 @@ class LomodService
         return ret
     }
 
+    func unsetRedundancyBackup() -> Bool {
+        let port = UserDefaults.standard.string(forKey: PREF_LOMOD_PORT)
+        guard port != nil else {
+            DDLogError("unsetRedundancyBackup, port not ready yet")
+            return false
+        }
+
+        var ret = false
+        DDLogInfo("unsetRedundancyBackup")
+
+        if let adminToken = UserDefaults.standard.string(forKey: PREF_ADMIN_TOKEN),
+           let url = URL(string: "http://\(LOCAL_HOST):\(port!)/system/backup") {
+            var urlRequest = URLRequest(url: url)
+            urlRequest.httpMethod = "DELETE"
+            urlRequest.setValue("token=\(adminToken)", forHTTPHeaderField: "Authorization")
+
+            let opGroup = DispatchGroup()
+            opGroup.enter()
+            self.networkSession.reqData(with: urlRequest, completionHandler: { (data, response, error) in
+                if let error = error {
+                    DDLogError("unsetRedundancyBackup, error: \(error.localizedDescription)")
+                } else if let httpresp = response as? HTTPURLResponse {
+                    if httpresp.statusCode == 200 {
+                        DDLogInfo("unsetRedundancyBackup succ")
+                        ret = true
+                    } else {
+                        DDLogError("unsetRedundancyBackup, error: \(String(describing: response))")
+                    }
+                } else {
+                    DDLogError("unsetRedundancyBackup, error: \(String(describing: response))")
+                }
+            }, sync: opGroup)
+            opGroup.wait()
+        } else {
+            DDLogError("unsetRedundancyBackup, failed")
+        }
+        return ret
+    }
+
     func setRedundancyBackup(username: String, backupDisk: String) -> Bool {
         let port = UserDefaults.standard.string(forKey: PREF_LOMOD_PORT)
         guard port != nil else {

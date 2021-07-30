@@ -140,7 +140,7 @@ class PreferencesWindow: NSWindowController, NSWindowDelegate {
             DDLogInfo("Unset backup dir: \(backupDir)")
 
             if let lomodService = getLomodService() {
-                let succ = lomodService.setRedundancyBackup(backupDisk: backupDirTextField.stringValue)
+                let succ = lomodService.unsetRedundancyBackup()
                 if (succ) {
                     UserDefaults.standard.set(backupDirTextField.stringValue, forKey: PREF_BACKUP_DIR)
                     dialogAlert(message: succUnsetBackupLocalized, info: "")
