@@ -16,6 +16,7 @@
 
 /* Class = "NSTextFieldCell"; title = "Home Directory"; ObjectID = "lAc-fy-Miv"; */
 "lAc-fy-Miv.title" = "Home Directory";
+"JS8-Cu-nJg.title" = "Home Directory";
 
 /* Class = "NSButtonCell"; title = "Select"; ObjectID = "o4F-iv-Nxx"; */
 "o4F-iv-Nxx.title" = "Select";
@@ -24,6 +25,7 @@
 
 /* Class = "NSTextFieldCell"; title = "Home Directory"; ObjectID = "ewJ-OL-QHy"; */
 "ewJ-OL-QHy.title" = "Backup Directory";
+"OW1-sH-Jzq.title" = "Backup Directory";
 
 /* Class = "NSButtonCell"; title = "Open"; ObjectID = "uJs-cw-aLe"; */
 "uJs-cw-aLe.title" = "Open";
