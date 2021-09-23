@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		224DE9DBFAAACB514AB47FB7 /* Pods_LomoAgentLauncher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B75321B0D26ACE9E3138A1A /* Pods_LomoAgentLauncher.framework */; };
 		3A1436512320C86700E0F154 /* LomoUpgrade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1436502320C86700E0F154 /* LomoUpgrade.swift */; };
+		3A1666E626FC599B008F1250 /* lomoc in Resources */ = {isa = PBXBuildFile; fileRef = 3A1666E526FC599A008F1250 /* lomoc */; };
+		3A1666E726FC59B5008F1250 /* lomoc in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3A1666E526FC599A008F1250 /* lomoc */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		3A16D9D2231C501F0092EADD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A16D9D1231C501F0092EADD /* AppDelegate.swift */; };
 		3A16D9D4231C50270092EADD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A16D9D3231C50270092EADD /* Assets.xcassets */; };
 		3A16D9E1231C53290092EADD /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A16D9E0231C53290092EADD /* ServiceManagement.framework */; };
@@ -60,6 +62,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 6;
 			files = (
+				3A1666E726FC59B5008F1250 /* lomoc in CopyFiles */,
 				3A23EFCF2422FDC400906032 /* lib in CopyFiles */,
 				3A23EFCC2422FD3100906032 /* exiftool in CopyFiles */,
 				3AEB69AB24196C6F00F57177 /* ffprobe in CopyFiles */,
@@ -89,6 +92,7 @@
 		0BC870F0F7BFB0BD3ECD9A6F /* Pods-LomoAgentLauncher.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LomoAgentLauncher.release.xcconfig"; path = "Pods/Target Support Files/Pods-LomoAgentLauncher/Pods-LomoAgentLauncher.release.xcconfig"; sourceTree = "<group>"; };
 		116707D12FB1B16BD38492A2 /* Pods-LomoAgent.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LomoAgent.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LomoAgent/Pods-LomoAgent.debug.xcconfig"; sourceTree = "<group>"; };
 		3A1436502320C86700E0F154 /* LomoUpgrade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LomoUpgrade.swift; sourceTree = "<group>"; };
+		3A1666E526FC599A008F1250 /* lomoc */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = lomoc; path = dependencies/lomod/Contents/MacOS/lomoc; sourceTree = "<group>"; };
 		3A16D9CF231C501F0092EADD /* LomoAgentLauncher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LomoAgentLauncher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A16D9D1231C501F0092EADD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3A16D9D3231C50270092EADD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -222,6 +226,7 @@
 				3AE8C8A123A4464C009FA2E9 /* lomo-web */,
 				3AE33D3C23244F5100B81C13 /* lomoupg */,
 				3A818C152320D36A00B110B3 /* rsync */,
+				3A1666E526FC599A008F1250 /* lomoc */,
 				3A35C5D52240B5E90030FF1B /* lomod */,
 			);
 			name = MacOS;
@@ -380,6 +385,7 @@
 				3A35C5E122435B710030FF1B /* PreferencesWindow.xib in Resources */,
 				3A389701222F7801004A2001 /* MainMenu.xib in Resources */,
 				3A35C5EC22436CBA0030FF1B /* AboutWindow.xib in Resources */,
+				3A1666E626FC599B008F1250 /* lomoc in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

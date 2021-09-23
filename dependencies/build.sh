@@ -14,6 +14,7 @@ EXIFTOOL_PATH=$EXIFTOOL_HOME_ABS/exiftool
 EXIFTOOL_LIB=$EXIFTOOL_HOME_ABS/lib
 
 LOMOD_PATH=/Users/jeromy/.go/src/bitbucket.org/lomoware/lomo-backend/cmd/lomod/lomod
+LOMOC_PATH=/Users/jeromy/.go/src/bitbucket.org/lomoware/lomo-backend/cmd/lomoc/lomoc
 LOMOWEB_PATH=/Users/jeromy/.go/src/github.com/lomorage/lomo-web/lomo-web
 
 # lomoupg and rsync has no dependencies, just copy binaries
@@ -36,15 +37,18 @@ cp $FFPROBE_PATH $BINARY_DIR
 cp $EXIFTOOL_PATH $BINARY_DIR
 cp -R $EXIFTOOL_LIB $BINARY_DIR
 cp $LOMOD_PATH $BINARY_DIR
+cp $LOMOC_PATH $BINARY_DIR
 cp $LOMOWEB_PATH $BINARY_DIR
 cp $LOMOUPG_PATH $BINARY_DIR
 cp $RSYNC_PATH $BINARY_DIR
 
 cd $BINARY_DIR
+python ../../../matryoshka_name_tool.py  -L /usr/local/ -d ../Frameworks/lomod/ lomoc
 python ../../../matryoshka_name_tool.py  -L /usr/local/ -d ../Frameworks/lomod/ lomod
 python ../../../matryoshka_name_tool.py  -L $FFMPEG_HOME_ABS -d ../Frameworks/ffmpeg/ ffmpeg
 python ../../../matryoshka_name_tool.py  -L $FFMPEG_HOME_ABS -d ../Frameworks/ffmpeg/ ffprobe
 
+install_name_tool -add_rpath @executable_path/../Frameworks/lomod lomoc
 install_name_tool -add_rpath @executable_path/../Frameworks/lomod lomod
 install_name_tool -add_rpath @executable_path/../Frameworks/ffmpeg ffmpeg
 install_name_tool -add_rpath @executable_path/../Frameworks/ffmpeg ffprobe
