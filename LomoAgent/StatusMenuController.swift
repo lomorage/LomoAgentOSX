@@ -46,7 +46,7 @@ class StatusMenuController: NSObject {
     }
 
     @IBAction func importClicked(_ sender: Any) {
-        let lomoWebPort = String(UserDefaults.standard.integer(forKey: PREF_LOMOD_PORT) + 1)
+        let lomoWebPort = String(UserDefaults.standard.integer(forKey: PREF_LOMOD_PORT))
         if let url = URL(string: "http://" + listenIp + ":" + lomoWebPort) {
             NSWorkspace.shared.open(url)
         } else {
@@ -179,9 +179,6 @@ class StatusMenuController: NSObject {
                     // not found!
                     if let firstIp = ipList.first {
                         listenIp = firstIp
-                        // need restart lomo-web
-                        stopLomoWeb()
-                        startLomoWeb()
                         NotificationCenter.default.post(name: .NotifyIpChanged, object: self)
                     }
                 }
@@ -243,38 +240,8 @@ class StatusMenuController: NSObject {
         }
     }
 
-    func startLomoWeb() {
-        guard lomoWebTask == nil else {
-            DDLogInfo("lomo-web already started!")
-            return
-        }
-
-        lomoWebTask = Process()
-        if let task = lomoWebTask,
-           let executablePath = Bundle.main.executableURL?.deletingLastPathComponent() {
-            let lomoWebPath = executablePath.path + "/lomo-web"
-            DDLogInfo("lomo-web Path: \(lomoWebPath)")
-
-            if let lomodPort = UserDefaults.standard.string(forKey: PREF_LOMOD_PORT) {
-                let lomoWebPort = UserDefaults.standard.integer(forKey: PREF_LOMOD_PORT) + 1
-                task.launchPath = lomoWebPath
-                task.arguments = ["--baseurl", "http://" + listenIp + ":" + lomodPort,
-                                  "--port", String(lomoWebPort)]
-                task.launch()
-
-                DDLogInfo("lomo-web is running: \(task.isRunning), pid = \(task.processIdentifier)")
-            } else {
-                DDLogError("Need set Lomorage service port first")
-                lomoWebTask = nil
-                preferencesWindow.showWindow(nil)
-                NSApp.activate(ignoringOtherApps: true)
-            }
-        }
-    }
-
     func startLomoService() {
         startLomod()
-        startLomoWeb()
     }
 
     func stopLomod() {
@@ -287,26 +254,12 @@ class StatusMenuController: NSObject {
         lomodTask = nil
     }
 
-    func stopLomoWeb() {
-        if let task = lomoWebTask, task.isRunning {
-            DDLogError("lomo-web terminate, pid = \(task.processIdentifier)")
-            task.terminate()
-        } else if lomoWebTask != nil {
-            DDLogError("lomo-web already terminate with error: \(String(describing: lomoWebTask!.terminationReason))")
-        }
-        lomoWebTask = nil
-    }
-
     func stopLomoService() {
-        stopLomoWeb()
         stopLomod()
     }
 
     func killLomoService() {
-        var p = Process.launchedProcess(launchPath: "/usr/bin/killall", arguments: ["lomod"])
-        p.waitUntilExit()
-
-        p = Process.launchedProcess(launchPath: "/usr/bin/killall", arguments: ["lomo-web"])
+        let p = Process.launchedProcess(launchPath: "/usr/bin/killall", arguments: ["lomod"])
         p.waitUntilExit()
     }
 

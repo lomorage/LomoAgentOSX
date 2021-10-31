@@ -15,7 +15,6 @@ EXIFTOOL_LIB=$EXIFTOOL_HOME_ABS/lib
 
 LOMOD_PATH=/Users/jeromy/.go/src/bitbucket.org/lomoware/lomo-backend/cmd/lomod/lomod
 LOMOC_PATH=/Users/jeromy/.go/src/bitbucket.org/lomoware/lomo-backend/cmd/lomoc/lomoc
-LOMOWEB_PATH=/Users/jeromy/.go/src/github.com/lomorage/lomo-web/lomo-web
 
 # lomoupg and rsync has no dependencies, just copy binaries
 LOMOUPG_PATH=/Users/jeromy/.go/src/github.com/lomorage/lomoUpdate/lomoupg
@@ -38,7 +37,6 @@ cp $EXIFTOOL_PATH $BINARY_DIR
 cp -R $EXIFTOOL_LIB $BINARY_DIR
 cp $LOMOD_PATH $BINARY_DIR
 cp $LOMOC_PATH $BINARY_DIR
-cp $LOMOWEB_PATH $BINARY_DIR
 cp $LOMOUPG_PATH $BINARY_DIR
 cp $RSYNC_PATH $BINARY_DIR
 
