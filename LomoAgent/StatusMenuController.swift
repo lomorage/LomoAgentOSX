@@ -171,13 +171,7 @@ class StatusMenuController: NSObject {
                 lomodService.getUserList()
 
                 if let ipList = lomodService.getListenIPs() {
-                    for ip in ipList {
-                        if ip == listenIp {
-                            return // still valid
-                        }
-                    }
-                    // not found!
-                    if let firstIp = ipList.first {
+                    if let firstIp = ipList.first, firstIp != listenIp {
                         listenIp = firstIp
                         NotificationCenter.default.post(name: .NotifyIpChanged, object: self)
                     }
