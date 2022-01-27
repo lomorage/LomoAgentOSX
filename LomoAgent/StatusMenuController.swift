@@ -166,18 +166,20 @@ class StatusMenuController: NSObject {
 
     @objc func pingLomod() {
         if let lomodService = getLomodService() {
-            let (_, err) = lomodService.checkServerStatus()
-            if err == nil {
-                lomodService.getUserList()
 
-                if let ipList = lomodService.getListenIPs() {
-                    if let firstIp = ipList.first, firstIp != listenIp {
-                        listenIp = firstIp
-                        NotificationCenter.default.post(name: .NotifyIpChanged, object: self)
+            lomodService.checkServerStatus { (systemInfo, connectErr) in
+                if connectErr == nil {
+                    lomodService.getUserList()
+
+                    if let ipList = lomodService.getListenIPs() {
+                        if let firstIp = ipList.first, firstIp != self.listenIp {
+                            self.listenIp = firstIp
+                            NotificationCenter.default.post(name: .NotifyIpChanged, object: self)
+                        }
                     }
+                } else {
+                    DDLogError("pingLomod error!")
                 }
-            } else {
-                DDLogError("pingLomod error!")
             }
         }
     }

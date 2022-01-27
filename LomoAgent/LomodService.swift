@@ -263,13 +263,11 @@ class LomodService
         }
     }
 
-    func checkServerStatus() -> (SystemInfo?, Error?) {
+    func checkServerStatus(completionHandler: @escaping (SystemInfo?, Error?) -> Swift.Void) {
         var networkError: Error?
         if let port = UserDefaults.standard.string(forKey: PREF_LOMOD_PORT) {
             if let url = URL(string: "http://\(LOCAL_HOST):\(port)/system"),
                 let uuid = UserDefaults.standard.string(forKey: PREF_ADMIN_TOKEN){
-                let opGroup = DispatchGroup()
-                opGroup.enter()
                 DDLogInfo("check server status: \(String(describing: url)), token: \(uuid)")
                 var urlRequest = URLRequest(url: url)
                 urlRequest.setValue("token=\(uuid)", forHTTPHeaderField: "Authorization")
@@ -326,11 +324,10 @@ class LomodService
                     } else {
                         DDLogError("check server status failure: \(String(describing: response))")
                     }
-                }, sync: opGroup)
-                opGroup.wait()
+
+                    completionHandler(self.systemInfo, networkError)
+                }, sync: nil)
             }
         }
-
-        return (systemInfo, networkError)
     }
 }
