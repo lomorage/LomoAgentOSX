@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="15505" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="19529" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="19529"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
@@ -22,7 +22,7 @@
         </customObject>
         <menu id="DTi-xy-fwc">
             <items>
-                <menuItem title="Import" image="NSTouchBarOpenInBrowserTemplate" id="s1f-Vy-Kej">
+                <menuItem title="Browse" image="NSTouchBarOpenInBrowserTemplate" id="s1f-Vy-Kej">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
                         <action selector="importClicked:" target="yau-81-bwM" id="fVk-lp-N2F"/>
@@ -69,9 +69,9 @@
         </menu>
     </objects>
     <resources>
-        <image name="NSActionTemplate" width="14" height="14"/>
-        <image name="NSRefreshTemplate" width="11" height="15"/>
-        <image name="NSTouchBarOpenInBrowserTemplate" width="18" height="30"/>
-        <image name="NSTouchBarUserTemplate" width="15" height="30"/>
+        <image name="NSActionTemplate" width="15" height="15"/>
+        <image name="NSRefreshTemplate" width="14" height="16"/>
+        <image name="NSTouchBarOpenInBrowserTemplate" width="15" height="15"/>
+        <image name="NSTouchBarUserTemplate" width="14" height="14"/>
     </resources>
 </document>
