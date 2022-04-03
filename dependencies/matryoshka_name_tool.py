@@ -62,6 +62,7 @@ class MatryoshkaName:
         out, err = p.communicate()
         lines = out.splitlines()
         for line in lines[1:]:
+            line = line.decode('utf-8')
             libdir_match = self.libdir_pattern.match(line)
             loader_path = line.strip().startswith('@loader_path')
             if libdir_match or loader_path:
@@ -86,7 +87,7 @@ class MatryoshkaName:
                              '@executable_path/' + self.args.install_libdir + os.path.basename(dylib),
                              target ]
                 sp.call(cmd)
-                print "\t" + ' '.join(cmd)
+                print("\t" + ' '.join(cmd))
                 if dylib not in self.dylibs_recursed and dylib != object: # recurse
                     self.install_name_tool(dylib)
                     self.dylibs_recursed.add(dylib)
