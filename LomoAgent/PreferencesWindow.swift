@@ -66,6 +66,8 @@ class PreferencesWindow: NSWindowController, NSWindowDelegate {
     @IBOutlet weak var portTextField: NSTextField!
 
     @IBOutlet weak var ipTextField: NSTextField!
+    @IBOutlet weak var ipLabel: NSTextField!
+    @IBOutlet weak var portLabel: NSTextField!
 
     @IBOutlet weak var debugModeCheckBox: NSButton!
 
@@ -85,6 +87,13 @@ class PreferencesWindow: NSWindowController, NSWindowDelegate {
 
     @IBOutlet weak var userTipsLabel: NSTextField!
 
+    fileprivate func hideShowOnDebugMode() {
+        ipLabel.isHidden = (debugModeCheckBox.state != .on)
+        ipTextField.isHidden = (debugModeCheckBox.state != .on)
+        portLabel.isHidden = (debugModeCheckBox.state != .on)
+        portTextField.isHidden = (debugModeCheckBox.state != .on)
+    }
+
     @IBAction func onDebugModeClick(_ sender: Any) {
         let oldState = UserDefaults.standard.bool(forKey: PREF_DEBUG_MODE)
         let newState = (debugModeCheckBox.state == .on)
@@ -92,6 +101,8 @@ class PreferencesWindow: NSWindowController, NSWindowDelegate {
             UserDefaults.standard.set(newState, forKey: PREF_DEBUG_MODE)
             NotificationCenter.default.post(name: .NotifySettingsChanged, object: self)
         }
+
+        hideShowOnDebugMode()
     }
 
     @IBAction func onStartOnBootClick(_ sender: Any) {
@@ -231,6 +242,11 @@ class PreferencesWindow: NSWindowController, NSWindowDelegate {
         return "PreferencesWindow"
     }
 
+    override func showWindow(_ sender: Any?) {
+        super.showWindow(sender)
+        generateQRCode()
+    }
+
     override func windowDidLoad() {
         super.windowDidLoad()
 
@@ -249,6 +265,7 @@ class PreferencesWindow: NSWindowController, NSWindowDelegate {
         } else {
             debugModeCheckBox.state = .off
         }
+        hideShowOnDebugMode()
         DDLogInfo("Debug Mode: \(debugModeCheckBox.state == .on)")
 
         if UserDefaults.standard.bool(forKey: PREF_START_ON_BOOT) {
@@ -309,7 +326,7 @@ class PreferencesWindow: NSWindowController, NSWindowDelegate {
                         return
                     }
                     ipTextField.stringValue = firstAddr
-                    userTipsLabel.textColor = .black
+                    userTipsLabel.textColor = .labelColor
                     userTipsLabel.stringValue = userTipsScanQRCode
                     imageQRCode.image = QRCodeImageWith(data: data, size: imageQRCode.frame.size.width)
                 }

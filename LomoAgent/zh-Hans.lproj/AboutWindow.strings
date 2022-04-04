@@ -1,12 +1,12 @@
 
 /* Class = "NSTextFieldCell"; title = "LomoAgent"; ObjectID = "4AV-Bb-xpD"; */
-"4AV-Bb-xpD.title" = "LomoAgent";
+"4AV-Bb-xpD.title" = "Lomorage照片助手";
 
 /* Class = "NSWindow"; title = "About LomoAgent"; ObjectID = "F0z-JX-Cv5"; */
-"F0z-JX-Cv5.title" = "关于LomoAgent";
+"F0z-JX-Cv5.title" = "关于";
 
 /* Class = "NSTextFieldCell"; title = "version"; ObjectID = "Iox-9E-p6j"; */
 "Iox-9E-p6j.title" = "版本";
 
 /* Class = "NSTextFieldCell"; title = "Download \"lomorage\" on Apple APP store, then you can easily backup your photos and videos locally and share with your family.\n\n©2019 by Lomoware"; ObjectID = "y51-vr-zJM"; */
-"y51-vr-zJM.title" = "从苹果应用程序商店下载\"lomorage\"，可以轻松完成照片视频的本地备份，并方便的和家人之间共享。\n\n©2019 by Lomoware";
+"y51-vr-zJM.title" = "从苹果应用程序商店下载\"lomorage\"，可以轻松完成照片视频的本地备份，并方便的和家人之间共享。\n\n©2022 by Lomoware";

@@ -1,0 +1,10 @@
+/* 
+  InfoPlist.strings
+  LomoAgent
+
+  Created by jeromy on 4/3/22.
+  Copyright © 2022 lomoware. All rights reserved.
+*/
+
+"CFBundleDisplayName" = "Lomorage Photo Assistant";
+"CFBundleName" = "Lomorage Photo Assistant";

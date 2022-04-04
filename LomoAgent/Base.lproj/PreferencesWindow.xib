@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="18122" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="20037" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="18122"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="20037"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -12,10 +12,12 @@
                 <outlet property="debugModeCheckBox" destination="6In-C0-Ox8" id="Elp-qb-8ve"/>
                 <outlet property="homeDirTextField" destination="eQt-yd-8Oh" id="iWN-ft-Og1"/>
                 <outlet property="imageQRCode" destination="Ha9-zw-3Td" id="CaF-1f-0Zm"/>
+                <outlet property="ipLabel" destination="HJy-yO-KmA" id="isd-N6-Dr6"/>
                 <outlet property="ipTextField" destination="xNB-4l-h21" id="jFu-Nn-aSh"/>
                 <outlet property="lastBackupLabel" destination="hLc-hC-7B1" id="GnP-0e-iJK"/>
                 <outlet property="openBackupButton" destination="9uI-GV-J4c" id="htL-VN-8YV"/>
                 <outlet property="openHomeButton" destination="AyW-Hh-bcP" id="Dvx-Bf-pkk"/>
+                <outlet property="portLabel" destination="FeW-Jp-XEh" id="tm2-c9-txb"/>
                 <outlet property="portTextField" destination="8OA-ER-QGA" id="gze-4u-eHl"/>
                 <outlet property="selectBackupButton" destination="41g-Kx-m4R" id="W03-k1-4Ib"/>
                 <outlet property="selectHomeButton" destination="9j3-TC-mnI" id="feT-GR-Zey"/>
