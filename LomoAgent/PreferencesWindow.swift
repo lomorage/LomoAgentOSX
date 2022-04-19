@@ -317,22 +317,24 @@ class PreferencesWindow: NSWindowController, NSWindowDelegate {
     }
 
     func generateQRCode() {
-        if let lomodService = getLomodService() {
-            imageQRCode.wantsLayer = true
-            if let addresses = lomodService.getListenIPs() {
-                if let firstAddr = addresses.first {
-                    let url = "http://\(firstAddr):\(portTextField.stringValue)"
-                    guard let data = url.data(using: String.Encoding.utf8, allowLossyConversion: false) else {
-                        return
+        DispatchQueue.main.async {
+            if let lomodService = getLomodService() {
+                self.imageQRCode.wantsLayer = true
+                if let addresses = lomodService.getListenIPs() {
+                    if let firstAddr = addresses.first {
+                        let url = "http://\(firstAddr):\(self.portTextField.stringValue)"
+                        guard let data = url.data(using: String.Encoding.utf8, allowLossyConversion: false) else {
+                            return
+                        }
+                        self.ipTextField.stringValue = firstAddr
+                        self.userTipsLabel.textColor = .labelColor
+                        self.userTipsLabel.stringValue = userTipsScanQRCode
+                        self.imageQRCode.image = QRCodeImageWith(data: data, size: self.imageQRCode.frame.size.width)
                     }
-                    ipTextField.stringValue = firstAddr
-                    userTipsLabel.textColor = .labelColor
-                    userTipsLabel.stringValue = userTipsScanQRCode
-                    imageQRCode.image = QRCodeImageWith(data: data, size: imageQRCode.frame.size.width)
+                } else {
+                    self.userTipsLabel.textColor = .red
+                    self.userTipsLabel.stringValue = userTipsConfigureHomeDirAndWaitStart
                 }
-            } else {
-                userTipsLabel.textColor = .red
-                userTipsLabel.stringValue = userTipsNeedConfigureHomeDir
             }
         }
     }

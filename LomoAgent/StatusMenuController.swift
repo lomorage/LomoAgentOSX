@@ -169,7 +169,10 @@ class StatusMenuController: NSObject {
 
             lomodService.checkServerStatus { (systemInfo, connectErr) in
                 if connectErr == nil {
-                    lomodService.getUserList()
+
+                    DispatchQueue.main.async {
+                        lomodService.getUserList()
+                    }
 
                     if let ipList = lomodService.getListenIPs() {
                         if let firstIp = ipList.first, firstIp != self.listenIp {
