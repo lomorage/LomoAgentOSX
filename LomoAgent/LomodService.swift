@@ -9,6 +9,12 @@
 import Foundation
 import CocoaLumberjack
 
+enum WebdavLayout: Int {
+    case viewYear = 0
+    case viewYearMonth = 1
+    case viewYearMonthDay = 2
+}
+
 struct BackupRecordItem {
     let backupOutput: String
     let lastBackupTime: String

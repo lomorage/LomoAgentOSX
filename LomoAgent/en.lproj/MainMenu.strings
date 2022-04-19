@@ -11,8 +11,13 @@
 /* Class = "NSMenuItem"; title = "Users"; ObjectID = "RE4-Dz-g6K"; */
 "RE4-Dz-g6K.title" = "Users";
 
-/* Class = "NSMenuItem"; title = "Import"; ObjectID = "s1f-Vy-Kej"; */
-"s1f-Vy-Kej.title" = "Browse";
+/* Class = "NSMenuItem"; title = "Web Access"; ObjectID = "s1f-Vy-Kej"; */
+"s1f-Vy-Kej.title" = "Web Access";
 
 /* Class = "NSMenuItem"; title = "About"; ObjectID = "sKW-Ui-FWc"; */
 "sKW-Ui-FWc.title" = "About";
+
+"lrA-Tz-1fc.title" = "Customize View";
+"hA3-DO-o66.title" = "Year";
+"Piy-V3-IXU.title" = "Year/Month";
+"8iy-mW-ps0.tilte" = "Year/Month/Day";

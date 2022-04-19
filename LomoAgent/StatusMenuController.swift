@@ -39,6 +39,20 @@ class StatusMenuController: NSObject {
         NSApp.activate(ignoringOtherApps: true)
     }
 
+    @IBAction func onClickCustomizeViewMenu(_ sender: Any) {
+        guard let menuItem = sender as? NSMenuItem, let menuIdentifier = menuItem.identifier else { return }
+
+        var layout = WebdavLayout.viewYearMonthDay
+        
+        switch menuIdentifier.rawValue {
+            case "menuYear": layout = .viewYear
+            case "menuYearMonth": layout = .viewYearMonth
+            case "menuYearMonthDay": layout = .viewYearMonthDay
+            default: break
+        }
+
+        DDLogInfo("Check layout to :\(layout)")
+    }
 
     @IBAction func usersClicked(_ sender: Any) {
         userWindow.showWindow(nil)

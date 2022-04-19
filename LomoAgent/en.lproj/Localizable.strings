@@ -24,7 +24,7 @@
 "Change password succeed!" = "Change password succeed!";
 "Change password failed!" = "Change password failed!";
 
-"Please configure home directory for photo storage first" = "Please configure home directory for photo storage first";
+"Please configure home directory for photo storage and wait for system start" = "Please configure home directory for photo storage and wait for system start";
 "If the service can not be found automatically, you can use Lomorage APP to scan QR code to configure the service" = "If the service can not be found automatically, you can use Lomorage APP to scan QR code to configure the service";
 
 "OK" = "OK";

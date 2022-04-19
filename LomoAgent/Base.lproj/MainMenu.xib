@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="19529" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="20037" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="19529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="20037"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
@@ -22,7 +22,7 @@
         </customObject>
         <menu id="DTi-xy-fwc">
             <items>
-                <menuItem title="Browse" image="NSTouchBarOpenInBrowserTemplate" id="s1f-Vy-Kej">
+                <menuItem title="Web Access" image="NSTouchBarOpenInBrowserTemplate" id="s1f-Vy-Kej">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
                         <action selector="importClicked:" target="yau-81-bwM" id="fVk-lp-N2F"/>
@@ -34,6 +34,31 @@
                     <connections>
                         <action selector="usersClicked:" target="yau-81-bwM" id="jIF-Qs-Bn0"/>
                     </connections>
+                </menuItem>
+                <menuItem title="Customize View" image="NSQuickLookTemplate" id="lrA-Tz-1fc">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="Customize View" id="hO3-Fv-Jrl">
+                        <items>
+                            <menuItem title="Year" identifier="menuYear" toolTip="YYYY" id="hA3-DO-o66">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="onClickCustomizeViewMenu:" target="yau-81-bwM" id="RjH-kv-kAI"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Year/Month" identifier="menuYearMonth" toolTip="YYYY/MM" id="Piy-V3-IXU">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="onClickCustomizeViewMenu:" target="yau-81-bwM" id="IXp-bJ-n1H"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Year/Month/Day" identifier="menuearMonthDay" toolTip="YYYY/MM/DD" id="8iy-mW-ps0">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="onClickCustomizeViewMenu:" target="yau-81-bwM" id="7Ab-fg-ZkH"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="GWg-8H-QPN"/>
                 <menuItem title="Restart" image="NSRefreshTemplate" id="QEK-wS-71g">
@@ -70,6 +95,7 @@
     </objects>
     <resources>
         <image name="NSActionTemplate" width="15" height="15"/>
+        <image name="NSQuickLookTemplate" width="21" height="13"/>
         <image name="NSRefreshTemplate" width="14" height="16"/>
         <image name="NSTouchBarOpenInBrowserTemplate" width="15" height="15"/>
         <image name="NSTouchBarUserTemplate" width="14" height="14"/>
