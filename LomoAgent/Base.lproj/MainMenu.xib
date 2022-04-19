@@ -51,7 +51,7 @@
                                     <action selector="onClickCustomizeViewMenu:" target="yau-81-bwM" id="IXp-bJ-n1H"/>
                                 </connections>
                             </menuItem>
-                            <menuItem title="Year/Month/Day" identifier="menuearMonthDay" toolTip="YYYY/MM/DD" id="8iy-mW-ps0">
+                            <menuItem title="Year/Month/Day" identifier="menuYearMonthDay" toolTip="YYYY/MM/DD" id="8iy-mW-ps0">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <connections>
                                     <action selector="onClickCustomizeViewMenu:" target="yau-81-bwM" id="7Ab-fg-ZkH"/>
