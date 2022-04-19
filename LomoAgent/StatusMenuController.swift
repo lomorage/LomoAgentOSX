@@ -40,6 +40,7 @@ class StatusMenuController: NSObject {
     }
 
     @IBAction func onClickCustomizeViewMenu(_ sender: Any) {
+
         guard let menuItem = sender as? NSMenuItem, let menuIdentifier = menuItem.identifier else { return }
 
         var layout = WebdavLayout.viewYearMonthDay
@@ -52,6 +53,35 @@ class StatusMenuController: NSObject {
         }
 
         DDLogInfo("Check layout to :\(layout)")
+
+        if let lomodService = getLomodService() {
+            lomodService.setWebDAVLayout(layout: layout)
+
+            let mountDir = "/tmp/Lomorage"
+            var succ = true
+            if !FileManager.default.fileExists(atPath: mountDir) {
+                do {
+                    try FileManager.default.createDirectory(atPath: mountDir, withIntermediateDirectories: true, attributes: nil)
+                } catch let error as NSError {
+                    DDLogError("Unable to create directory \(error.debugDescription)")
+                    succ = false
+                }
+            }
+
+            guard succ else {
+                return
+            }
+
+            let task = Process()
+            task.launchPath = "/sbin/mount_webdav"
+            task.arguments = ["http://127.0.0.1:8004/", mountDir]
+            task.launch()
+            task.waitUntilExit()
+
+            NSWorkspace.shared.activateFileViewerSelecting([URL(fileURLWithPath: mountDir)])
+        } else {
+            DDLogWarn("onClickCustomizeViewMenu lomodService not ready")
+        }
     }
 
     @IBAction func usersClicked(_ sender: Any) {

@@ -10,9 +10,9 @@ import Foundation
 import CocoaLumberjack
 
 enum WebdavLayout: Int {
-    case viewYear = 0
+    case viewYearMonthDay = 0
     case viewYearMonth = 1
-    case viewYearMonthDay = 2
+    case viewYear = 2
 }
 
 struct BackupRecordItem {
@@ -222,6 +222,46 @@ class LomodService
             DDLogError("setRedundancyBackup, failed")
         }
         return ret
+    }
+
+    func setWebDAVLayout(layout: WebdavLayout) {
+        let port = UserDefaults.standard.string(forKey: PREF_LOMOD_PORT)
+        guard port != nil else {
+            DDLogError("setWebDAVLayout, port not ready yet")
+            return
+        }
+
+        var ret = false
+        DDLogInfo("setWebDAVLayout to \(layout)")
+
+        if let url = URL(string: "http://\(LOCAL_HOST):\(port!)/system/conf/webdav_layout/\(layout.rawValue)"),
+            let uuid = UserDefaults.standard.string(forKey: PREF_ADMIN_TOKEN) {
+            var urlRequest = URLRequest(url: url)
+            urlRequest.httpMethod = "POST"
+            urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
+            urlRequest.addValue("application/json", forHTTPHeaderField: "Accept")
+            urlRequest.setValue("token=\(uuid)", forHTTPHeaderField: "Authorization")
+
+            let opGroup = DispatchGroup()
+            opGroup.enter()
+            self.networkSession.reqData(with: urlRequest, completionHandler: { (data, response, error) in
+                if let error = error {
+                    DDLogError("setWebDAVLayout, error: \(error.localizedDescription)")
+                } else if let httpresp = response as? HTTPURLResponse {
+                    if httpresp.statusCode == 200 {
+                        DDLogInfo("setWebDAVLayout \(layout) succ")
+                        ret = true
+                    } else {
+                        DDLogError("setWebDAVLayout, error: \(String(describing: response))")
+                    }
+                } else {
+                    DDLogError("setWebDAVLayout, error: \(String(describing: response))")
+                }
+            }, sync: opGroup)
+            opGroup.wait()
+        } else {
+            DDLogError("setWebDAVLayout, failed")
+        }
     }
 
     func getListenIPs() -> [String]? {
