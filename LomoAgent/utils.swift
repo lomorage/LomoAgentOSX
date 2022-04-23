@@ -310,3 +310,10 @@ class Version {
         return false
     }
 }
+
+func getPerferredLangWithoutRegionAndScript() -> String {
+    let items1 = Locale.current.identifier.split(separator: "_")
+    let langWithoutRegion = String(items1.first!)
+    let items2 = langWithoutRegion.split(separator: "-")
+    return String(items2.first!)
+}

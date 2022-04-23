@@ -21,8 +21,9 @@ class StatusMenuController: NSObject {
     var stateTimer: Timer!
     var pingTimer: Timer = Timer()
     var updateTimer: Timer = Timer()
+    var guideUrlPoped = false
     static let stateTimerIntervalSec = 1.0
-    static let pingTimerIntervalSec = 30.0
+    static let pingTimerIntervalSec = 10.0
     static let autoUpdateHour = 4
     static let autoUpdateMinute = 0
 
@@ -216,6 +217,16 @@ class StatusMenuController: NSObject {
 
                     DispatchQueue.main.async {
                         lomodService.getUserList()
+                    }
+
+                    if let info = systemInfo, info.systemStatus <= 0, !self.guideUrlPoped {
+                        let preferredLang = getPerferredLangWithoutRegionAndScript()
+                        var url = URL(string: "https://lomosw.lomorage.com/index.html")
+                        if preferredLang == "zh" {
+                            url = URL(string: "https://lomosw.lomorage.com/zh/index.html")
+                        }
+                        NSWorkspace.shared.open(url!)
+                        self.guideUrlPoped = true
                     }
 
                     if let ipList = lomodService.getListenIPs() {

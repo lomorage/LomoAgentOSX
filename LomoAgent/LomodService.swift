@@ -224,11 +224,11 @@ class LomodService
         return ret
     }
 
-    func setWebDAVLayout(layout: WebdavLayout) {
+    func setWebDAVLayout(layout: WebdavLayout) -> Bool {
         let port = UserDefaults.standard.string(forKey: PREF_LOMOD_PORT)
         guard port != nil else {
             DDLogError("setWebDAVLayout, port not ready yet")
-            return
+            return false
         }
 
         var ret = false
@@ -262,6 +262,8 @@ class LomodService
         } else {
             DDLogError("setWebDAVLayout, failed")
         }
+
+        return ret
     }
 
     func getListenIPs() -> [String]? {
