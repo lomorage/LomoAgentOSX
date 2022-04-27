@@ -88,7 +88,7 @@ class LomodService
         DDLogInfo("changePassword for \(username)")
         let port = UserDefaults.standard.string(forKey: PREF_LOMOD_PORT)
         guard port != nil else {
-            DDLogError("setRedundancyBackup, port not ready yet")
+            DDLogError("changePassword, port not ready yet")
             return false
         }
 

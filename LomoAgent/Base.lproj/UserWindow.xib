@@ -17,20 +17,20 @@
         <window title="Users" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="196" y="240" width="480" height="270"/>
+            <rect key="contentRect" x="196" y="240" width="480" height="316"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1792" height="1095"/>
-            <view key="contentView" wantsLayer="YES" id="EiT-Mj-1SZ">
-                <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+            <view key="contentView" wantsLayer="YES" misplaced="YES" id="EiT-Mj-1SZ">
+                <rect key="frame" x="0.0" y="0.0" width="480" height="316"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SjM-dc-6dC">
-                        <rect key="frame" x="20" y="20" width="435" height="235"/>
+                    <scrollView misplaced="YES" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SjM-dc-6dC">
+                        <rect key="frame" x="20" y="53" width="435" height="248"/>
                         <clipView key="contentView" id="8KW-8j-QB2">
-                            <rect key="frame" x="1" y="1" width="433" height="233"/>
+                            <rect key="frame" x="1" y="1" width="433" height="246"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="hbc-PO-dIP" viewBased="YES" id="XMx-5B-EIh">
-                                    <rect key="frame" x="0.0" y="0.0" width="433" height="208"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="433" height="221"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <size key="intercellSpacing" width="3" height="2"/>
                                     <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -157,11 +157,8 @@
                                 </tableView>
                             </subviews>
                         </clipView>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="235" id="U1I-oi-sjQ"/>
-                        </constraints>
                         <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="HIq-Mg-UMT">
-                            <rect key="frame" x="1" y="113" width="433" height="16"/>
+                            <rect key="frame" x="1" y="193" width="233" height="16"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                         <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="SkT-e7-35d">
@@ -173,18 +170,46 @@
                             <autoresizingMask key="autoresizingMask"/>
                         </tableHeaderView>
                     </scrollView>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2Tv-Jx-Vbp">
+                        <rect key="frame" x="131" y="13" width="45" height="32"/>
+                        <buttonCell key="cell" type="push" bezelStyle="rounded" image="NSTouchBarUserAddTemplate" imagePosition="overlaps" alignment="right" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="1w7-M4-PJe">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="onClickAddUser:" target="-2" id="cUv-QQ-L2E"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="uPC-3c-Bbe">
+                        <rect key="frame" x="305" y="13" width="45" height="32"/>
+                        <buttonCell key="cell" type="push" bezelStyle="rounded" image="NSTouchBarDeleteTemplate" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="iWg-In-Dw6">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="onClickDelUser:" target="-2" id="Swt-B0-eQk"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
+                    <constraint firstAttribute="bottom" secondItem="2Tv-Jx-Vbp" secondAttribute="bottom" constant="20" symbolic="YES" id="06B-nr-Da0"/>
                     <constraint firstAttribute="trailing" secondItem="SjM-dc-6dC" secondAttribute="trailing" constant="25" id="GFH-1l-Ww4"/>
+                    <constraint firstAttribute="bottom" secondItem="SjM-dc-6dC" secondAttribute="bottom" constant="53" id="K60-4R-bJg"/>
                     <constraint firstItem="SjM-dc-6dC" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="20" id="V0L-9Z-TOQ"/>
-                    <constraint firstAttribute="bottom" secondItem="SjM-dc-6dC" secondAttribute="bottom" constant="20" id="ic4-dI-irc"/>
+                    <constraint firstItem="2Tv-Jx-Vbp" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="138" id="f4r-C0-CWY"/>
                     <constraint firstItem="SjM-dc-6dC" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="15" id="mVB-f4-xWf"/>
+                    <constraint firstAttribute="bottom" secondItem="uPC-3c-Bbe" secondAttribute="bottom" constant="20" symbolic="YES" id="yuS-Yi-u0U"/>
+                    <constraint firstAttribute="trailing" secondItem="uPC-3c-Bbe" secondAttribute="trailing" constant="137" id="zN8-cs-4sB"/>
                 </constraints>
             </view>
             <connections>
                 <outlet property="delegate" destination="-2" id="YOW-Fw-Cy4"/>
             </connections>
-            <point key="canvasLocation" x="68" y="145"/>
+            <point key="canvasLocation" x="68" y="180"/>
         </window>
     </objects>
+    <resources>
+        <image name="NSTouchBarDeleteTemplate" width="15" height="17"/>
+        <image name="NSTouchBarUserAddTemplate" width="17" height="16"/>
+    </resources>
 </document>

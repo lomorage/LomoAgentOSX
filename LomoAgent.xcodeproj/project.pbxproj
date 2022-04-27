@@ -32,6 +32,8 @@
 		3A8BEF0F22E419F500DAE39C /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8BEF0E22E419F500DAE39C /* Localizable.swift */; };
 		3A8BEF1122E4BA0B00DAE39C /* LomodService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8BEF1022E4BA0B00DAE39C /* LomodService.swift */; };
 		3A94CC2E22E407A9002207D5 /* utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A94CC2D22E407A9002207D5 /* utils.swift */; };
+		3AA732872819C584006EAA8A /* CreateUserWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AA732892819C584006EAA8A /* CreateUserWindow.xib */; };
+		3AA7328F2819C7A1006EAA8A /* CreateUserWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA7328E2819C7A1006EAA8A /* CreateUserWindow.swift */; };
 		3AC3E846229F9B60004EA1D7 /* HyperlinkTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC3E845229F9B60004EA1D7 /* HyperlinkTextField.swift */; };
 		3AE33D3B23244F2E00B81C13 /* rsync in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3A818C152320D36A00B110B3 /* rsync */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		3AE33D3E23244F6400B81C13 /* lomoupg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3AE33D3C23244F5100B81C13 /* lomoupg */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
@@ -126,6 +128,10 @@
 		3A8BEF0E22E419F500DAE39C /* Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
 		3A8BEF1022E4BA0B00DAE39C /* LomodService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LomodService.swift; sourceTree = "<group>"; };
 		3A94CC2D22E407A9002207D5 /* utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = utils.swift; sourceTree = "<group>"; };
+		3AA732882819C584006EAA8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/CreateUserWindow.xib; sourceTree = "<group>"; };
+		3AA7328B2819C58A006EAA8A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/CreateUserWindow.strings; sourceTree = "<group>"; };
+		3AA7328D2819C58A006EAA8A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/CreateUserWindow.strings"; sourceTree = "<group>"; };
+		3AA7328E2819C7A1006EAA8A /* CreateUserWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserWindow.swift; sourceTree = "<group>"; };
 		3AC3E845229F9B60004EA1D7 /* HyperlinkTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HyperlinkTextField.swift; sourceTree = "<group>"; };
 		3AE33D3C23244F5100B81C13 /* lomoupg */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = lomoupg; path = dependencies/lomod/Contents/MacOS/lomoupg; sourceTree = "<group>"; };
 		3AE5886524569FD40079CB36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/UserWindow.xib; sourceTree = "<group>"; };
@@ -267,7 +273,9 @@
 				3A8BEF1022E4BA0B00DAE39C /* LomodService.swift */,
 				3A38970D22321A03004A2001 /* PreferencesWindow.swift */,
 				3AE5886B2456A0F60079CB36 /* UserWindow.swift */,
+				3AA7328E2819C7A1006EAA8A /* CreateUserWindow.swift */,
 				3A35C5E322435B710030FF1B /* PreferencesWindow.xib */,
+				3AA732892819C584006EAA8A /* CreateUserWindow.xib */,
 				3A2FE40122E2BC34000022B0 /* Bridging-Header.h */,
 				3A35C5E8224365340030FF1B /* AboutWindow.swift */,
 				3AC3E845229F9B60004EA1D7 /* HyperlinkTextField.swift */,
@@ -379,6 +387,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AA732872819C584006EAA8A /* CreateUserWindow.xib in Resources */,
 				3A8BEF0A22E419BB00DAE39C /* Localizable.strings in Resources */,
 				3AFBE6E127FAACAA00A69C9A /* InfoPlist.strings in Resources */,
 				3A3896FE222F7801004A2001 /* Assets.xcassets in Resources */,
@@ -462,6 +471,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AA7328F2819C7A1006EAA8A /* CreateUserWindow.swift in Sources */,
 				3A2FE40022E2B339000022B0 /* QRImage.swift in Sources */,
 				3AE5886C2456A0F60079CB36 /* UserWindow.swift in Sources */,
 				3A8BEF1122E4BA0B00DAE39C /* LomodService.swift in Sources */,
@@ -516,6 +526,16 @@
 				3A8BEF0D22E419BD00DAE39C /* zh-Hans */,
 			);
 			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		3AA732892819C584006EAA8A /* CreateUserWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3AA732882819C584006EAA8A /* Base */,
+				3AA7328B2819C58A006EAA8A /* en */,
+				3AA7328D2819C58A006EAA8A /* zh-Hans */,
+			);
+			name = CreateUserWindow.xib;
 			sourceTree = "<group>";
 		};
 		3AE5886624569FD40079CB36 /* UserWindow.xib */ = {

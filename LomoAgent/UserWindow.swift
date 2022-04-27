@@ -54,7 +54,26 @@ class PasswordTextField: NSTextField
 
 class UserWindow: NSWindowController {
 
+    var createUserWindow: CreateUserWindow!
+
     @IBOutlet weak var tableview: NSTableView!
+
+    @IBAction func onClickAddUser(_ sender: Any) {
+        createUserWindow.showWindow(nil)
+
+        NSApp.activate(ignoringOtherApps: true)
+    }
+
+    @IBAction func onClickDelUser(_ sender: Any) {
+        if let lomodService = getLomodService() {
+            for row in tableview.selectedRowIndexes {
+                let user = lomodService.members[row]
+                DDLogInfo("delete \(user.userName)")
+            }
+
+            tableview.reloadData()
+        }
+    }
 
     override var windowNibName : String! {
         return "UserWindow"
@@ -86,6 +105,12 @@ class UserWindow: NSWindowController {
         }
     }
 
+    @objc func onIpChanged(_ notification: Notification) {
+        DispatchQueue.main.async {
+            self.tableview.reloadData()
+        }
+    }
+
     override func windowDidLoad() {
         super.windowDidLoad()
 
@@ -97,6 +122,13 @@ class UserWindow: NSWindowController {
         tableview.delegate = self
         tableview.dataSource = self
         tableview.action = #selector(onItemClicked)
+
+        createUserWindow = CreateUserWindow()
+
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(onIpChanged(_:)),
+                                               name: .NotifyIpChanged,
+                                               object: nil)
     }
 }
 
