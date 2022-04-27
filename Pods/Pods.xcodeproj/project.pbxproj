@@ -159,7 +159,7 @@
 		025E1BE0ED1D68EF1B6F819885A204DE /* DDLog+LOGV.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "DDLog+LOGV.h"; path = "Sources/CocoaLumberjack/include/DDLog+LOGV.h"; sourceTree = "<group>"; };
 		032BEB9770B426991504D3035221A99C /* ioapi.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ioapi.h; path = Zip/minizip/ioapi.h; sourceTree = "<group>"; };
 		056BC1EB8639E3F67F9F23084BE5848E /* blake2-impl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "blake2-impl.h"; path = "Sources/ModuleMaps/Argon2/blake2-impl.h"; sourceTree = "<group>"; };
-		0579B9621A0948B247774C0A697607C4 /* SimpleFIPS202.c */ = {isa = PBXFileReference; includeInIndex = 1; name = SimpleFIPS202.c; path = Sources/ModuleMaps/SHA3/SimpleFIPS202.c; sourceTree = "<group>"; };
+		0579B9621A0948B247774C0A697607C4 /* SimpleFIPS202.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = SimpleFIPS202.c; path = Sources/ModuleMaps/SHA3/SimpleFIPS202.c; sourceTree = "<group>"; };
 		097B7F65372B88C4D9DE5A40CA28856E /* DDFileLogger+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "DDFileLogger+Internal.h"; path = "Sources/CocoaLumberjack/DDFileLogger+Internal.h"; sourceTree = "<group>"; };
 		0A67E956A2EB779A87974F4F83706105 /* DDMultiFormatter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDMultiFormatter.m; path = Sources/CocoaLumberjack/Extensions/DDMultiFormatter.m; sourceTree = "<group>"; };
 		0B3C24948F51653F4257755B1631109D /* Pods-LomoAgentLauncher-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LomoAgentLauncher-Info.plist"; sourceTree = "<group>"; };
@@ -171,11 +171,11 @@
 		13150222E4B1CD1F528123EC82E3546F /* Zip.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Zip.release.xcconfig; sourceTree = "<group>"; };
 		16AAC3B804B212D92B48496C93A4F6DB /* Pods-LomoAgentLauncher-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LomoAgentLauncher-umbrella.h"; sourceTree = "<group>"; };
 		17DE57160039AAFF8236F00CDA54189B /* DDLoggerNames.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDLoggerNames.m; path = Sources/CocoaLumberjack/DDLoggerNames.m; sourceTree = "<group>"; };
-		1975C080801D1FCBE88713493970396F /* Pods_LomoAgent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_LomoAgent.framework; path = "Pods-LomoAgent.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1975C080801D1FCBE88713493970396F /* Pods_LomoAgent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LomoAgent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A408E67EE780E1CD29CDCC3ABF45502 /* DDTTYLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDTTYLogger.h; path = Sources/CocoaLumberjack/include/DDTTYLogger.h; sourceTree = "<group>"; };
-		1E53A4FC9AD52B412657260E8DB6C7F2 /* unzip.c */ = {isa = PBXFileReference; includeInIndex = 1; name = unzip.c; path = Zip/minizip/unzip.c; sourceTree = "<group>"; };
+		1E53A4FC9AD52B412657260E8DB6C7F2 /* unzip.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = unzip.c; path = Zip/minizip/unzip.c; sourceTree = "<group>"; };
 		2021775FFC68A2C884D804CA3E32CAC8 /* DDContextFilterLogFormatter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDContextFilterLogFormatter.h; path = Sources/CocoaLumberjack/include/DDContextFilterLogFormatter.h; sourceTree = "<group>"; };
-		2331A3CF9C28C7B9C23E6C9B6BBADCA8 /* Commands.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Commands.framework; path = Commands.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2331A3CF9C28C7B9C23E6C9B6BBADCA8 /* Commands.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Commands.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		25EFFB6F5D13E5AA5AD28D4317D3F3EB /* CocoaLumberjack.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CocoaLumberjack.swift; path = Sources/CocoaLumberjackSwift/CocoaLumberjack.swift; sourceTree = "<group>"; };
 		26487BD1504B0E0C9C7932CF9F8206E3 /* CocoaLumberjack-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CocoaLumberjack-prefix.pch"; sourceTree = "<group>"; };
 		28B12094C9C795573C1FA39C862C9C36 /* Pods-LomoAgentLauncher-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LomoAgentLauncher-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -184,12 +184,12 @@
 		2E0B7BC797EF6A79F6BD40BA1DEB12BB /* CocoaLumberjack.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CocoaLumberjack.h; path = "Sources/CocoaLumberjack/Supporting Files/CocoaLumberjack.h"; sourceTree = "<group>"; };
 		2E93E2474CEBA7DB80F85180D34ECCAA /* core.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = core.h; path = Sources/ModuleMaps/Argon2/core.h; sourceTree = "<group>"; };
 		2F769A72D159644D4A352A06D3FBD251 /* Crypto.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Crypto.swift; path = Sources/Core/Crypto.swift; sourceTree = "<group>"; };
-		313363282FEEEA96C1398E8E2486022E /* CatCrypto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CatCrypto.framework; path = CatCrypto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		313363282FEEEA96C1398E8E2486022E /* CatCrypto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CatCrypto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		313DB199F8A9E6FA2119ECA25723AD7E /* EnumDescription.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EnumDescription.swift; path = Sources/Protocols/EnumDescription.swift; sourceTree = "<group>"; };
 		326446BE19C7C97FB94E835372DBC55C /* Pods-LomoAgent.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LomoAgent.debug.xcconfig"; sourceTree = "<group>"; };
 		33820C5A0D495B3C9B36EC52A7C4DB1D /* ArrayExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ArrayExtension.swift; path = Sources/Core/ArrayExtension.swift; sourceTree = "<group>"; };
-		3773464DBD588BF2CB243D2D9325D477 /* Pods_LomoAgentLauncher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_LomoAgentLauncher.framework; path = "Pods-LomoAgentLauncher.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		379F0C9C40761FFB8D9FF81ED8292B62 /* encoding.c */ = {isa = PBXFileReference; includeInIndex = 1; name = encoding.c; path = Sources/ModuleMaps/Argon2/encoding.c; sourceTree = "<group>"; };
+		3773464DBD588BF2CB243D2D9325D477 /* Pods_LomoAgentLauncher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LomoAgentLauncher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		379F0C9C40761FFB8D9FF81ED8292B62 /* encoding.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = encoding.c; path = Sources/ModuleMaps/Argon2/encoding.c; sourceTree = "<group>"; };
 		38CFE116EAF8D4A81F8E712B1A593D81 /* CatCrypto-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CatCrypto-umbrella.h"; sourceTree = "<group>"; };
 		39587297A2FE1582CB03A7F929CC7454 /* ZipUtilities.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZipUtilities.swift; path = Zip/ZipUtilities.swift; sourceTree = "<group>"; };
 		39B8F3228CA5FA6D4752631AA92E0973 /* CommandsDashcTransformer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CommandsDashcTransformer.swift; path = Sources/Commands/CommandsDashcTransformer.swift; sourceTree = "<group>"; };
@@ -198,7 +198,7 @@
 		3C7A4F0EE89CBA163F84A5FC4D5F9969 /* CLIColor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CLIColor.m; path = Sources/CocoaLumberjack/CLI/CLIColor.m; sourceTree = "<group>"; };
 		3CC7A295838173B0306C20146625AD2E /* argon2.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = argon2.h; path = Sources/ModuleMaps/Argon2/argon2.h; sourceTree = "<group>"; };
 		3E58B4C16604DB7DC5093D21BE84204D /* DDDispatchQueueLogFormatter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDDispatchQueueLogFormatter.h; path = Sources/CocoaLumberjack/include/DDDispatchQueueLogFormatter.h; sourceTree = "<group>"; };
-		43CF21FE87C3B2CABAEC1B3F9A68A9C3 /* argon2.c */ = {isa = PBXFileReference; includeInIndex = 1; name = argon2.c; path = Sources/ModuleMaps/Argon2/argon2.c; sourceTree = "<group>"; };
+		43CF21FE87C3B2CABAEC1B3F9A68A9C3 /* argon2.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = argon2.c; path = Sources/ModuleMaps/Argon2/argon2.c; sourceTree = "<group>"; };
 		4447C746D9A38555014C4F8FB39AC219 /* Decryption.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Decryption.swift; path = Sources/Protocols/Decryption.swift; sourceTree = "<group>"; };
 		4614ED71689B3B18DD94BCF22264E742 /* DDFileLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDFileLogger.h; path = Sources/CocoaLumberjack/include/DDFileLogger.h; sourceTree = "<group>"; };
 		48903A733CA562F9734F827220ED6B0E /* blamka-round-opt.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "blamka-round-opt.h"; path = "Sources/ModuleMaps/Argon2/blamka-round-opt.h"; sourceTree = "<group>"; };
@@ -217,7 +217,7 @@
 		5D5D9EC998D5611BFCA2D909F2A18FE9 /* Commands-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Commands-Info.plist"; sourceTree = "<group>"; };
 		5DFC0D69A900B40FEB7615651377C262 /* Zip.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Zip.modulemap; sourceTree = "<group>"; };
 		5F01AB02B94C7EC3F74575545D771CB1 /* CatCrypto-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CatCrypto-prefix.pch"; sourceTree = "<group>"; };
-		6061484218239D0D19F75F749E29CAF9 /* core.c */ = {isa = PBXFileReference; includeInIndex = 1; name = core.c; path = Sources/ModuleMaps/Argon2/core.c; sourceTree = "<group>"; };
+		6061484218239D0D19F75F749E29CAF9 /* core.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = core.c; path = Sources/ModuleMaps/Argon2/core.c; sourceTree = "<group>"; };
 		6367760D66779165F198589CB24CB876 /* CocoaLumberjack-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "CocoaLumberjack-Info.plist"; sourceTree = "<group>"; };
 		654851D8C400E05330BAFFA79F26FF80 /* DDLoggerNames.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDLoggerNames.h; path = Sources/CocoaLumberjack/include/DDLoggerNames.h; sourceTree = "<group>"; };
 		6808F5B06AC979AE01EEBFB4C9C47D28 /* CatCrypto.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CatCrypto.debug.xcconfig; sourceTree = "<group>"; };
@@ -225,7 +225,7 @@
 		6EACBA7C23329443FDD2F8103B94A6AD /* Pods-LomoAgent.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LomoAgent.release.xcconfig"; sourceTree = "<group>"; };
 		6F2FC6AF36428528AD881FF780BDAD22 /* DDAbstractDatabaseLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDAbstractDatabaseLogger.m; path = Sources/CocoaLumberjack/DDAbstractDatabaseLogger.m; sourceTree = "<group>"; };
 		70964B35A313DB4A17EB7821061BA8E6 /* Commands-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Commands-prefix.pch"; sourceTree = "<group>"; };
-		7187E3C04F9D3A74F271DA08A23D199E /* thread.c */ = {isa = PBXFileReference; includeInIndex = 1; name = thread.c; path = Sources/ModuleMaps/Argon2/thread.c; sourceTree = "<group>"; };
+		7187E3C04F9D3A74F271DA08A23D199E /* thread.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = thread.c; path = Sources/ModuleMaps/Argon2/thread.c; sourceTree = "<group>"; };
 		719BD4034F7ADBD0E79800893F3A42FC /* zip.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = zip.h; path = Zip/minizip/zip.h; sourceTree = "<group>"; };
 		71DA07B31BE3D26F297345D871D2EBD3 /* Helper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Helper.swift; path = Sources/Core/Helper.swift; sourceTree = "<group>"; };
 		7206ED0CF7D0CB115EA4309813B70CFF /* DDOSLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDOSLogger.m; path = Sources/CocoaLumberjack/DDOSLogger.m; sourceTree = "<group>"; };
@@ -238,42 +238,42 @@
 		7FAEF0BDA53E7D81FB70527145C123C3 /* unzip.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = unzip.h; path = Zip/minizip/unzip.h; sourceTree = "<group>"; };
 		7FE4CA5819F1BD26FEC2C769D1502698 /* Encryption.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Encryption.swift; path = Sources/Protocols/Encryption.swift; sourceTree = "<group>"; };
 		7FFBA56ECDF14EF8672F6947CC19D764 /* DDMultiFormatter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDMultiFormatter.h; path = Sources/CocoaLumberjack/include/DDMultiFormatter.h; sourceTree = "<group>"; };
-		86CB4D87C320EDE2FBD1DEF924A2E437 /* KeccakSpongeWidth1600.c */ = {isa = PBXFileReference; includeInIndex = 1; name = KeccakSpongeWidth1600.c; path = Sources/ModuleMaps/SHA3/KeccakSpongeWidth1600.c; sourceTree = "<group>"; };
+		86CB4D87C320EDE2FBD1DEF924A2E437 /* KeccakSpongeWidth1600.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = KeccakSpongeWidth1600.c; path = Sources/ModuleMaps/SHA3/KeccakSpongeWidth1600.c; sourceTree = "<group>"; };
 		87359AF7772E552EB1C99F4B4FE163F9 /* Commands.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Commands.swift; path = Sources/Commands/Commands.swift; sourceTree = "<group>"; };
 		8AED14B35A8AA7AD2691AC12415C30CF /* DDLog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDLog.h; path = Sources/CocoaLumberjack/include/DDLog.h; sourceTree = "<group>"; };
 		8C747D053454D058FF8647D9FF6E9CD4 /* Commands-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Commands-umbrella.h"; sourceTree = "<group>"; };
 		941C835CDA8D854BAAE3103739996092 /* DDLogMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDLogMacros.h; path = Sources/CocoaLumberjack/include/DDLogMacros.h; sourceTree = "<group>"; };
-		9520508FA39C33E487E6465DBBA0E780 /* blake2b.c */ = {isa = PBXFileReference; includeInIndex = 1; name = blake2b.c; path = Sources/ModuleMaps/Argon2/blake2b.c; sourceTree = "<group>"; };
-		9968B97595F6BBC7710E20E107AC6ECA /* ref.c */ = {isa = PBXFileReference; includeInIndex = 1; name = ref.c; path = Sources/ModuleMaps/Argon2/ref.c; sourceTree = "<group>"; };
+		9520508FA39C33E487E6465DBBA0E780 /* blake2b.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = blake2b.c; path = Sources/ModuleMaps/Argon2/blake2b.c; sourceTree = "<group>"; };
+		9968B97595F6BBC7710E20E107AC6ECA /* ref.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = ref.c; path = Sources/ModuleMaps/Argon2/ref.c; sourceTree = "<group>"; };
 		99EDB6BD1AE0512AE05F37CA514B1594 /* DDASLLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDASLLogger.h; path = Sources/CocoaLumberjack/include/DDASLLogger.h; sourceTree = "<group>"; };
 		9ACB4BE67E0D9A9C4C40687140623F36 /* CatCrypto.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CatCrypto.h; path = Sources/CatCrypto.h; sourceTree = "<group>"; };
 		9C19453299BA26A5A288AC521CB54667 /* thread.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = thread.h; path = Sources/ModuleMaps/Argon2/thread.h; sourceTree = "<group>"; };
 		9C50755DC2F32CF8FCD56AB76A80FD02 /* DDAbstractDatabaseLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDAbstractDatabaseLogger.h; path = Sources/CocoaLumberjack/include/DDAbstractDatabaseLogger.h; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9E0A5DFB6FBF90063ACC1F427A5005C7 /* blamka-round-ref.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "blamka-round-ref.h"; path = "Sources/ModuleMaps/Argon2/blamka-round-ref.h"; sourceTree = "<group>"; };
 		A2B9F51534256B797B7B7F6BF3420238 /* DDFileLogger+Buffering.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "DDFileLogger+Buffering.h"; path = "Sources/CocoaLumberjack/include/DDFileLogger+Buffering.h"; sourceTree = "<group>"; };
 		A6E6E8708041F72DB5DD17D2BCE18E36 /* Pods-LomoAgent-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LomoAgent-acknowledgements.markdown"; sourceTree = "<group>"; };
-		A845402EF959A57A4640F2A4F5155943 /* Zip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Zip.framework; path = Zip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A845402EF959A57A4640F2A4F5155943 /* Zip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Zip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8B8660F5FB25970736AF65DF754D4B2 /* KeccakSpongeWidth1600.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KeccakSpongeWidth1600.h; path = Sources/ModuleMaps/SHA3/KeccakSpongeWidth1600.h; sourceTree = "<group>"; };
 		A97ED25BF71CF05D883391D86783C0E9 /* CatCrypto-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CatCrypto-dummy.m"; sourceTree = "<group>"; };
 		ADC6456FC53229245464DB6A7BC18F7A /* Pods-LomoAgent-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LomoAgent-frameworks.sh"; sourceTree = "<group>"; };
 		ADFE611B679A18F32810412EB8D28463 /* DDContextFilterLogFormatter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDContextFilterLogFormatter.m; path = Sources/CocoaLumberjack/Extensions/DDContextFilterLogFormatter.m; sourceTree = "<group>"; };
 		AF34EA74201886BD38ED435FF453E527 /* SwiftLogLevel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SwiftLogLevel.h; path = Sources/CocoaLumberjackSwiftSupport/include/SwiftLogLevel.h; sourceTree = "<group>"; };
 		B374A0142AB5B4BDC33CD5743AE4728B /* CocoaLumberjack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CocoaLumberjack.release.xcconfig; sourceTree = "<group>"; };
-		B3B9AC8864B4963310A2AB3FEAA6223C /* md6_compress.c */ = {isa = PBXFileReference; includeInIndex = 1; name = md6_compress.c; path = Sources/ModuleMaps/MD6/md6_compress.c; sourceTree = "<group>"; };
+		B3B9AC8864B4963310A2AB3FEAA6223C /* md6_compress.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = md6_compress.c; path = Sources/ModuleMaps/MD6/md6_compress.c; sourceTree = "<group>"; };
 		B3EF458030A49E5883FF5943F7447A7D /* blake2.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = blake2.h; path = Sources/ModuleMaps/Argon2/blake2.h; sourceTree = "<group>"; };
 		B428443A56025716D6FBB7EAD8A6ABFF /* DDFileLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDFileLogger.m; path = Sources/CocoaLumberjack/DDFileLogger.m; sourceTree = "<group>"; };
 		B5309E5124A40A10E6844FB91B56F5B0 /* crypt.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypt.h; path = Zip/minizip/crypt.h; sourceTree = "<group>"; };
 		B734C5A9FE2E663EEAA8A06F5952E954 /* Commands.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Commands.release.xcconfig; sourceTree = "<group>"; };
 		B7E7774B1F1C1BD2C66BC38C96EE3ADC /* CommandsENV.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CommandsENV.swift; path = Sources/Commands/CommandsENV.swift; sourceTree = "<group>"; };
-		B8A098C708D571CE6FBCE13726F7E95E /* zip.c */ = {isa = PBXFileReference; includeInIndex = 1; name = zip.c; path = Zip/minizip/zip.c; sourceTree = "<group>"; };
+		B8A098C708D571CE6FBCE13726F7E95E /* zip.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = zip.c; path = Zip/minizip/zip.c; sourceTree = "<group>"; };
 		BA3664E0ACE201B964E28DFD9741D219 /* Contextual.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Contextual.swift; path = Sources/Protocols/Contextual.swift; sourceTree = "<group>"; };
 		BB8CFCE55A02CCFE02F14891E3CFDE8E /* DDAssert.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DDAssert.swift; path = Sources/CocoaLumberjackSwift/DDAssert.swift; sourceTree = "<group>"; };
 		BC89876E7303ABA4F17EA6F0A3DD5A4B /* DDDispatchQueueLogFormatter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDDispatchQueueLogFormatter.m; path = Sources/CocoaLumberjack/Extensions/DDDispatchQueueLogFormatter.m; sourceTree = "<group>"; };
 		BDB728F5BA8426707EE775C4ACA87213 /* Zip.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Zip.h; path = Zip/Zip.h; sourceTree = "<group>"; };
 		BF7B2ADF9D321BA82A11943AA03FBB01 /* CocoaLumberjack-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CocoaLumberjack-umbrella.h"; sourceTree = "<group>"; };
 		C1430F003D39D9906881A6AC724B7931 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
-		C261436D14052AE3C35F240BCD155CAC /* CocoaLumberjack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CocoaLumberjack.framework; path = CocoaLumberjack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C261436D14052AE3C35F240BCD155CAC /* CocoaLumberjack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CocoaLumberjack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3FA3540ABDFC1E80A376F50538A1398 /* Pods-LomoAgent.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-LomoAgent.modulemap"; sourceTree = "<group>"; };
 		C84D556F46F5F04EE0D413E7B6055258 /* Zip-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Zip-umbrella.h"; sourceTree = "<group>"; };
 		C9E6C73093AFF8B5CCBAC3B3B895C940 /* SHA.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SHA.swift; path = Sources/Cryptos/SHA.swift; sourceTree = "<group>"; };
@@ -282,7 +282,7 @@
 		CF5F7ED0B2063D28403BAE61B64DDF4F /* Argon.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Argon.swift; path = Sources/Cryptos/Argon.swift; sourceTree = "<group>"; };
 		D136D34B63ABA719FB0E46D0D504F8D5 /* KeccakP-1600-reference.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "KeccakP-1600-reference.h"; path = "Sources/ModuleMaps/SHA3/KeccakP-1600-reference.h"; sourceTree = "<group>"; };
 		D1C48AB08F11DC08C2DB1395269C8367 /* DDFileLogger+Buffering.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "DDFileLogger+Buffering.m"; path = "Sources/CocoaLumberjack/Extensions/DDFileLogger+Buffering.m"; sourceTree = "<group>"; };
-		D269FA5DBDFA9BC66390EE041F4FF18B /* ioapi.c */ = {isa = PBXFileReference; includeInIndex = 1; name = ioapi.c; path = Zip/minizip/ioapi.c; sourceTree = "<group>"; };
+		D269FA5DBDFA9BC66390EE041F4FF18B /* ioapi.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = ioapi.c; path = Zip/minizip/ioapi.c; sourceTree = "<group>"; };
 		D9725729E432AE76644A2C03FAA6B67C /* DDTTYLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDTTYLogger.m; path = Sources/CocoaLumberjack/DDTTYLogger.m; sourceTree = "<group>"; };
 		DCD56AC7960D2E4C6429D106424076B3 /* Commands.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Commands.debug.xcconfig; sourceTree = "<group>"; };
 		DD8B6AE951932B5081AB678388B39AE0 /* align.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = align.h; path = Sources/ModuleMaps/SHA3/align.h; sourceTree = "<group>"; };
@@ -291,7 +291,7 @@
 		E5187CA1F38068527206604CF58CE5E1 /* Pods-LomoAgentLauncher.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LomoAgentLauncher.release.xcconfig"; sourceTree = "<group>"; };
 		EC3F56D7E151F3423FA76EF62297E405 /* DDASLLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDASLLogger.m; path = Sources/CocoaLumberjack/DDASLLogger.m; sourceTree = "<group>"; };
 		EDA1C18C88CE3422CF48485B393AED06 /* Pods-LomoAgent-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LomoAgent-acknowledgements.plist"; sourceTree = "<group>"; };
-		EF4C1015D242465C942F7B50B54038FB /* md6_mode.c */ = {isa = PBXFileReference; includeInIndex = 1; name = md6_mode.c; path = Sources/ModuleMaps/MD6/md6_mode.c; sourceTree = "<group>"; };
+		EF4C1015D242465C942F7B50B54038FB /* md6_mode.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = md6_mode.c; path = Sources/ModuleMaps/MD6/md6_mode.c; sourceTree = "<group>"; };
 		F013FC4AFE943F6CD252FC7C03ED7A84 /* brg_endian.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = brg_endian.h; path = Sources/ModuleMaps/SHA3/brg_endian.h; sourceTree = "<group>"; };
 		F0A9243E013BEBEB079EC69ADA315ACE /* Zip.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Zip.debug.xcconfig; sourceTree = "<group>"; };
 		F3A716DDE48596511122FC12A0C6AC61 /* CatCrypto.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CatCrypto.release.xcconfig; sourceTree = "<group>"; };
@@ -299,7 +299,7 @@
 		F70476B7CB116064A938D4AB91B07741 /* encoding.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = encoding.h; path = Sources/ModuleMaps/Argon2/encoding.h; sourceTree = "<group>"; };
 		F7E3689EC3900E21443EC3FEE9BD18FD /* md6.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = md6.h; path = Sources/ModuleMaps/MD6/md6.h; sourceTree = "<group>"; };
 		F8FDD9143D5036660B4AF9B7E2571B45 /* MessageDigest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MessageDigest.swift; path = Sources/Cryptos/MessageDigest.swift; sourceTree = "<group>"; };
-		F940C2D2AC3F78E0E073517AC437E8CF /* KeccakP-1600-reference.c */ = {isa = PBXFileReference; includeInIndex = 1; name = "KeccakP-1600-reference.c"; path = "Sources/ModuleMaps/SHA3/KeccakP-1600-reference.c"; sourceTree = "<group>"; };
+		F940C2D2AC3F78E0E073517AC437E8CF /* KeccakP-1600-reference.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = "KeccakP-1600-reference.c"; path = "Sources/ModuleMaps/SHA3/KeccakP-1600-reference.c"; sourceTree = "<group>"; };
 		F9DDB266CF56831B0108C6EEB1B2E469 /* SimpleFIPS202.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SimpleFIPS202.h; path = Sources/ModuleMaps/SHA3/SimpleFIPS202.h; sourceTree = "<group>"; };
 		FBFFB1B8B6C7A62851D411B227C17250 /* Pods-LomoAgentLauncher.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LomoAgentLauncher.debug.xcconfig"; sourceTree = "<group>"; };
 		FCBBD76F853B275F3F1EA4D14AB1CEA7 /* Zip-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Zip-dummy.m"; sourceTree = "<group>"; };
@@ -445,7 +445,6 @@
 				986BB6D5679EC7A80F7C7392B05C9889 /* Support Files */,
 				40D0824E780FAC28528A3F70E1D0F357 /* Swift */,
 			);
-			name = CocoaLumberjack;
 			path = CocoaLumberjack;
 			sourceTree = "<group>";
 		};
@@ -537,7 +536,6 @@
 				735286B1746B2EA2CE3FC6C77911F901 /* CommandsTask.swift */,
 				4106044E670A2242E05BBF7E493C66BC /* Support Files */,
 			);
-			name = Commands;
 			path = Commands;
 			sourceTree = "<group>";
 		};
@@ -618,7 +616,6 @@
 				51C3D673B0AC6BEDC4DCD3EA850F7EF3 /* Verification.swift */,
 				DB5A1A6C197A926856DEC90A280B3135 /* Support Files */,
 			);
-			name = CatCrypto;
 			path = CatCrypto;
 			sourceTree = "<group>";
 		};
@@ -655,7 +652,6 @@
 				39587297A2FE1582CB03A7F929CC7454 /* ZipUtilities.swift */,
 				6EE69190CD03471467F4F4121AFD4E55 /* Support Files */,
 			);
-			name = Zip;
 			path = Zip;
 			sourceTree = "<group>";
 		};

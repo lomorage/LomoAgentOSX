@@ -18,12 +18,10 @@ class StatusMenuController: NSObject {
     var aboutWindow: AboutWindow!
     var lomodTask: Process?
     var lomoWebTask: Process?
-    var stateTimer: Timer!
-    var pingTimer: Timer = Timer()
     var updateTimer: Timer = Timer()
     var guideUrlPoped = false
-    static let stateTimerIntervalSec = 1.0
-    static let pingTimerIntervalSec = 10.0
+    let stateReaptingTimer = RepeatingTimer(timeInterval: 1)
+    let pingReaptingTimer = RepeatingTimer(timeInterval: 5)
     static let autoUpdateHour = 4
     static let autoUpdateMinute = 0
 
@@ -107,8 +105,8 @@ class StatusMenuController: NSObject {
     fileprivate func doExit() {
         stopLomoService()
         NotificationCenter.default.removeObserver(self)
-        stateTimer.invalidate()
-        pingTimer.invalidate()
+        stateReaptingTimer.suspend()
+        pingReaptingTimer.suspend()
         updateTimer.invalidate()
         NSApplication.shared.terminate(self)
     }
@@ -166,8 +164,10 @@ class StatusMenuController: NSObject {
                                                name: .NotifyExit,
                                                object: nil)
 
-        stateTimer = Timer.scheduledTimer(timeInterval: StatusMenuController.stateTimerIntervalSec, target: self, selector: #selector(checkLomodState), userInfo: nil, repeats: true)
-        pingTimer = Timer.scheduledTimer(timeInterval: StatusMenuController.pingTimerIntervalSec, target: self, selector: #selector(pingLomod), userInfo: nil, repeats: true)
+        stateReaptingTimer.eventHandler = checkLomodState
+        pingReaptingTimer.eventHandler = pingLomod
+        stateReaptingTimer.resume()
+        pingReaptingTimer.resume()
 
         scheduleAutoUpdate()
     }
@@ -200,7 +200,11 @@ class StatusMenuController: NSObject {
 
     @objc func checkLomodState() {
         if let task = lomodTask, task.isRunning {
-            restartMenuItem.image = NSImage(named: NSImage.statusAvailableName)
+            if let lomodService = getLomodService(), lomodService.systemInfo != nil {
+                restartMenuItem.image = NSImage(named: NSImage.statusAvailableName)
+            } else {
+                restartMenuItem.image = NSImage(named: NSImage.statusPartiallyAvailableName)
+            }
         } else {
             restartMenuItem.image = NSImage(named: NSImage.statusUnavailableName)
             if lomodTask != nil {
@@ -214,6 +218,7 @@ class StatusMenuController: NSObject {
 
             lomodService.checkServerStatus { (systemInfo, connectErr) in
                 if connectErr == nil {
+                    DDLogError("pingLomod succ!")
 
                     DispatchQueue.main.async {
                         lomodService.getUserList()

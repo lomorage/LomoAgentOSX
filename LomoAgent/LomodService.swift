@@ -51,7 +51,7 @@ class LomodService
 
     private(set) var members = [Member]()
 
-    private var systemInfo: SystemInfo?
+    private(set) var systemInfo: SystemInfo?
 
     private(set) public var finalBackupTime: String = ""
 
@@ -312,6 +312,7 @@ class LomodService
     }
 
     func checkServerStatus(completionHandler: @escaping (SystemInfo?, Error?) -> Swift.Void) {
+        systemInfo = nil
         var networkError: Error?
         if let port = UserDefaults.standard.string(forKey: PREF_LOMOD_PORT) {
             if let url = URL(string: "http://\(LOCAL_HOST):\(port)/system"),
