@@ -29,9 +29,12 @@ class CreateUserWindow: NSWindowController {
             var result = createUserFailLocalized
             if lomodService.createUser(username: username, encryptPassword: encryptedPwd, homedir: homeDir) {
                 result = createUserSuccLocalized
+                NotificationCenter.default.post(name: .NotifyUserChanged, object: self)
+                dialogAlert(message: result, info: "")
+                self.window?.close()
+            } else {
+                dialogAlert(message: result, info: "")
             }
-
-            dialogAlert(message: result, info: "")
         }
     }
 

@@ -25,6 +25,8 @@ class StatusMenuController: NSObject {
     static let autoUpdateHour = 4
     static let autoUpdateMinute = 0
 
+    var lomodService: LomodService!
+
     var listenIp = ""
 
     let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
@@ -53,34 +55,30 @@ class StatusMenuController: NSObject {
 
         DDLogInfo("Check layout to :\(layout)")
 
-        if let lomodService = getLomodService() {
-            lomodService.setWebDAVLayout(layout: layout)
+        lomodService.setWebDAVLayout(layout: layout)
 
-            let mountDir = "/tmp/Lomorage"
-            var succ = true
-            if !FileManager.default.fileExists(atPath: mountDir) {
-                do {
-                    try FileManager.default.createDirectory(atPath: mountDir, withIntermediateDirectories: true, attributes: nil)
-                } catch let error as NSError {
-                    DDLogError("Unable to create directory \(error.debugDescription)")
-                    succ = false
-                }
+        let mountDir = "/tmp/Lomorage"
+        var succ = true
+        if !FileManager.default.fileExists(atPath: mountDir) {
+            do {
+                try FileManager.default.createDirectory(atPath: mountDir, withIntermediateDirectories: true, attributes: nil)
+            } catch let error as NSError {
+                DDLogError("Unable to create directory \(error.debugDescription)")
+                succ = false
             }
-
-            guard succ else {
-                return
-            }
-
-            let task = Process()
-            task.launchPath = "/sbin/mount_webdav"
-            task.arguments = ["http://127.0.0.1:8004/", mountDir]
-            task.launch()
-            task.waitUntilExit()
-
-            NSWorkspace.shared.activateFileViewerSelecting([URL(fileURLWithPath: mountDir)])
-        } else {
-            DDLogWarn("onClickCustomizeViewMenu lomodService not ready")
         }
+
+        guard succ else {
+            return
+        }
+
+        let task = Process()
+        task.launchPath = "/sbin/mount_webdav"
+        task.arguments = ["http://127.0.0.1:8004/", mountDir]
+        task.launch()
+        task.waitUntilExit()
+
+        NSWorkspace.shared.activateFileViewerSelecting([URL(fileURLWithPath: mountDir)])
     }
 
     @IBAction func usersClicked(_ sender: Any) {
@@ -170,6 +168,8 @@ class StatusMenuController: NSObject {
         pingReaptingTimer.resume()
 
         scheduleAutoUpdate()
+
+        lomodService = getLomodService()
     }
 
     func getSecondsOffsetTo(hour: Int, minute: Int) -> Int {
@@ -200,7 +200,7 @@ class StatusMenuController: NSObject {
 
     @objc func checkLomodState() {
         if let task = lomodTask, task.isRunning {
-            if let lomodService = getLomodService(), lomodService.systemInfo != nil {
+            if lomodService!.systemInfo != nil {
                 restartMenuItem.image = NSImage(named: NSImage.statusAvailableName)
             } else {
                 restartMenuItem.image = NSImage(named: NSImage.statusPartiallyAvailableName)
@@ -214,35 +214,32 @@ class StatusMenuController: NSObject {
     }
 
     @objc func pingLomod() {
-        if let lomodService = getLomodService() {
+        lomodService.checkServerStatus { (systemInfo, connectErr) in
+            if connectErr == nil {
+                DDLogError("pingLomod succ!")
 
-            lomodService.checkServerStatus { (systemInfo, connectErr) in
-                if connectErr == nil {
-                    DDLogError("pingLomod succ!")
-
-                    DispatchQueue.main.async {
-                        lomodService.getUserList()
-                    }
-
-                    if let info = systemInfo, info.systemStatus <= 0, !self.guideUrlPoped {
-                        let preferredLang = getPerferredLangWithoutRegionAndScript()
-                        var url = URL(string: "https://lomosw.lomorage.com/index.html")
-                        if preferredLang == "zh" {
-                            url = URL(string: "https://lomosw.lomorage.com/zh/index.html")
-                        }
-                        NSWorkspace.shared.open(url!)
-                        self.guideUrlPoped = true
-                    }
-
-                    if let ipList = lomodService.getListenIPs() {
-                        if let firstIp = ipList.first, firstIp != self.listenIp {
-                            self.listenIp = firstIp
-                            NotificationCenter.default.post(name: .NotifyIpChanged, object: self)
-                        }
-                    }
-                } else {
-                    DDLogError("pingLomod error!")
+                DispatchQueue.main.async {
+                    self.lomodService.getUserList()
                 }
+
+                if let info = systemInfo, info.systemStatus <= 0, !self.guideUrlPoped {
+                    let preferredLang = getPerferredLangWithoutRegionAndScript()
+                    var url = URL(string: "https://lomosw.lomorage.com/index.html")
+                    if preferredLang == "zh" {
+                        url = URL(string: "https://lomosw.lomorage.com/zh/index.html")
+                    }
+                    NSWorkspace.shared.open(url!)
+                    self.guideUrlPoped = true
+                }
+
+                if let ipList = self.lomodService.getListenIPs() {
+                    if let firstIp = ipList.first, firstIp != self.listenIp {
+                        self.listenIp = firstIp
+                        NotificationCenter.default.post(name: .NotifyIpChanged, object: self)
+                    }
+                }
+            } else {
+                DDLogError("pingLomod error!")
             }
         }
     }

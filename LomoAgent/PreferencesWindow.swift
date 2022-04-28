@@ -21,6 +21,7 @@ let LOCAL_HOST = "127.0.0.1"
 extension Notification.Name {
     static let NotifySettingsChanged = NSNotification.Name("NotifySettingsChanged")
     static let NotifyIpChanged = NSNotification.Name("NotifyIpChanged")
+    static let NotifyUserChanged = NSNotification.Name("NotifyUserChanged")
     static let NotifyExit = NSNotification.Name("NotifyExit")
     static let NotifyStart = NSNotification.Name("NotifyStart")
 }

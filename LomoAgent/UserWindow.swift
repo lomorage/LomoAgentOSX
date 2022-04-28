@@ -60,6 +60,8 @@ class UserWindow: NSWindowController {
 
     @IBAction func onClickAddUser(_ sender: Any) {
         createUserWindow.showWindow(nil)
+        createUserWindow.passwordTextField.stringValue = ""
+        createUserWindow.userNameTextField.stringValue = ""
 
         NSApp.activate(ignoringOtherApps: true)
     }
@@ -105,7 +107,10 @@ class UserWindow: NSWindowController {
         }
     }
 
-    @objc func onIpChanged(_ notification: Notification) {
+    @objc func onLomodServiceChanged(_ notification: Notification) {
+        if let lomodService = getLomodService() {
+            lomodService.getUserList()
+        }
         DispatchQueue.main.async {
             self.tableview.reloadData()
         }
@@ -126,8 +131,13 @@ class UserWindow: NSWindowController {
         createUserWindow = CreateUserWindow()
 
         NotificationCenter.default.addObserver(self,
-                                               selector: #selector(onIpChanged(_:)),
+                                               selector: #selector(onLomodServiceChanged(_:)),
                                                name: .NotifyIpChanged,
+                                               object: nil)
+
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(onLomodServiceChanged(_:)),
+                                               name: .NotifyUserChanged,
                                                object: nil)
     }
 }
