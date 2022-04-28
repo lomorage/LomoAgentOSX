@@ -9,7 +9,7 @@
         <customObject id="-2" userLabel="File's Owner" customClass="CreateUserWindow" customModule="LomoAgent" customModuleProvider="target">
             <connections>
                 <outlet property="passwordTextField" destination="DbB-Tb-wvP" id="XXF-Vk-B38"/>
-                <outlet property="userNameTextField" destination="DbB-Tb-wvP" id="PSS-Yt-U0H"/>
+                <outlet property="userNameTextField" destination="913-7u-q3M" id="1cQ-mt-abE"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="j5M-zi-lCu"/>
             </connections>
         </customObject>

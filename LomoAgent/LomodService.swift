@@ -84,6 +84,59 @@ class LomodService
         }
     }
 
+    func createUser(username:String, encryptPassword: String, homedir: String) -> Bool {
+
+        let port = UserDefaults.standard.string(forKey: PREF_LOMOD_PORT)
+        guard port != nil else {
+            DDLogError("createUser, port not ready yet")
+            return false
+        }
+
+        var ret = false
+        let urlString = "http://\(LOCAL_HOST):\(port!)/user"
+
+        if let url = URL(string: urlString), let uuid = UserDefaults.standard.string(forKey: PREF_ADMIN_TOKEN) {
+            var json = [String:Any]()
+            json["Name"] = username
+            json["Password"] = encryptPassword
+            json["NickName"] = ""
+            json["HomeDir"] = homedir
+            json["BotUser"] =  false
+
+            do {
+                let data = try JSONSerialization.data(withJSONObject: json, options: [])
+                var urlRequest = URLRequest(url: url)
+                urlRequest.httpMethod = "POST"
+                urlRequest.httpBody = data
+                urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
+                urlRequest.addValue("application/json", forHTTPHeaderField: "Accept")
+                urlRequest.setValue("token=\(uuid)", forHTTPHeaderField: "Authorization")
+
+                let opGroup = DispatchGroup()
+                opGroup.enter()
+                self.networkSession.reqData(with: urlRequest, completionHandler: { (data, response, error) in
+                    if let error = error {
+                        DDLogError("create user error: \(error)")
+                    } else if let httpresp = response as? HTTPURLResponse {
+                        if httpresp.statusCode == 200 {
+                            DDLogInfo("create user \(username) succ")
+                            ret = true
+                        } else {
+                            DDLogError("error when create user: \(String(describing: response))")
+                        }
+                    } else {
+                        DDLogError("error when create user: \(String(describing: response))")
+                    }
+                }, sync: opGroup)
+                opGroup.wait()
+            } catch {
+                DDLogError("failed when create user: \(error)")
+            }
+        }
+
+        return ret
+    }
+
     func changePassword(for username: String, with password: String) -> Bool {
         DDLogInfo("changePassword for \(username)")
         let port = UserDefaults.standard.string(forKey: PREF_LOMOD_PORT)

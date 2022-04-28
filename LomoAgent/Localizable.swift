@@ -28,6 +28,8 @@ let passwordTooShortLocalized = NSLocalizedString("Password should be no less th
 let clickChangePasswordLocalized = NSLocalizedString("click to change password", comment: "")
 let passwordChangeSuccLocalized = NSLocalizedString("Change password succeed!", comment: "")
 let passwordChangeFailLocalized = NSLocalizedString("Change password failed!", comment: "")
+let createUserSuccLocalized = NSLocalizedString("Create user succeed!", comment: "")
+let createUserFailLocalized = NSLocalizedString("Create user failed!", comment: "")
 
 let userTipsConfigureHomeDirAndWaitStart = NSLocalizedString("Please configure home directory for photo storage and wait for system start", comment: "")
 let userTipsScanQRCode = NSLocalizedString("If the service can not be found automatically, you can use Lomorage APP to scan QR code to configure the service", comment: "")

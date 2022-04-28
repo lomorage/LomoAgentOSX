@@ -20,6 +20,19 @@ class CreateUserWindow: NSWindowController {
     }
 
     @IBAction func onOkClicked(_ sender: Any) {
+        let username = userNameTextField.stringValue
+        let password = passwordTextField.stringValue
+
+        if let encryptedPwd = getEncryptPassword(username, password), let lomodService = getLomodService(),
+           let homeDir = UserDefaults.standard.string(forKey: PREF_HOME_DIR) {
+            DDLogInfo("Create user, username: \(username)")
+            var result = createUserFailLocalized
+            if lomodService.createUser(username: username, encryptPassword: encryptedPwd, homedir: homeDir) {
+                result = createUserSuccLocalized
+            }
+
+            dialogAlert(message: result, info: "")
+        }
     }
 
     override var windowNibName : String! {
