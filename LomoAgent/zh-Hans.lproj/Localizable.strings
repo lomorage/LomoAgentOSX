@@ -32,5 +32,8 @@
 "OK" = "确定";
 "Cancel" = "取消";
 "Quit?" = "退出应用?";
-
 "Unset backup directory?" = "取消备份目录设置?";
+"Delete user %@?" = "删除用户 %@ ?";
+"Delete user %@ failed" = "删除用户 %@ 失败";
+"Delete user %@ succeed" = "删除用户 %@ 成功";
+"Please check home directory for user %@ and delete it manually" = "请检查用户 %@ 的主目录之后再手动删除";

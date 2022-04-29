@@ -67,13 +67,41 @@ class UserWindow: NSWindowController {
     }
 
     @IBAction func onClickDelUser(_ sender: Any) {
+        var userList = [String]()
         if let lomodService = getLomodService() {
             for row in tableview.selectedRowIndexes {
                 let user = lomodService.members[row]
-                DDLogInfo("delete \(user.userName)")
+                userList.append(user.userName!)
             }
 
-            tableview.reloadData()
+            if dialogOKCancel(message: String(format: alertDelUser, userList.joined(separator: ",")), info: "") {
+                var failUserLst = [String]()
+                for user in userList {
+                    if lomodService.deleteUser(username: user) {
+                        DDLogInfo("delete user \(user) succ")
+                    } else {
+                        DDLogWarn("delete user \(user) failed")
+                        failUserLst.append(user)
+                    }
+                }
+
+                if failUserLst.isEmpty {
+                    NotificationCenter.default.post(name: .NotifyUserChanged, object: self)
+                    dialogAlert(
+                        message: String(format: alertDelUserSucc, userList.joined(separator: ",")),
+                        info: String(format: deleteUserFolder, userList.joined(separator: ","))
+                    )
+                    if let homeDir = UserDefaults.standard.string(forKey: PREF_HOME_DIR) {
+                        NSWorkspace.shared.activateFileViewerSelecting([URL(fileURLWithPath: homeDir)])
+                    }
+                } else {
+                    dialogAlert(
+                        message: String(format: alertDelUserFailure, failUserLst.joined(separator: ",")),
+                        info: ""
+                    )
+                }
+
+            }
         }
     }
 
@@ -108,10 +136,10 @@ class UserWindow: NSWindowController {
     }
 
     @objc func onLomodServiceChanged(_ notification: Notification) {
-        if let lomodService = getLomodService() {
-            lomodService.getUserList()
-        }
         DispatchQueue.main.async {
+            if let lomodService = getLomodService() {
+                lomodService.getUserList()
+            }
             self.tableview.reloadData()
         }
     }

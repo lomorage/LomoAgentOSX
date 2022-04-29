@@ -32,5 +32,8 @@
 "OK" = "OK";
 "Cancel" = "Cancel";
 "Quit?" = "Quit?";
-
 "Unset backup directory?" = "Unset backup directory?";
+"Delete user %@?" = "Delete user %@?";
+"Delete user %@ failed" = "Delete user %@ failed";
+"Delete user %@ succeed" = "Delete user %@ succeed";
+"Please check home directory for user %@ and delete it manually" = "Please check home directory for user %@ and delete it manually";

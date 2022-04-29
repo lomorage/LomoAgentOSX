@@ -137,6 +137,45 @@ class LomodService
         return ret
     }
 
+    func deleteUser(username:String) -> Bool {
+        let port = UserDefaults.standard.string(forKey: PREF_LOMOD_PORT)
+        guard port != nil else {
+            DDLogError("unsetRedundancyBackup, port not ready yet")
+            return false
+        }
+
+        var ret = false
+        DDLogInfo("deleteUser: \(username)")
+
+        if let adminToken = UserDefaults.standard.string(forKey: PREF_ADMIN_TOKEN),
+           let url = URL(string: "http://\(LOCAL_HOST):\(port!)/user/\(username)") {
+            var urlRequest = URLRequest(url: url)
+            urlRequest.httpMethod = "DELETE"
+            urlRequest.setValue("token=\(adminToken)", forHTTPHeaderField: "Authorization")
+
+            let opGroup = DispatchGroup()
+            opGroup.enter()
+            self.networkSession.reqData(with: urlRequest, completionHandler: { (data, response, error) in
+                if let error = error {
+                    DDLogError("deleteUser, error: \(error.localizedDescription)")
+                } else if let httpresp = response as? HTTPURLResponse {
+                    if httpresp.statusCode == 200 {
+                        DDLogInfo("deleteUser succ")
+                        ret = true
+                    } else {
+                        DDLogError("deleteUser, error: \(String(describing: response))")
+                    }
+                } else {
+                    DDLogError("deleteUser, error: \(String(describing: response))")
+                }
+            }, sync: opGroup)
+            opGroup.wait()
+        } else {
+            DDLogError("deleteUser, failed")
+        }
+        return ret
+    }
+
     func changePassword(for username: String, with password: String) -> Bool {
         DDLogInfo("changePassword for \(username)")
         let port = UserDefaults.standard.string(forKey: PREF_LOMOD_PORT)
