@@ -10,16 +10,16 @@
 		224DE9DBFAAACB514AB47FB7 /* Pods_LomoAgentLauncher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B75321B0D26ACE9E3138A1A /* Pods_LomoAgentLauncher.framework */; };
 		3A1436512320C86700E0F154 /* LomoUpgrade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1436502320C86700E0F154 /* LomoUpgrade.swift */; };
 		3A1666E626FC599B008F1250 /* lomoc in Resources */ = {isa = PBXBuildFile; fileRef = 3A1666E526FC599A008F1250 /* lomoc */; };
-		3A1666E726FC59B5008F1250 /* lomoc in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3A1666E526FC599A008F1250 /* lomoc */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		3A1666E726FC59B5008F1250 /* lomoc in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3A1666E526FC599A008F1250 /* lomoc */; };
 		3A16D9D2231C501F0092EADD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A16D9D1231C501F0092EADD /* AppDelegate.swift */; };
 		3A16D9D4231C50270092EADD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A16D9D3231C50270092EADD /* Assets.xcassets */; };
 		3A16D9E1231C53290092EADD /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A16D9E0231C53290092EADD /* ServiceManagement.framework */; };
 		3A16D9E3231C605F0092EADD /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A16D9E2231C605F0092EADD /* main.swift */; };
-		3A23EFCC2422FD3100906032 /* exiftool in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3A23EFCB2422FD3100906032 /* exiftool */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		3A23EFCF2422FDC400906032 /* lib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3A23EFCD2422FD4E00906032 /* lib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		3A23EFCC2422FD3100906032 /* exiftool in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3A23EFCB2422FD3100906032 /* exiftool */; };
+		3A23EFCF2422FDC400906032 /* lib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3A23EFCD2422FD4E00906032 /* lib */; };
 		3A2FE40022E2B339000022B0 /* QRImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2FE3FF22E2B339000022B0 /* QRImage.swift */; };
-		3A35C5DA2240B5F30030FF1B /* lomod in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3A35C5D52240B5E90030FF1B /* lomod */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		3A35C5DD2240B6040030FF1B /* lomod in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3A35C5CE2240B5A90030FF1B /* lomod */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		3A35C5DA2240B5F30030FF1B /* lomod in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3A35C5D52240B5E90030FF1B /* lomod */; };
+		3A35C5DD2240B6040030FF1B /* lomod in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3A35C5CE2240B5A90030FF1B /* lomod */; };
 		3A35C5E122435B710030FF1B /* PreferencesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A35C5E322435B710030FF1B /* PreferencesWindow.xib */; };
 		3A35C5EA224365340030FF1B /* AboutWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A35C5E8224365340030FF1B /* AboutWindow.swift */; };
 		3A35C5EC22436CBA0030FF1B /* AboutWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A35C5EE22436CBA0030FF1B /* AboutWindow.xib */; };
@@ -36,14 +36,14 @@
 		3AA7328F2819C7A1006EAA8A /* CreateUserWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA7328E2819C7A1006EAA8A /* CreateUserWindow.swift */; };
 		3AA732922819FFDC006EAA8A /* RepeatingTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA732912819FFDC006EAA8A /* RepeatingTimer.swift */; };
 		3AC3E846229F9B60004EA1D7 /* HyperlinkTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC3E845229F9B60004EA1D7 /* HyperlinkTextField.swift */; };
-		3AE33D3B23244F2E00B81C13 /* rsync in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3A818C152320D36A00B110B3 /* rsync */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		3AE33D3E23244F6400B81C13 /* lomoupg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3AE33D3C23244F5100B81C13 /* lomoupg */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		3AE33D3B23244F2E00B81C13 /* rsync in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3A818C152320D36A00B110B3 /* rsync */; };
+		3AE33D3E23244F6400B81C13 /* lomoupg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3AE33D3C23244F5100B81C13 /* lomoupg */; };
 		3AE33D422324CD9300B81C13 /* LomoAgentLauncher.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3A16D9CF231C501F0092EADD /* LomoAgentLauncher.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		3AE5886424569FD40079CB36 /* UserWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AE5886624569FD40079CB36 /* UserWindow.xib */; };
 		3AE5886C2456A0F60079CB36 /* UserWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE5886B2456A0F60079CB36 /* UserWindow.swift */; };
-		3AEB69A92419673300F57177 /* ffmpeg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3AEB69A82419673300F57177 /* ffmpeg */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		3AEB69AB24196C6F00F57177 /* ffprobe in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3AEB69AA24196C6F00F57177 /* ffprobe */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		3AEB69AD24196C8700F57177 /* ffmpeg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3AEB69AC24196C8700F57177 /* ffmpeg */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		3AEB69A92419673300F57177 /* ffmpeg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3AEB69A82419673300F57177 /* ffmpeg */; };
+		3AEB69AB24196C6F00F57177 /* ffprobe in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3AEB69AA24196C6F00F57177 /* ffprobe */; };
+		3AEB69AD24196C8700F57177 /* ffmpeg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3AEB69AC24196C8700F57177 /* ffmpeg */; };
 		3AFBE6E127FAACAA00A69C9A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3AFBE6E327FAACAA00A69C9A /* InfoPlist.strings */; };
 		4EC270328FC84ECCB0FA9CB1 /* Pods_LomoAgent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9542EC456060AE536C4531A /* Pods_LomoAgent.framework */; };
 /* End PBXBuildFile section */
@@ -733,7 +733,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 2019_10_10.00_41_58.0.fc9ca86;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = U73LFJTY32;
 				INFOPLIST_FILE = LomoAgent/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -741,7 +741,8 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				OTHER_CODE_SIGN_FLAGS = "--deep";
+				MARKETING_VERSION = 0.8;
+				OTHER_CODE_SIGN_FLAGS = "--deep --force";
 				PRODUCT_BUNDLE_IDENTIFIER = lomoware.lomorage.LomoAgent;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -757,7 +758,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 2019_10_10.00_41_58.0.fc9ca86;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = U73LFJTY32;
 				INFOPLIST_FILE = LomoAgent/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -765,7 +766,8 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				OTHER_CODE_SIGN_FLAGS = "--deep";
+				MARKETING_VERSION = 0.8;
+				OTHER_CODE_SIGN_FLAGS = "--deep --force";
 				PRODUCT_BUNDLE_IDENTIFIER = lomoware.lomorage.LomoAgent;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
