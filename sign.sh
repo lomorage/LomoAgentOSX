@@ -3,11 +3,11 @@ set -xe
 
 #security find-identity -v
 
-codesign --remove-signature "$1/Contents/Library/LoginItems/LomoAgentLauncher.app"
-codesign --timestamp --deep -s 4C9293BC4416D5D3AFDC9A8EAE4B26384CB71407 -o runtime -v "$1/Contents/Library/LoginItems/LomoAgentLauncher.app"
-
 codesign --remove-signature "$1/Contents/Library/LoginItems/LomoAgentLauncher.app/Contents/Frameworks/"*.dylib
 codesign --timestamp --deep -s 4C9293BC4416D5D3AFDC9A8EAE4B26384CB71407 -o runtime -v "$1/Contents/Library/LoginItems/LomoAgentLauncher.app/Contents/Frameworks/"*.dylib
+
+codesign --remove-signature "$1/Contents/Library/LoginItems/LomoAgentLauncher.app"
+codesign --timestamp --deep -s 4C9293BC4416D5D3AFDC9A8EAE4B26384CB71407 -o runtime -v "$1/Contents/Library/LoginItems/LomoAgentLauncher.app"
 
 for item in lomoc \
             lomod \

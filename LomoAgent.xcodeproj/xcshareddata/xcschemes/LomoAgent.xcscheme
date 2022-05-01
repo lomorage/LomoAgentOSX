@@ -127,5 +127,32 @@
    <ArchiveAction
       buildConfiguration = "Release"
       revealArchiveInOrganizer = "YES">
+      <PreActions>
+         <ExecutionAction
+            ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
+            <ActionContent
+               title = "Run Script"
+               scriptText = "# Type a script or drag a script file from your workspace to insert its path.&#10;echo &quot;Running Archive Pre-actions&quot;&#10;">
+            </ActionContent>
+         </ExecutionAction>
+      </PreActions>
+      <PostActions>
+         <ExecutionAction
+            ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
+            <ActionContent
+               title = "Run Script"
+               scriptText = "# Type a script or drag a script file from your workspace to insert its path.&#10;set -xe&#10;&#10;echo &quot;Running Archive Post-actions&quot;&#10;&#10;EXPORT_PATH=&quot;$TEMP_DIR/Export&quot;&#10;APP_PATH=&quot;$EXPORT_PATH/$PRODUCT_NAME.app&quot;&#10;ZIP_PATH=&quot;$EXPORT_PATH/$PRODUCT_NAME.zip&quot;&#10;&#10;/usr/bin/xcodebuild -exportArchive -archivePath &quot;$ARCHIVE_PATH&quot; -exportOptionsPlist &quot;$SRCROOT/ExportOptions.plist&quot; -exportPath &quot;$EXPORT_PATH&quot;&#10;&#10;/usr/bin/open &quot;$EXPORT_PATH&quot;&#10;">
+               <EnvironmentBuildable>
+                  <BuildableReference
+                     BuildableIdentifier = "primary"
+                     BlueprintIdentifier = "3A3896F7222F77FA004A2001"
+                     BuildableName = "LomoAgent.app"
+                     BlueprintName = "LomoAgent"
+                     ReferencedContainer = "container:LomoAgent.xcodeproj">
+                  </BuildableReference>
+               </EnvironmentBuildable>
+            </ActionContent>
+         </ExecutionAction>
+      </PostActions>
    </ArchiveAction>
 </Scheme>
