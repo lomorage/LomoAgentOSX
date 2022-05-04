@@ -23,14 +23,16 @@ struct BackupRecordItem {
 
 struct SystemInfo {
     let os: String
+    let lomodVer: String
     let apiVer: String
     let timezoneOffset: Int32
     let systemStatus: Int32
     var listenIPs = [String]()
     var backupRecords = [String: BackupRecordItem]()
 
-    init(os: String, apiVer: String, timezoneOffset: Int32, systemStatus: Int32) {
+    init(os: String, lomodVer: String, apiVer: String, timezoneOffset: Int32, systemStatus: Int32) {
         self.os = os
+        self.lomodVer = lomodVer
         self.apiVer = apiVer
         self.timezoneOffset = timezoneOffset
         self.systemStatus = systemStatus
@@ -424,10 +426,11 @@ class LomodService
                                 DDLogInfo("check server status, json response:  \(jsonResult)")
                                 if let osSystem = jsonResult["OS"] as? String,
                                     let apiVer = jsonResult["APIVersion"] as? String,
+                                    let lomodVer = jsonResult["LomodVersion"] as? String,
                                     let status = jsonResult["SystemStatus"] as? Int32,
                                     let timeZoneOffset = jsonResult["TimezoneOffset"] as? Int32
                                 {
-                                    self.systemInfo = SystemInfo(os: osSystem, apiVer: apiVer, timezoneOffset: timeZoneOffset, systemStatus: status)
+                                    self.systemInfo = SystemInfo(os: osSystem, lomodVer: lomodVer, apiVer: apiVer, timezoneOffset: timeZoneOffset, systemStatus: status)
 
                                     if let listenIPs = jsonResult["ListenIPs"] as? [String] {
                                         for ip in listenIPs {

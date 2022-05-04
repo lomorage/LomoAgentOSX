@@ -1,6 +1,9 @@
 #!/bin/bash
 set -xe
 
+# https://developer.apple.com/documentation/security/notarizing_macos_software_before_distribution/customizing_the_notarization_workflow
+
+#sudo xattr -rd com.apple.quarantine $1
 #security find-identity -v
 
 codesign --remove-signature "$1/Contents/Library/LoginItems/LomoAgentLauncher.app/Contents/Frameworks/"*.dylib
@@ -49,6 +52,8 @@ rm -rf $filename.zip
 /usr/bin/ditto -c -k --sequesterRsrc --keepParent "$1" "$filename.zip"
 #/usr/bin/ditto -c -k --keepParent $1 $filename.zip
 xcrun altool --notarize-app --primary-bundle-id lomoware.lomorage.$filename --username lomorage@gmail.com --password "@keychain:altool" --file "$filename.zip"
+
+#xcrun stapler staple "$1"
 
 #xcrun altool --notarization-info $RequestUUID -u lomorage@gmail.com --password "@keychain:altool"
 #spctl --assess -v $1
