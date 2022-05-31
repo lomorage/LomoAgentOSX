@@ -22,6 +22,7 @@ let errorUnsetBackupLocalized = NSLocalizedString("Error when unsetting backup d
 let succUnsetBackupLocalized = NSLocalizedString("Unset backup directory succeed", comment: "")
 
 let invalidPortLocalized = NSLocalizedString("Invalid port", comment: "")
+let usedPortLocalized = NSLocalizedString("Port already used, please change another port", comment: "")
 let invalidPortTipsLocalized = NSLocalizedString("The port should be a number in range [1024, 49151]", comment: "")
 let homeDirRequiredLocalized = NSLocalizedString("Home directory required!", comment: "")
 let passwordTooShortLocalized = NSLocalizedString("Password should be no less than 6 characters", comment: "")
@@ -32,6 +33,8 @@ let createUserSuccLocalized = NSLocalizedString("Create user succeed!", comment:
 let createUserFailLocalized = NSLocalizedString("Create user failed!", comment: "")
 
 let userTipsConfigureHomeDirAndWaitStart = NSLocalizedString("Please configure home directory for photo storage and wait for system start", comment: "")
+let userTipsReportIssue = NSLocalizedString("Error! Please send log files to support@lomorage.com", comment: "")
+
 let userTipsScanQRCode = NSLocalizedString("If the service can not be found automatically, you can use Lomorage APP to scan QR code to configure the service", comment: "")
 
 let alertOk = NSLocalizedString("OK", comment: "")

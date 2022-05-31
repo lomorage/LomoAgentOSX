@@ -121,6 +121,13 @@ class PreferencesWindow: NSWindowController, NSWindowDelegate {
         let p = Int(port)
         guard p != nil && p! >= 1024 && p! <= 49151 else {
             dialogAlert(message: invalidPortLocalized, info: invalidPortTipsLocalized)
+            portTextField.stringValue = oldPort!
+            return
+        }
+        guard isPortOpen(port: UInt16(p!)) else {
+            userTipsLabel.textColor = .red
+            userTipsLabel.stringValue = usedPortLocalized
+            portTextField.stringValue = oldPort!
             return
         }
         if oldPort != port {
@@ -333,8 +340,16 @@ class PreferencesWindow: NSWindowController, NSWindowDelegate {
                         self.imageQRCode.image = QRCodeImageWith(data: data, size: self.imageQRCode.frame.size.width)
                     }
                 } else {
-                    self.userTipsLabel.textColor = .red
-                    self.userTipsLabel.stringValue = userTipsConfigureHomeDirAndWaitStart
+                    if let lomodPort = UInt16(self.portTextField.stringValue), !isPortOpen(port: lomodPort) {
+                        self.userTipsLabel.textColor = .red
+                        self.userTipsLabel.stringValue = usedPortLocalized
+                    } else {
+                        self.userTipsLabel.textColor = .red
+                        self.userTipsLabel.stringValue = userTipsReportIssue
+                        if let logDir = getLogDir() {
+                            NSWorkspace.shared.open(URL(fileURLWithPath: logDir))
+                        }
+                    }
                 }
             }
         }

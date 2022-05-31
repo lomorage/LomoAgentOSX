@@ -27,6 +27,7 @@
 "Create user failed!" = "Create user failed!";
 
 "Please configure home directory for photo storage and wait for system start" = "Please configure home directory for photo storage and wait for system start";
+"Error! Please send log files to support@lomorage.com" = "Error! Please send log files to support@lomorage.com";
 "If the service can not be found automatically, you can use Lomorage APP to scan QR code to configure the service" = "If the service can not be found automatically, you can use Lomorage APP to scan QR code to configure the service";
 
 "OK" = "OK";

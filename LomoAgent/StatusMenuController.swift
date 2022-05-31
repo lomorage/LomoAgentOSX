@@ -290,6 +290,8 @@ class StatusMenuController: NSObject {
             } else {
                 DDLogError("Need set home directory first")
                 lomodTask = nil
+                preferencesWindow.userTipsLabel.textColor = .red
+                preferencesWindow.userTipsLabel.stringValue = userTipsConfigureHomeDirAndWaitStart
                 preferencesWindow.showWindow(nil)
                 NSApp.activate(ignoringOtherApps: true)
             }

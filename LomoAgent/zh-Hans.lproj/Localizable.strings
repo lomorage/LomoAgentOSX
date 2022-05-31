@@ -27,6 +27,7 @@
 "Create user failed!" = "创建用户失败!";
 
 "Please configure home directory for photo storage and wait for system start" = "请设置用于照片存储的主目录，并等待系统启动";
+"Error! Please send log files to support@lomorage.com" = "启动出错! 请将错误日志发送到support@lomorage.com";
 "If the service can not be found automatically, you can use Lomorage APP to scan QR code to configure the service" = "如果不能自动发现服务，您也可以使用Lomorage手机应用扫码来配置服务";
 
 "OK" = "确定";
