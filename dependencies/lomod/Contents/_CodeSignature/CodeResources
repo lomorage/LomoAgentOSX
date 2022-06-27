@@ -1,0 +1,2974 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>files</key>
+	<dict>
+		<key>Resources/.DS_Store</key>
+		<data>
+		Yvfhslb/WbXZnYF3h1NMF9Pbtm4=
+		</data>
+	</dict>
+	<key>files2</key>
+	<dict>
+		<key>Frameworks/ffmpeg/libavcodec.58.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			8pvtJQUuhXO9Az00Hz6po0amPAs=
+			</data>
+			<key>requirement</key>
+			<string>identifier "libavcodec.58" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>Frameworks/ffmpeg/libavdevice.58.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			D4yGoC40xNSkNzbSXXXuSXTuIqs=
+			</data>
+			<key>requirement</key>
+			<string>identifier "libavdevice.58" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>Frameworks/ffmpeg/libavfilter.7.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			IhYc5AB24IiUAjTBGUC/l45qY6c=
+			</data>
+			<key>requirement</key>
+			<string>identifier "libavfilter.7" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>Frameworks/ffmpeg/libavformat.58.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			wjg2MqbKOUPI3RmU5gZu/f5rrv8=
+			</data>
+			<key>requirement</key>
+			<string>identifier "libavformat.58" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>Frameworks/ffmpeg/libavutil.56.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			bq0IE1AAo3QUJtLEynlDkOmDs+M=
+			</data>
+			<key>requirement</key>
+			<string>identifier "libavutil.56" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>Frameworks/ffmpeg/libpostproc.55.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			VEjnaR89Mqe9FmsfbNlBOqUErZU=
+			</data>
+			<key>requirement</key>
+			<string>identifier "libpostproc.55" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>Frameworks/ffmpeg/libswresample.3.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			gsY/c8PeJz4afPNWQVlA41jOayo=
+			</data>
+			<key>requirement</key>
+			<string>identifier "libswresample.3" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>Frameworks/ffmpeg/libswscale.5.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			4RZvdvRH+gKqYUG9NsvISxHMevM=
+			</data>
+			<key>requirement</key>
+			<string>identifier "libswscale.5" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>Frameworks/lomod/libIex-3_1.30.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			J/TCNlzcQ5Diw9TgWzMX47j9yKs=
+			</data>
+			<key>requirement</key>
+			<string>identifier "libIex-3_1" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>Frameworks/lomod/libIlmThread-3_1.30.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			NImw2ygzB/nKEGuAti1BBmyYwh8=
+			</data>
+			<key>requirement</key>
+			<string>identifier "libIlmThread-3_1" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>Frameworks/lomod/libImath-3_1.29.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			kRiHCeAz4f6g+P9ef4G1GoeW4Z4=
+			</data>
+			<key>requirement</key>
+			<string>identifier "libImath-3_1" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>Frameworks/lomod/libMagickCore-7.Q16HDRI.10.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			AWDW0rs8GByFiiASR+gkqYWUaQE=
+			</data>
+			<key>requirement</key>
+			<string>identifier "libMagickCore-7.Q16HDRI.10" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>Frameworks/lomod/libOpenEXR-3_1.30.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			/fzZudNzMkqOecDzh1kBm0Gtmkg=
+			</data>
+			<key>requirement</key>
+			<string>identifier "libOpenEXR-3_1" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>Frameworks/lomod/libOpenEXRCore-3_1.30.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			mR0yFT5u239y+BizumIynFzcNlI=
+			</data>
+			<key>requirement</key>
+			<string>identifier "libOpenEXRCore-3_1" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>Frameworks/lomod/libOpenEXRUtil-3_1.30.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			lv4DSCQh01GAkyIa8Ac+3Swi//c=
+			</data>
+			<key>requirement</key>
+			<string>identifier "libOpenEXRUtil-3_1" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>Frameworks/lomod/libX11.6.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			MOwx+16lB1tjBoxBCcEGv1jliD0=
+			</data>
+			<key>requirement</key>
+			<string>identifier libX11 and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>Frameworks/lomod/libXau.6.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			OUb8ST7+XeFCXQyVX1qa1JIWLyA=
+			</data>
+			<key>requirement</key>
+			<string>identifier "libXau.6" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>Frameworks/lomod/libXdmcp.6.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			ugkxZGyJDrIYoKG1pM6gzmj2XM0=
+			</data>
+			<key>requirement</key>
+			<string>identifier "libXdmcp.6" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>Frameworks/lomod/libXext.6.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			sIH47Xitsirb1A2Bkgi+SZnBRGw=
+			</data>
+			<key>requirement</key>
+			<string>identifier "libXext.6" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>Frameworks/lomod/libXrender.1.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			CdkgQVPKDoHGMrNDRjcOUAbitNc=
+			</data>
+			<key>requirement</key>
+			<string>identifier "libXrender.1" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>Frameworks/lomod/libaom.3.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			Vj+6xqODA0fEWFlhK+EQSbWiICM=
+			</data>
+			<key>requirement</key>
+			<string>identifier "libaom.3" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>Frameworks/lomod/libbrotlicommon.1.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			R577nzQeNQgF92Klb78/k2HvRv4=
+			</data>
+			<key>requirement</key>
+			<string>identifier "libbrotlicommon.1" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>Frameworks/lomod/libbrotlidec.1.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			0QfzHMzXlLYMEQ7EutgxAAIOSaI=
+			</data>
+			<key>requirement</key>
+			<string>identifier "libbrotlidec.1" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>Frameworks/lomod/libbrotlienc.1.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			fv8+BYUvwXU3sGoKfY9mVdxAuCQ=
+			</data>
+			<key>requirement</key>
+			<string>identifier "libbrotlienc.1" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>Frameworks/lomod/libcairo-gobject.2.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			nJSX6/Z7BNLNgti4CyuBFhMvEgM=
+			</data>
+			<key>requirement</key>
+			<string>identifier "libcairo-gobject.2" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>Frameworks/lomod/libcairo.2.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			ejE+VDMPySvhkMJ9TvMeHlCCjj4=
+			</data>
+			<key>requirement</key>
+			<string>identifier "libcairo.2" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>Frameworks/lomod/libcfitsio.9.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			QOvEGfL57781dWcztHxkec9QwG8=
+			</data>
+			<key>requirement</key>
+			<string>identifier "libcfitsio.9" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>Frameworks/lomod/libcgif.0.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			jU1xawC6Tdx2oMVy8hB6G9pcaPA=
+			</data>
+			<key>requirement</key>
+			<string>identifier "libcgif.0" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>Frameworks/lomod/libde265.0.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			rV8fSSW+xJcIo5hqjr7lWEfE2T4=
+			</data>
+			<key>requirement</key>
+			<string>identifier libde265 and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>Frameworks/lomod/libexif.12.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			k29CWxcZiROkD3LSoODsm6qYKyg=
+			</data>
+			<key>requirement</key>
+			<string>identifier "libexif.12" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>Frameworks/lomod/libffi.8.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			hLKueHMb/rKjojHvQHnE2AiUvlk=
+			</data>
+			<key>requirement</key>
+			<string>identifier "libffi.8" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>Frameworks/lomod/libfftw3.3.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			/uJUNjvgL4Pto6gR4COL+AneXOI=
+			</data>
+			<key>requirement</key>
+			<string>identifier libfftw3 and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>Frameworks/lomod/libfontconfig.1.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			rE5StN3+2SMRpBPYqTuUxRgps64=
+			</data>
+			<key>requirement</key>
+			<string>identifier "libfontconfig.1" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>Frameworks/lomod/libfreetype.6.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			84IviuLKh1d8+GdfRkJhMKZrE6k=
+			</data>
+			<key>requirement</key>
+			<string>identifier "libfreetype.6" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>Frameworks/lomod/libfribidi.0.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			1uhih/WwX2YWZMYQ85GbadrRm+Y=
+			</data>
+			<key>requirement</key>
+			<string>identifier "libfribidi.0" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>Frameworks/lomod/libgcc_s.1.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			2KHHuFKaR0bDnoKtvyDT2VHlQOU=
+			</data>
+			<key>requirement</key>
+			<string>identifier "libgcc_s.1" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>Frameworks/lomod/libgdk_pixbuf-2.0.0.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			NXi/U73lYP+Gk+ZFaKa6eYgA9XA=
+			</data>
+			<key>requirement</key>
+			<string>identifier "libgdk_pixbuf-2" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>Frameworks/lomod/libgio-2.0.0.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			BtsclRWDFVp9FQoFj27gJsPuh1M=
+			</data>
+			<key>requirement</key>
+			<string>identifier "libgio-2" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>Frameworks/lomod/libglib-2.0.0.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			Az+/UR1XkPVofpqeCWc4qGVa4yk=
+			</data>
+			<key>requirement</key>
+			<string>identifier "libglib-2" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>Frameworks/lomod/libgmodule-2.0.0.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			INTsuESR/Is8WDym0aTW1+rkoq0=
+			</data>
+			<key>requirement</key>
+			<string>identifier "libgmodule-2" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>Frameworks/lomod/libgobject-2.0.0.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			9ZGNJtK1jjGBc76jsm7v/uI0fns=
+			</data>
+			<key>requirement</key>
+			<string>identifier "libgobject-2" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>Frameworks/lomod/libgraphite2.3.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			/vyzz4ByHhKS3iFG7UxeoS6dAh4=
+			</data>
+			<key>requirement</key>
+			<string>identifier libgraphite2 and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>Frameworks/lomod/libgsf-1.114.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			DoRjlqnX9g7tUQkL7MynyNdx8Ls=
+			</data>
+			<key>requirement</key>
+			<string>identifier "libgsf-1" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>Frameworks/lomod/libgthread-2.0.0.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			bBvraRbOvJU6qMXw8IqHuAi6z/0=
+			</data>
+			<key>requirement</key>
+			<string>identifier "libgthread-2" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>Frameworks/lomod/libharfbuzz.0.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			FrbCLSsH8InFrALEoaAzSWD3TzY=
+			</data>
+			<key>requirement</key>
+			<string>identifier "libharfbuzz.0" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>Frameworks/lomod/libhdf5.300.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			Vgj+eLa1GKNaHZpdUoLH2yZyu7I=
+			</data>
+			<key>requirement</key>
+			<string>identifier libhdf5 and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>Frameworks/lomod/libheif.1.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			3ezf2lAE1FXcrCwXk3ox7Msak9A=
+			</data>
+			<key>requirement</key>
+			<string>identifier "libheif.1" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>Frameworks/lomod/libimagequant.0.0.0.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			Kc1z/M77NGNl4TIDOC45sU4ewAA=
+			</data>
+			<key>requirement</key>
+			<string>identifier "libimagequant.0" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>Frameworks/lomod/libintl.8.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			RSrFOZxsoRuF3yOaL4Vri3ARPEE=
+			</data>
+			<key>requirement</key>
+			<string>identifier "libintl.8" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>Frameworks/lomod/libjpeg.62.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			x00JFGnGdC2LYOSaYPz1R9/+Ur0=
+			</data>
+			<key>requirement</key>
+			<string>identifier "libjpeg.62" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>Frameworks/lomod/libjpeg.9.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			uHNtI6m+gwpZyw9+C5OCDlxSZDE=
+			</data>
+			<key>requirement</key>
+			<string>identifier "libjpeg.9" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>Frameworks/lomod/libjxl.0.6.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			WRDQyY/T6ifnPUq3TmxoHrGG9Ps=
+			</data>
+			<key>requirement</key>
+			<string>identifier "libjxl.0" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>Frameworks/lomod/libjxl_threads.0.6.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			bMvtOOFhtdNM/vmUGOMUfGXbtJQ=
+			</data>
+			<key>requirement</key>
+			<string>identifier "libjxl_threads.0" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>Frameworks/lomod/liblcms2.2.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			Kpp3WmaCVsmr64bHj2LsxDZlYdY=
+			</data>
+			<key>requirement</key>
+			<string>identifier liblcms2 and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>Frameworks/lomod/liblqr-1.0.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			jYr/IkLAEKYyNPJFVkaTdO2mXBo=
+			</data>
+			<key>requirement</key>
+			<string>identifier "liblqr-1" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>Frameworks/lomod/libltdl.7.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			XdCrS85IUypyz3/bRNjiZiS2bNQ=
+			</data>
+			<key>requirement</key>
+			<string>identifier "libltdl.7" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>Frameworks/lomod/libmatio.11.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			S6dMC4qGnHzsow1BcaPoll7RrLQ=
+			</data>
+			<key>requirement</key>
+			<string>identifier "libmatio.11" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>Frameworks/lomod/libnspr4.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			PChqWRIWrrjCa/j4DwkCd1FB2Lo=
+			</data>
+			<key>requirement</key>
+			<string>identifier libnspr4 and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>Frameworks/lomod/libnss3.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			caJUBja7QQSUcLbPfSQHNdm0zK4=
+			</data>
+			<key>requirement</key>
+			<string>identifier libnss3 and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>Frameworks/lomod/libnssutil3.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			tTZXIMCUpj8PbqXB7SLcxeXV530=
+			</data>
+			<key>requirement</key>
+			<string>identifier libnssutil3 and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>Frameworks/lomod/libomp.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			p/osiKOAUO/Dp8S9chLEyjq6AXw=
+			</data>
+			<key>requirement</key>
+			<string>identifier libomp and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>Frameworks/lomod/libopenjp2.7.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			Ugov+FDB/sYdSDi0gjUyWJZVKcY=
+			</data>
+			<key>requirement</key>
+			<string>identifier libopenjp2 and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>Frameworks/lomod/libopenslide.0.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			Xf4la5ifmsc1/Lbyso/UKeeFObQ=
+			</data>
+			<key>requirement</key>
+			<string>identifier "libopenslide.0" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>Frameworks/lomod/liborc-0.4.0.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			EdUFCW7QF7XMIERaCRkyydgWs1w=
+			</data>
+			<key>requirement</key>
+			<string>identifier "liborc-0" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>Frameworks/lomod/libpango-1.0.0.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			ZeddbPbDXZHuDjievQ17qwwZWc4=
+			</data>
+			<key>requirement</key>
+			<string>identifier "libpango-1" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>Frameworks/lomod/libpangocairo-1.0.0.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			5UW8mJNQnnwH4ief5QHbLnJja6w=
+			</data>
+			<key>requirement</key>
+			<string>identifier "libpangocairo-1" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>Frameworks/lomod/libpangoft2-1.0.0.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			LjKr5+p9/iSZ7d8pE4IocxTLB54=
+			</data>
+			<key>requirement</key>
+			<string>identifier "libpangoft2-1" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>Frameworks/lomod/libpcre.1.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			1ZZ8L72f6JJP1HaZcc2LUYAE9Fk=
+			</data>
+			<key>requirement</key>
+			<string>identifier "libpcre.1" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>Frameworks/lomod/libpixman-1.0.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			hTu86yMAauHmRuPkfPqBIFH18QI=
+			</data>
+			<key>requirement</key>
+			<string>identifier "libpixman-1" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>Frameworks/lomod/libplc4.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			8kpic71qWleGeGDS8n9VsXnCvuo=
+			</data>
+			<key>requirement</key>
+			<string>identifier libplc4 and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>Frameworks/lomod/libplds4.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			e5/7m+GaKn4XlLgOBOta8UldUZs=
+			</data>
+			<key>requirement</key>
+			<string>identifier libplds4 and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>Frameworks/lomod/libpng16.16.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			p218Hh2bnD/EXsHRFeS84UcXlxQ=
+			</data>
+			<key>requirement</key>
+			<string>identifier libpng16 and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>Frameworks/lomod/libpoppler-glib.8.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			y5kn7IszdC9DdW7f+WR7U0xtoYg=
+			</data>
+			<key>requirement</key>
+			<string>identifier "libpoppler-glib.8" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>Frameworks/lomod/libpoppler.118.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			xecsTDgSBLZUw1tOZnnlKmBuEMA=
+			</data>
+			<key>requirement</key>
+			<string>identifier "libpoppler.118" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>Frameworks/lomod/libpostproc.55.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			Kyu8gyYk1zYnlpXRrihRuGI8VrE=
+			</data>
+			<key>requirement</key>
+			<string>identifier "libpostproc.55" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = U73LFJTY32</string>
+		</dict>
+		<key>Frameworks/lomod/librsvg-2.2.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			3jIYjUTcOQmp0fcDUEmx+6bJYG8=
+			</data>
+			<key>requirement</key>
+			<string>identifier "librsvg-2" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>Frameworks/lomod/libsmime3.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			G2mYe6kuNHM1sMqxHhL5Gm9RB9Y=
+			</data>
+			<key>requirement</key>
+			<string>identifier libsmime3 and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>Frameworks/lomod/libspng.0.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			sN4AmDNlYvEHgWWYD7KclAIaiHk=
+			</data>
+			<key>requirement</key>
+			<string>identifier "libspng.0" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>Frameworks/lomod/libsqlite3.0.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			JgNtRYkLzf2PLagWTP7xQ9KyHJg=
+			</data>
+			<key>requirement</key>
+			<string>identifier libsqlite3 and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>Frameworks/lomod/libssl3.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			Us6uVygBReOBtfidP2X/A9lpFg4=
+			</data>
+			<key>requirement</key>
+			<string>identifier libssl3 and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>Frameworks/lomod/libswresample.3.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			Mx9KgL1Qk87C85jExs21z0ydEpg=
+			</data>
+			<key>requirement</key>
+			<string>identifier "libswresample.3" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = U73LFJTY32</string>
+		</dict>
+		<key>Frameworks/lomod/libswscale.5.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			QjukDk6iCOFx7ZzCyU0d+f30f+A=
+			</data>
+			<key>requirement</key>
+			<string>identifier "libswscale.5" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = U73LFJTY32</string>
+		</dict>
+		<key>Frameworks/lomod/libsz.2.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			DA9gITrwz+eRHVb88e135gDjqdM=
+			</data>
+			<key>requirement</key>
+			<string>identifier "libsz.2" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>Frameworks/lomod/libtiff.5.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			9B4ygr9GzuwSW4Nge4zX1jyQYgM=
+			</data>
+			<key>requirement</key>
+			<string>identifier "libtiff.5" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>Frameworks/lomod/libvips.42.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			kIH1eJdUikW0eSsPzXCwsNQaZI8=
+			</data>
+			<key>requirement</key>
+			<string>identifier "libvips.42" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>Frameworks/lomod/libvmaf.1.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			pJqx4MYVqD9XiIpNTcvYpTwqBAM=
+			</data>
+			<key>requirement</key>
+			<string>identifier "libvmaf.1" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>Frameworks/lomod/libwebp.7.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			pt0KnbVqhH7AJp8u87e5CDw/6tM=
+			</data>
+			<key>requirement</key>
+			<string>identifier "libwebp.7" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>Frameworks/lomod/libwebpdemux.2.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			AoLgCkLzQL9igKMbvATem6R/Jas=
+			</data>
+			<key>requirement</key>
+			<string>identifier "libwebpdemux.2" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>Frameworks/lomod/libwebpmux.3.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			MQGbtSaPjDFusnA/mhImzgGC5Lc=
+			</data>
+			<key>requirement</key>
+			<string>identifier "libwebpmux.3" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>Frameworks/lomod/libx265.199.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			TsoLS6Iy519ssy1z0dPfRP8lw44=
+			</data>
+			<key>requirement</key>
+			<string>identifier libx265 and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>Frameworks/lomod/libxcb-render.0.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			UMXVpzUjvvTte6KJjzC5gW2CpLM=
+			</data>
+			<key>requirement</key>
+			<string>identifier "libxcb-render.0" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>Frameworks/lomod/libxcb-shm.0.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			mPvaNyHGjLZ3L6YmL/jXQQu8AVk=
+			</data>
+			<key>requirement</key>
+			<string>identifier "libxcb-shm.0" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>Frameworks/lomod/libxcb.1.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			TQ3jTGwYEfhHPutJE7jGO0NI/qg=
+			</data>
+			<key>requirement</key>
+			<string>identifier "libxcb.1" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>Frameworks/lomod/libxml2.2.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			Mc8ZQtG3VzVVcGGzRdDbxFbPHyY=
+			</data>
+			<key>requirement</key>
+			<string>identifier libxml2 and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/exiftool</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			aYbj0GzKzgWJ/rMp5Ia6IDLB6P0=
+			</data>
+			<key>requirement</key>
+			<string>identifier exiftool and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = U73LFJTY32</string>
+		</dict>
+		<key>MacOS/ffmpeg</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			h1nig2QwtKtNbQI5Ce6rCqwrqVc=
+			</data>
+			<key>requirement</key>
+			<string>identifier ffmpeg and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = U73LFJTY32</string>
+		</dict>
+		<key>MacOS/ffprobe</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			SVfsqHExOxbLYUFwUPeSnVQUGMs=
+			</data>
+			<key>requirement</key>
+			<string>identifier ffprobe and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = U73LFJTY32</string>
+		</dict>
+		<key>MacOS/lib/File/RandomAccess.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			eiK04A/N9yc5dtMPqAbiZJW6FII=
+			</data>
+			<key>requirement</key>
+			<string>identifier RandomAccess and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/File/RandomAccess.pod</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			93dct8yitaBPnKoNUnJbKIKyq3c=
+			</data>
+			<key>requirement</key>
+			<string>identifier RandomAccess and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			Ru2MixjjtbYFREgtsTmmCgBJEuw=
+			</data>
+			<key>requirement</key>
+			<string>identifier ExifTool and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool.pod</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			t2iNjLrK1V73p2MeD6TECdh1kDI=
+			</data>
+			<key>requirement</key>
+			<string>identifier ExifTool and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/AES.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			sSqPwEaBfnS673oCxR5emAgotjo=
+			</data>
+			<key>requirement</key>
+			<string>identifier AES and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/AFCP.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			FRCI1P06e5JKddaBbQRRpHEtL6A=
+			</data>
+			<key>requirement</key>
+			<string>identifier AFCP and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/AIFF.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			lgCGgO5rvEoWHSw18ZLS+BGApKM=
+			</data>
+			<key>requirement</key>
+			<string>identifier AIFF and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/APE.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			lo5oEd1D6KytYGxStyHq7g3oKoY=
+			</data>
+			<key>requirement</key>
+			<string>identifier APE and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/APP12.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			l2lNiGKxMT/r4Ju57sNGGr2Twbw=
+			</data>
+			<key>requirement</key>
+			<string>identifier APP12 and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/ASF.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			lwEtDaxsjb9YaV3+4e2RA/24LYk=
+			</data>
+			<key>requirement</key>
+			<string>identifier ASF and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Apple.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			Kr6oNokZE6LnYoecvYsIIb1mUuw=
+			</data>
+			<key>requirement</key>
+			<string>identifier Apple and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Audible.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			RLo4B4bC5DMBcOOILphfmPXlOs0=
+			</data>
+			<key>requirement</key>
+			<string>identifier Audible and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/BMP.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			aAnoeHYW6aPU04+pFsZOM54eYEc=
+			</data>
+			<key>requirement</key>
+			<string>identifier BMP and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/BPG.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			SPjZqDMaxxZ48vPsutmHD20RcD0=
+			</data>
+			<key>requirement</key>
+			<string>identifier BPG and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/BZZ.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			P/QHR/SEpe3eAqsFcNRayNCIDAI=
+			</data>
+			<key>requirement</key>
+			<string>identifier BZZ and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/BigTIFF.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			MmRA+04W7kePQsGHXnN3PZ7iGSA=
+			</data>
+			<key>requirement</key>
+			<string>identifier BigTIFF and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/BuildTagLookup.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			Dr286e5losp2cEJVEKkRlN3A0tA=
+			</data>
+			<key>requirement</key>
+			<string>identifier BuildTagLookup and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Canon.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			EuwcouBqa4XiOqsR9mFr9BhwHIY=
+			</data>
+			<key>requirement</key>
+			<string>identifier Canon and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/CanonCustom.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			e1AGaktAl763d/2RbyeROxi8iHU=
+			</data>
+			<key>requirement</key>
+			<string>identifier CanonCustom and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/CanonRaw.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			0/fJRLBTBjsADaqpasFuzGnN3aQ=
+			</data>
+			<key>requirement</key>
+			<string>identifier CanonRaw and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/CanonVRD.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			Ac7KjVDuvTjZXUxa+F8cpFiTeNc=
+			</data>
+			<key>requirement</key>
+			<string>identifier CanonVRD and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/CaptureOne.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			+gvWuiwwfbBK5agQYX7caapry8Y=
+			</data>
+			<key>requirement</key>
+			<string>identifier CaptureOne and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Casio.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			ICz+qKKh4RXK7T/tjl3X09CX9JQ=
+			</data>
+			<key>requirement</key>
+			<string>identifier Casio and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Charset.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			dgGFjN6KWHhevwo8WyNtp8aayws=
+			</data>
+			<key>requirement</key>
+			<string>identifier Charset and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Charset/Arabic.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			6cywzDlT/rz5nlfPHgko1qjK8PQ=
+			</data>
+			<key>requirement</key>
+			<string>identifier Arabic and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Charset/Baltic.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			OI62Br+ciKQF0zOpIXpn8UFFJn4=
+			</data>
+			<key>requirement</key>
+			<string>identifier Baltic and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Charset/Cyrillic.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			7ESbiSrQwo0JEq4/nPSB3n+rHBI=
+			</data>
+			<key>requirement</key>
+			<string>identifier Cyrillic and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Charset/DOSLatin1.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			+kQ5XOgUQZnETdHI+W5DhnPpPrA=
+			</data>
+			<key>requirement</key>
+			<string>identifier DOSLatin1 and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Charset/DOSLatinUS.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			yDxPomFMXJqR00PZ7bQ9xEsgDE4=
+			</data>
+			<key>requirement</key>
+			<string>identifier DOSLatinUS and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Charset/Greek.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			FU4pZOui0HKIwpYF1TaLPKoIH6g=
+			</data>
+			<key>requirement</key>
+			<string>identifier Greek and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Charset/Hebrew.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			8ikveO+uSo23W/HlLtLgFh9U0fk=
+			</data>
+			<key>requirement</key>
+			<string>identifier Hebrew and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Charset/JIS.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			k/zWXHj6AWvmElMAuzThvUTRHbM=
+			</data>
+			<key>requirement</key>
+			<string>identifier JIS and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Charset/Latin.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			ukPLOkbpxzhpLkxzYMSuSpyxwLM=
+			</data>
+			<key>requirement</key>
+			<string>identifier Latin and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Charset/Latin2.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			EqO1XTMZjJ49fAg2OWQ2P/kfP5c=
+			</data>
+			<key>requirement</key>
+			<string>identifier Latin2 and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Charset/MacArabic.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			aJ7Vp3eOwd+6G2IMBhLU6totuAc=
+			</data>
+			<key>requirement</key>
+			<string>identifier MacArabic and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Charset/MacChineseCN.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			iXbArnW8MIt7Bqk8rkNwEaghBw8=
+			</data>
+			<key>requirement</key>
+			<string>identifier MacChineseCN and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Charset/MacChineseTW.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			YkrkpOxALWUiMoa6NHmIiSv260o=
+			</data>
+			<key>requirement</key>
+			<string>identifier MacChineseTW and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Charset/MacCroatian.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			x0w7zdG0I8LlZSHmZ64+CTy+u08=
+			</data>
+			<key>requirement</key>
+			<string>identifier MacCroatian and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Charset/MacCyrillic.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			uoqhFHbD1AGeGN/UCkouIt9gnb4=
+			</data>
+			<key>requirement</key>
+			<string>identifier MacCyrillic and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Charset/MacGreek.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			MFvieaJmH4YYnAQX4CLKn/HYXwE=
+			</data>
+			<key>requirement</key>
+			<string>identifier MacGreek and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Charset/MacHebrew.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			bIMYHHZAY0gBBszEtsOSKYpwnyg=
+			</data>
+			<key>requirement</key>
+			<string>identifier MacHebrew and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Charset/MacIceland.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			BAZ1tg5cG9Vf3uGE+jF9SHDY/9Q=
+			</data>
+			<key>requirement</key>
+			<string>identifier MacIceland and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Charset/MacJapanese.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			kgO+XccAlv0PGXsszZLWHDBcOsU=
+			</data>
+			<key>requirement</key>
+			<string>identifier MacJapanese and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Charset/MacKorean.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			xDN7ged+VVZOY1iw/TwQvzw5h/U=
+			</data>
+			<key>requirement</key>
+			<string>identifier MacKorean and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Charset/MacLatin2.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			6xJCsgAnDldfjYixvtxvjCzRYLQ=
+			</data>
+			<key>requirement</key>
+			<string>identifier MacLatin2 and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Charset/MacRSymbol.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			zR2tf0hvogaAGQsMkLh69tz/3bs=
+			</data>
+			<key>requirement</key>
+			<string>identifier MacRSymbol and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Charset/MacRoman.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			SsBL6hdZrbAVQjTl4YMO5dlDPuk=
+			</data>
+			<key>requirement</key>
+			<string>identifier MacRoman and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Charset/MacRomanian.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			v6xREmKSUMHzKNMpDcsZEXbCCO8=
+			</data>
+			<key>requirement</key>
+			<string>identifier MacRomanian and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Charset/MacThai.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			xkeAnNivBFc5AqoCKSkrlxeYD9w=
+			</data>
+			<key>requirement</key>
+			<string>identifier MacThai and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Charset/MacTurkish.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			aX5nNjvPPb8WzooNqpHxKtmM4xY=
+			</data>
+			<key>requirement</key>
+			<string>identifier MacTurkish and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Charset/PDFDoc.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			xQ87LZfx4lQTkOYnqohg5lkCS7g=
+			</data>
+			<key>requirement</key>
+			<string>identifier PDFDoc and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Charset/ShiftJIS.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			BRDAC5vYBtDc2eTch15v3Y6iMgs=
+			</data>
+			<key>requirement</key>
+			<string>identifier ShiftJIS and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Charset/Symbol.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			cd0bvi+WMsM9FUPWRiyGf5NY4Ik=
+			</data>
+			<key>requirement</key>
+			<string>identifier Symbol and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Charset/Thai.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			SR5CygextIL+tP0IMKItNvoa/tg=
+			</data>
+			<key>requirement</key>
+			<string>identifier Thai and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Charset/Turkish.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			RR+o2ZAutwrdngGJhZ4DAnL8VsQ=
+			</data>
+			<key>requirement</key>
+			<string>identifier Turkish and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Charset/Vietnam.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			KNC9JNTbGPNesnHc/fRli1ICAu8=
+			</data>
+			<key>requirement</key>
+			<string>identifier Vietnam and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/DICOM.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			mWbxLOW5rJEH5FVtt71oPZ0r6LM=
+			</data>
+			<key>requirement</key>
+			<string>identifier DICOM and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/DJI.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			N6zwVfXy7tTV0qjFp8RiK49DZbA=
+			</data>
+			<key>requirement</key>
+			<string>identifier DJI and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/DNG.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			jjr03fVtM6p/bOR3WYPn5Fs6d2s=
+			</data>
+			<key>requirement</key>
+			<string>identifier DNG and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/DPX.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			ELpK+50E5dsVfQ4TAjBooMAl+Z0=
+			</data>
+			<key>requirement</key>
+			<string>identifier DPX and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/DV.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			Tye0qLUDfb0JqYVEKr9+upxzHXI=
+			</data>
+			<key>requirement</key>
+			<string>identifier DV and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/DarwinCore.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			CUuS5isLh5ZTKk7l6OcC5g2QHeg=
+			</data>
+			<key>requirement</key>
+			<string>identifier DarwinCore and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/DjVu.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			ZQ4nlJ2baw1+BVuH5zOl9YAjDOg=
+			</data>
+			<key>requirement</key>
+			<string>identifier DjVu and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/EXE.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			41LMlnX/EX6HYcVdLG1IG6IEey0=
+			</data>
+			<key>requirement</key>
+			<string>identifier EXE and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Exif.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			JCbCSTbGEMJcpy4RVoSdThPwGAs=
+			</data>
+			<key>requirement</key>
+			<string>identifier Exif and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/FITS.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			dfTegW0dn2uJWc+lAakgj2XUgdI=
+			</data>
+			<key>requirement</key>
+			<string>identifier FITS and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/FLAC.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			57AAJL0m9i/x9H5kJrDgJoT3itY=
+			</data>
+			<key>requirement</key>
+			<string>identifier FLAC and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/FLIF.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			/fKzgvBaab7N+P3RNVdxrPk+tNQ=
+			</data>
+			<key>requirement</key>
+			<string>identifier FLIF and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/FLIR.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			YOjcVumP8FqrFL6poIaQluCImrM=
+			</data>
+			<key>requirement</key>
+			<string>identifier FLIR and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Fixup.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			Zzi726l2Yw8Mtt5rIZ0mQ2Nc3is=
+			</data>
+			<key>requirement</key>
+			<string>identifier Fixup and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Flash.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			N5pD49L3DXEG+JQMgdcnOZQh8pQ=
+			</data>
+			<key>requirement</key>
+			<string>identifier Flash and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/FlashPix.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			KjzHe8e5qfg0Mainmrhl0O3OPRU=
+			</data>
+			<key>requirement</key>
+			<string>identifier FlashPix and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Font.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			3VHY80yW6KdFOZh2g7h1DYjHS98=
+			</data>
+			<key>requirement</key>
+			<string>identifier Font and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/FotoStation.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			6l2B3/DwSpBXN2P6aBedo6APFRw=
+			</data>
+			<key>requirement</key>
+			<string>identifier FotoStation and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/FujiFilm.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			ALnKz+VCGS9hIpmsnpPU5DmDNGA=
+			</data>
+			<key>requirement</key>
+			<string>identifier FujiFilm and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/GE.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			6Pr5c7zYIHZWD674/6ly4tph8ZY=
+			</data>
+			<key>requirement</key>
+			<string>identifier GE and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/GIF.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			y7kn5ZbYbzl2WrGAyYqxWfBIF/E=
+			</data>
+			<key>requirement</key>
+			<string>identifier GIF and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/GIMP.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			itoIGYMVAZ5L61ESLP18mwAUE0M=
+			</data>
+			<key>requirement</key>
+			<string>identifier GIMP and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/GPS.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			L70+jPUTJ/HmZNm2XoQFzygr7nM=
+			</data>
+			<key>requirement</key>
+			<string>identifier GPS and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/GeoTiff.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			nI+8JOY//MIFtS4VA3nEjiPDZBA=
+			</data>
+			<key>requirement</key>
+			<string>identifier GeoTiff and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Geotag.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			OlDy7DUbBhlHNmLiJYwz9l7JCBM=
+			</data>
+			<key>requirement</key>
+			<string>identifier Geotag and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/GoPro.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			7cbLcjwHv4SNkRCvSZ3dsduwf3Q=
+			</data>
+			<key>requirement</key>
+			<string>identifier GoPro and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/H264.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			/trrODE/rosF0i9yqL23a1cFiz8=
+			</data>
+			<key>requirement</key>
+			<string>identifier H264 and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/HP.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			j4sg1JO1CmZITPSd1DQvRePfP84=
+			</data>
+			<key>requirement</key>
+			<string>identifier HP and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/HTML.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			reBt6ry615Qin4+rtZZbO3UtFYk=
+			</data>
+			<key>requirement</key>
+			<string>identifier HTML and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/HtmlDump.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			4Tg7gIZvvagkkMe3eVEF4WbEH8I=
+			</data>
+			<key>requirement</key>
+			<string>identifier HtmlDump and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/ICC_Profile.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			YZ8Zn2VBw9qhhwF0vwj2hZgl9Sk=
+			</data>
+			<key>requirement</key>
+			<string>identifier "ICC_Profile" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/ID3.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			1bY5JOkRgQkTLrK4H5Ahhjthdig=
+			</data>
+			<key>requirement</key>
+			<string>identifier ID3 and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/IPTC.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			2UhroKK7GLowQ2gv8RarJ5ydfc4=
+			</data>
+			<key>requirement</key>
+			<string>identifier IPTC and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/ISO.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			IfYr/pPfVQPwO6wyvLLBSrQIexI=
+			</data>
+			<key>requirement</key>
+			<string>identifier ISO and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/ITC.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			NMuKcje4BpJhaAW74gmMRFRJ+GM=
+			</data>
+			<key>requirement</key>
+			<string>identifier ITC and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Import.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			PY902pDJiSr4PXb4kfw58963020=
+			</data>
+			<key>requirement</key>
+			<string>identifier Import and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/InDesign.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			BbTpuWjbr0zu6JNDVf92PRlLoQU=
+			</data>
+			<key>requirement</key>
+			<string>identifier InDesign and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/JPEG.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			FvjlS1lIx577ZUjb95a6ONJjFTA=
+			</data>
+			<key>requirement</key>
+			<string>identifier JPEG and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/JPEGDigest.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			PDOjxRO18spdtgdXxurTo/kHe2E=
+			</data>
+			<key>requirement</key>
+			<string>identifier JPEGDigest and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/JSON.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			TLjIB7EzPpIVkWi4J3QTuRHp490=
+			</data>
+			<key>requirement</key>
+			<string>identifier JSON and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/JVC.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			vWXqzHmyW2d7oDkEtCrkTECJqbs=
+			</data>
+			<key>requirement</key>
+			<string>identifier JVC and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Jpeg2000.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			SKAXxL27mSL8HTJqxSAhQtcS4ws=
+			</data>
+			<key>requirement</key>
+			<string>identifier Jpeg2000 and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Kodak.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			jLyDZNT38LVNZYI/9SHs2Td1aME=
+			</data>
+			<key>requirement</key>
+			<string>identifier Kodak and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/KyoceraRaw.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			cnmxursQZhP1LkM0tQp1zY/otNE=
+			</data>
+			<key>requirement</key>
+			<string>identifier KyoceraRaw and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/LNK.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			tPlQGBcfj2Pd4jX3bNI2LaNor6I=
+			</data>
+			<key>requirement</key>
+			<string>identifier LNK and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Lang/cs.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			BCbzzLuFQveKB27ysZPnxxP1lO4=
+			</data>
+			<key>requirement</key>
+			<string>identifier cs and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Lang/de.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			88HKnmeTch6swYeD0JMvokZIuIg=
+			</data>
+			<key>requirement</key>
+			<string>identifier de and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Lang/en_ca.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			5zNswAaZYQFHEq4UYbHAVfh2xMU=
+			</data>
+			<key>requirement</key>
+			<string>identifier "en_ca" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Lang/en_gb.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			A5Kq/e7+0lZtCy3V4vvjjCmWZQQ=
+			</data>
+			<key>requirement</key>
+			<string>identifier "en_gb" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Lang/es.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			nnH04oB3pcvYsVYJ4nwoUOKwLig=
+			</data>
+			<key>requirement</key>
+			<string>identifier es and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Lang/fi.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			Yqbq2nfYu4MRJ78usYiOdhePfFc=
+			</data>
+			<key>requirement</key>
+			<string>identifier fi and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Lang/fr.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			J7f8wKhOntB1BHfrkoENY1+FNCQ=
+			</data>
+			<key>requirement</key>
+			<string>identifier fr and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Lang/it.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			yxPd8AxQq1j0ubPyRyuwHuhMbIA=
+			</data>
+			<key>requirement</key>
+			<string>identifier it and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Lang/ja.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			1hbnhWfmdPf2F+G1ax/WsKgDHkM=
+			</data>
+			<key>requirement</key>
+			<string>identifier ja and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Lang/ko.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			RZxMK9aBBdFb86XD5nHPVGWMbDY=
+			</data>
+			<key>requirement</key>
+			<string>identifier ko and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Lang/nl.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			wmOTWjiqhN2IiE4ip1Ea52m3Xck=
+			</data>
+			<key>requirement</key>
+			<string>identifier nl and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Lang/pl.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			QopEo7lnCDOOoQrxUMOu5QhYXCg=
+			</data>
+			<key>requirement</key>
+			<string>identifier pl and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Lang/ru.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			3LzO3clzkyLRdTqYW3gJEWt+las=
+			</data>
+			<key>requirement</key>
+			<string>identifier ru and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Lang/sv.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			HGjL2ApksQbu8JloyvdRx/xbGGM=
+			</data>
+			<key>requirement</key>
+			<string>identifier sv and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Lang/tr.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			ry6HOlAAViFNNLJKks7whmYwQuA=
+			</data>
+			<key>requirement</key>
+			<string>identifier tr and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Lang/zh_cn.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			YTOdfmdspAu7tVt+mQBbm/L5krE=
+			</data>
+			<key>requirement</key>
+			<string>identifier "zh_cn" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Lang/zh_tw.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			lbwAWsbuW8yepNIADGLjyCSs76Y=
+			</data>
+			<key>requirement</key>
+			<string>identifier "zh_tw" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Leaf.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			DebPMmHK7TmnJAbutr+89Nbjr5k=
+			</data>
+			<key>requirement</key>
+			<string>identifier Leaf and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Lytro.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			t1XXRqiE8NfyJY08zX7CdVhX9+E=
+			</data>
+			<key>requirement</key>
+			<string>identifier Lytro and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/M2TS.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			FribRyFlIH1Chnwyg2XzoJbCIQU=
+			</data>
+			<key>requirement</key>
+			<string>identifier M2TS and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/MIE.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			0TQBOC5KVNBFYz5ybMZZ+GcIHek=
+			</data>
+			<key>requirement</key>
+			<string>identifier MIE and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/MIEUnits.pod</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			GcNt15j290tL5AsGfZ02eqKsquY=
+			</data>
+			<key>requirement</key>
+			<string>identifier MIEUnits and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/MIFF.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			4g12mNaDRmw6q5q461jTZMONcds=
+			</data>
+			<key>requirement</key>
+			<string>identifier MIFF and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/MNG.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			7+mJ6uXAydVHrG2LDND5azqyJtg=
+			</data>
+			<key>requirement</key>
+			<string>identifier MNG and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/MOI.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			yS52mvgbgGenLGlNDOlS8Nb+vOE=
+			</data>
+			<key>requirement</key>
+			<string>identifier MOI and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/MPC.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			rl1hAP7EtP87UQfUHl19fEaLwr0=
+			</data>
+			<key>requirement</key>
+			<string>identifier MPC and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/MPEG.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			de1dcfX8KzRxw6oesnFCUJBxhrg=
+			</data>
+			<key>requirement</key>
+			<string>identifier MPEG and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/MPF.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			1WgQlYEeQ9xu3zMso1dsKuCplFU=
+			</data>
+			<key>requirement</key>
+			<string>identifier MPF and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/MWG.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			7mK9STNt+pzLC0Gpktwdyn+dSLk=
+			</data>
+			<key>requirement</key>
+			<string>identifier MWG and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/MXF.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			639fR8xJBf//PoFgNiivu8dqRQo=
+			</data>
+			<key>requirement</key>
+			<string>identifier MXF and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/MacOS.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			Qom4zTiWcaKDE7x0q44UYbMIHg0=
+			</data>
+			<key>requirement</key>
+			<string>identifier MacOS and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/MacOSX.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			WZqfM0pP01jJlodVvyO/FBWkMak=
+			</data>
+			<key>requirement</key>
+			<string>identifier MacOSX and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/MakerNotes.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			zcxNfTnT7thytji78knxV+sjqGQ=
+			</data>
+			<key>requirement</key>
+			<string>identifier MakerNotes and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Matroska.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			3UH4Wv1Kbm9R0TzRIt71EemJ59c=
+			</data>
+			<key>requirement</key>
+			<string>identifier Matroska and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Microsoft.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			MPI0vujVj6tARJXoP0gmWfuTcYo=
+			</data>
+			<key>requirement</key>
+			<string>identifier Microsoft and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Minolta.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			y7xrpG0PqtsINVrLpPsCaJlrGTQ=
+			</data>
+			<key>requirement</key>
+			<string>identifier Minolta and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/MinoltaRaw.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			4jjhAbz+P6DD9GIEMEBUMbD5awA=
+			</data>
+			<key>requirement</key>
+			<string>identifier MinoltaRaw and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Motorola.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			73A9wu6vQ2Y6HZAkE/ZgQpuHrNE=
+			</data>
+			<key>requirement</key>
+			<string>identifier Motorola and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Nikon.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			zddAs2f3GZzl6Y0waCd50hBZcas=
+			</data>
+			<key>requirement</key>
+			<string>identifier Nikon and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/NikonCapture.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			iI9r/sEwwqE8xuJRMKkufdWSq9I=
+			</data>
+			<key>requirement</key>
+			<string>identifier NikonCapture and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/NikonCustom.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			2Of95RmTjWX7Xm1HmpIizmpc8yE=
+			</data>
+			<key>requirement</key>
+			<string>identifier NikonCustom and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Nintendo.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			+BJN/RPRlHdeBLcsVOCAtyPNt94=
+			</data>
+			<key>requirement</key>
+			<string>identifier Nintendo and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/OOXML.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			SSdxM0xUenxkA0JuHCJS4bWZwe8=
+			</data>
+			<key>requirement</key>
+			<string>identifier OOXML and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Ogg.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			hW4aTgUn56iBTykQvf8UCLutYWg=
+			</data>
+			<key>requirement</key>
+			<string>identifier Ogg and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Olympus.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			q3quzV+j/O9IUcoDIWCc7ewQqyI=
+			</data>
+			<key>requirement</key>
+			<string>identifier Olympus and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/OpenEXR.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			yr96P4jWH7D3lsqQOUCJMvBBI9U=
+			</data>
+			<key>requirement</key>
+			<string>identifier OpenEXR and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Opus.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			5HpDdxKqk8P3ktVJQMl1oMOlpmc=
+			</data>
+			<key>requirement</key>
+			<string>identifier Opus and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/PCX.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			2Oh3lcbj2VmTEPeMUxL71pV7jVQ=
+			</data>
+			<key>requirement</key>
+			<string>identifier PCX and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/PDF.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			3bSVyHUcwcUvfxn2Iclv4d8zn8w=
+			</data>
+			<key>requirement</key>
+			<string>identifier PDF and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/PGF.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			DYJK0jcaM1h24x+MjXYrjt8ob2g=
+			</data>
+			<key>requirement</key>
+			<string>identifier PGF and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/PICT.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			bEiuUrWxPV8HuYmk6CEloowvcD8=
+			</data>
+			<key>requirement</key>
+			<string>identifier PICT and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/PLIST.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			mqSoVgLqVa+i9mUG2/1QMm9B4sg=
+			</data>
+			<key>requirement</key>
+			<string>identifier PLIST and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/PLUS.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			smgunAWhOGu9+TmRJyuIbPP7Uns=
+			</data>
+			<key>requirement</key>
+			<string>identifier PLUS and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/PNG.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			fthaPm7IXRsai4f5gfLDT6cWfPo=
+			</data>
+			<key>requirement</key>
+			<string>identifier PNG and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/PPM.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			V8qAc6ExlNZF8aJKis+SLMKOoKI=
+			</data>
+			<key>requirement</key>
+			<string>identifier PPM and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/PSP.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			u8Cx97iaRIBzlrA0mTUj4lAKy/o=
+			</data>
+			<key>requirement</key>
+			<string>identifier PSP and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Palm.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			a3bIwF58WzgWBxLml63GSBfHTRE=
+			</data>
+			<key>requirement</key>
+			<string>identifier Palm and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Panasonic.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			AzaOse01ufiQLnSjvAg0LKNIH5Y=
+			</data>
+			<key>requirement</key>
+			<string>identifier Panasonic and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/PanasonicRaw.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			F+6t7cso2xYNVQfDRTTuEWZSexQ=
+			</data>
+			<key>requirement</key>
+			<string>identifier PanasonicRaw and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Parrot.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			c4GO4namk7/Uyz+EqwnMJE6SmI0=
+			</data>
+			<key>requirement</key>
+			<string>identifier Parrot and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Pentax.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			t/wiMjohsXxs2e+YUo4otQ9e3FE=
+			</data>
+			<key>requirement</key>
+			<string>identifier Pentax and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/PhaseOne.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			Q7xWVBqiIGsGKkdVErx/7tWy5go=
+			</data>
+			<key>requirement</key>
+			<string>identifier PhaseOne and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/PhotoCD.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			JLasjVsN6DDBS86EKv2/twHbMug=
+			</data>
+			<key>requirement</key>
+			<string>identifier PhotoCD and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/PhotoMechanic.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			Fz+WBw8aK+JUwX1VAJWGlF/WgT0=
+			</data>
+			<key>requirement</key>
+			<string>identifier PhotoMechanic and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Photoshop.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			qHBKWyM0JwZBsXX+2A8ChenPDRE=
+			</data>
+			<key>requirement</key>
+			<string>identifier Photoshop and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/PostScript.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			i+1l7gzLl4reAH7YjajkHCUotho=
+			</data>
+			<key>requirement</key>
+			<string>identifier PostScript and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/PrintIM.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			ngsQptVJt0j4afFsW+fuoUeI2E8=
+			</data>
+			<key>requirement</key>
+			<string>identifier PrintIM and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Qualcomm.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			t97uZ1XBc7sDcgeDylGgvCef/pg=
+			</data>
+			<key>requirement</key>
+			<string>identifier Qualcomm and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/QuickTime.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			K5FGs/19k/YJLchUmicoFFJLvGk=
+			</data>
+			<key>requirement</key>
+			<string>identifier QuickTime and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/QuickTimeStream.pl</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			NF5P+vXceW/GaYaM/gc7W8LLcb0=
+			</data>
+			<key>requirement</key>
+			<string>identifier QuickTimeStream and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/README</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			NTSTiA5jvy8hftwzKi+gPPZ0r2I=
+			</data>
+			<key>requirement</key>
+			<string>identifier README and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/RIFF.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			AmAISUp1wGnrI1gDWMkEAQMxGPM=
+			</data>
+			<key>requirement</key>
+			<string>identifier RIFF and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/RSRC.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			qTm/Doo6LOXeKFEyEYB/zCUU9+k=
+			</data>
+			<key>requirement</key>
+			<string>identifier RSRC and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/RTF.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			hXWRPbTAPIJzugZb+qJiU1kK+tE=
+			</data>
+			<key>requirement</key>
+			<string>identifier RTF and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Radiance.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			+vPxE0cUM/bL//FjWcbz2+cMZ4w=
+			</data>
+			<key>requirement</key>
+			<string>identifier Radiance and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Rawzor.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			N1zOuH0JD1ZsJEm+02JO6qwIq/c=
+			</data>
+			<key>requirement</key>
+			<string>identifier Rawzor and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Real.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			dfOWuxkNSxP33eZm5KODuXhFeM8=
+			</data>
+			<key>requirement</key>
+			<string>identifier Real and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Reconyx.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			O21co7DJ95BLev24FxvRCT/5lJ0=
+			</data>
+			<key>requirement</key>
+			<string>identifier Reconyx and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Red.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			/3JAYBNhmbq2mPDIgGsOECVYyoE=
+			</data>
+			<key>requirement</key>
+			<string>identifier Red and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Ricoh.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			yj+yKZvJ5q7v1TFA99QIa8GLl80=
+			</data>
+			<key>requirement</key>
+			<string>identifier Ricoh and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Samsung.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			D2mtIftBKeIYiYQlyP+iQN1Ii6Q=
+			</data>
+			<key>requirement</key>
+			<string>identifier Samsung and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Sanyo.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			BG7+ReAKedAWeHU2drCqVDDdhNo=
+			</data>
+			<key>requirement</key>
+			<string>identifier Sanyo and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Scalado.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			wE+IImYV8m3t8vcZynMdh1t59So=
+			</data>
+			<key>requirement</key>
+			<string>identifier Scalado and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Shift.pl</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			oEWH8ZO63arMZkj7lF2T4xR63ak=
+			</data>
+			<key>requirement</key>
+			<string>identifier Shift and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Shortcuts.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			o7nnEt/0BKgDjte/p/TVHwJPrZw=
+			</data>
+			<key>requirement</key>
+			<string>identifier Shortcuts and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Sigma.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			+BVyqfmCSCjIds1MQuL6OM4n00w=
+			</data>
+			<key>requirement</key>
+			<string>identifier Sigma and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/SigmaRaw.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			w9eatpMMQeiFnmpBb1XQZNhSqK4=
+			</data>
+			<key>requirement</key>
+			<string>identifier SigmaRaw and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Sony.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			KknAV+NIW0nlOjPT9yZhtjxrzzw=
+			</data>
+			<key>requirement</key>
+			<string>identifier Sony and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/SonyIDC.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			EIp57fd5x+6wD9q+iBTC7ZNm8HI=
+			</data>
+			<key>requirement</key>
+			<string>identifier SonyIDC and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Stim.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			PawnGqE1ZWlgtSoFI6uCD8aLh20=
+			</data>
+			<key>requirement</key>
+			<string>identifier Stim and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/TagInfoXML.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			5GpU6UltlpsFJ77FtUJmJbcxE4s=
+			</data>
+			<key>requirement</key>
+			<string>identifier TagInfoXML and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/TagLookup.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			+KBKDj956Yy1FmHywurSt8Vimsg=
+			</data>
+			<key>requirement</key>
+			<string>identifier TagLookup and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/TagNames.pod</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			7Ff3d4Qissl2dfD+aFXxOV8TsgQ=
+			</data>
+			<key>requirement</key>
+			<string>identifier TagNames and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Text.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			b5x2x3egHrOo3AZOCVDSclmKM64=
+			</data>
+			<key>requirement</key>
+			<string>identifier Text and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Theora.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			zBtb5NXDNUTMCbUlwm/TVUmIiGk=
+			</data>
+			<key>requirement</key>
+			<string>identifier Theora and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Torrent.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			r0O7bQarg8++VT6dDTZroZ/eFEc=
+			</data>
+			<key>requirement</key>
+			<string>identifier Torrent and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Unknown.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			NEKItsqj1JRDmcjryznYngvTDHs=
+			</data>
+			<key>requirement</key>
+			<string>identifier Unknown and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/VCard.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			0HWsUafdZlvYHVEgq9craYuYEf0=
+			</data>
+			<key>requirement</key>
+			<string>identifier VCard and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Validate.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			kOhBWFBEfp2uMrqTCfOf0NeMOUo=
+			</data>
+			<key>requirement</key>
+			<string>identifier Validate and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Vorbis.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			+Pp+2uwqyrrqqDPZ8xBCwyFThtE=
+			</data>
+			<key>requirement</key>
+			<string>identifier Vorbis and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/WTV.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			NASY/72oeUKek63tlHxXqbTB1u0=
+			</data>
+			<key>requirement</key>
+			<string>identifier WTV and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/WriteCanonRaw.pl</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			T/fZh/kiPrtKy/FXZbA46XaCBQU=
+			</data>
+			<key>requirement</key>
+			<string>identifier WriteCanonRaw and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/WriteExif.pl</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			F057S4eEZLxv9Hgswv5CAcjOzPw=
+			</data>
+			<key>requirement</key>
+			<string>identifier WriteExif and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/WriteIPTC.pl</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			IOJ8d0uoSbHq86jjniTfYkmgyAY=
+			</data>
+			<key>requirement</key>
+			<string>identifier WriteIPTC and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/WritePDF.pl</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			2mJ/Ua2ScUE4GZZg1yXcM1LKP4E=
+			</data>
+			<key>requirement</key>
+			<string>identifier WritePDF and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/WritePNG.pl</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			WNjIua2Lh3wG3lanJtiOjQHv/PE=
+			</data>
+			<key>requirement</key>
+			<string>identifier WritePNG and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/WritePhotoshop.pl</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			AMcERjBdte7CwFg63PJB5/1dUbs=
+			</data>
+			<key>requirement</key>
+			<string>identifier WritePhotoshop and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/WritePostScript.pl</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			N60NMRIKzELw90S8HI0b0Sh77is=
+			</data>
+			<key>requirement</key>
+			<string>identifier WritePostScript and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/WriteQuickTime.pl</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			AsFeEX0ITkiayOTgrap7I6404Yc=
+			</data>
+			<key>requirement</key>
+			<string>identifier WriteQuickTime and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/WriteXMP.pl</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			Noa+bwndUUOKUgZaJf020pPJEYg=
+			</data>
+			<key>requirement</key>
+			<string>identifier WriteXMP and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/Writer.pl</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			htE+X22y2q3W35PFUgWLq9RZG+Q=
+			</data>
+			<key>requirement</key>
+			<string>identifier Writer and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/XMP.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			UgO56s5UIsoW/M7Vci1scC9ICrU=
+			</data>
+			<key>requirement</key>
+			<string>identifier XMP and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/XMP2.pl</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			2WgVtDQt5vIedLQER3SUzWQr7d8=
+			</data>
+			<key>requirement</key>
+			<string>identifier XMP2 and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/XMPStruct.pl</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			tzuDSzs52yHIrL9uryCMmP3LezI=
+			</data>
+			<key>requirement</key>
+			<string>identifier XMPStruct and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/ZIP.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			pvQBUZMmjp+2YHWfP482BneOAeM=
+			</data>
+			<key>requirement</key>
+			<string>identifier ZIP and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lib/Image/ExifTool/iWork.pm</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			Cz992LvOHGZrCpSIYiC/EP7OMv0=
+			</data>
+			<key>requirement</key>
+			<string>identifier iWork and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/lomoc</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			F0Rw0E23HIOjCD3dbS/HKxpaGLA=
+			</data>
+			<key>requirement</key>
+			<string>identifier lomoc and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = U73LFJTY32</string>
+		</dict>
+		<key>MacOS/lomoupg</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			05wWqryDycYASpxdISPjckzvZW4=
+			</data>
+			<key>requirement</key>
+			<string>identifier lomoupg and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+		<key>MacOS/rsync</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			W8BgfMiHX3jlnXEwCqKZ0V9MluE=
+			</data>
+			<key>requirement</key>
+			<string>identifier rsync and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Qi Wang (ZVL9U88KQP)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
+	</dict>
+	<key>rules</key>
+	<dict>
+		<key>^Resources/</key>
+		<true/>
+		<key>^Resources/.*\.lproj/</key>
+		<dict>
+			<key>optional</key>
+			<true/>
+			<key>weight</key>
+			<real>1000</real>
+		</dict>
+		<key>^Resources/.*\.lproj/locversion.plist$</key>
+		<dict>
+			<key>omit</key>
+			<true/>
+			<key>weight</key>
+			<real>1100</real>
+		</dict>
+		<key>^Resources/Base\.lproj/</key>
+		<dict>
+			<key>weight</key>
+			<real>1010</real>
+		</dict>
+		<key>^version.plist$</key>
+		<true/>
+	</dict>
+	<key>rules2</key>
+	<dict>
+		<key>.*\.dSYM($|/)</key>
+		<dict>
+			<key>weight</key>
+			<real>11</real>
+		</dict>
+		<key>^(.*/)?\.DS_Store$</key>
+		<dict>
+			<key>omit</key>
+			<true/>
+			<key>weight</key>
+			<real>2000</real>
+		</dict>
+		<key>^(Frameworks|SharedFrameworks|PlugIns|Plug-ins|XPCServices|Helpers|MacOS|Library/(Automator|Spotlight|LoginItems))/</key>
+		<dict>
+			<key>nested</key>
+			<true/>
+			<key>weight</key>
+			<real>10</real>
+		</dict>
+		<key>^.*</key>
+		<true/>
+		<key>^Info\.plist$</key>
+		<dict>
+			<key>omit</key>
+			<true/>
+			<key>weight</key>
+			<real>20</real>
+		</dict>
+		<key>^PkgInfo$</key>
+		<dict>
+			<key>omit</key>
+			<true/>
+			<key>weight</key>
+			<real>20</real>
+		</dict>
+		<key>^Resources/</key>
+		<dict>
+			<key>weight</key>
+			<real>20</real>
+		</dict>
+		<key>^Resources/.*\.lproj/</key>
+		<dict>
+			<key>optional</key>
+			<true/>
+			<key>weight</key>
+			<real>1000</real>
+		</dict>
+		<key>^Resources/.*\.lproj/locversion.plist$</key>
+		<dict>
+			<key>omit</key>
+			<true/>
+			<key>weight</key>
+			<real>1100</real>
+		</dict>
+		<key>^Resources/Base\.lproj/</key>
+		<dict>
+			<key>weight</key>
+			<real>1010</real>
+		</dict>
+		<key>^[^/]+$</key>
+		<dict>
+			<key>nested</key>
+			<true/>
+			<key>weight</key>
+			<real>10</real>
+		</dict>
+		<key>^embedded\.provisionprofile$</key>
+		<dict>
+			<key>weight</key>
+			<real>20</real>
+		</dict>
+		<key>^version\.plist$</key>
+		<dict>
+			<key>weight</key>
+			<real>20</real>
+		</dict>
+	</dict>
+</dict>
+</plist>
