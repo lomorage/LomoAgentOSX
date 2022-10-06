@@ -224,7 +224,7 @@ class StatusMenuController: NSObject {
 
                 if let info = systemInfo, info.systemStatus <= 0, !self.guideUrlPoped {
                     let preferredLang = getPerferredLangWithoutRegionAndScript()
-                    var url = URL(string: "https://lomosw.lomorage.com/index.html")
+                    var url = URL(string: "https://lomosw.lomorage.com/en/index.html")
                     if preferredLang == "zh" {
                         url = URL(string: "https://lomosw.lomorage.com/zh/index.html")
                     }
@@ -290,9 +290,9 @@ class StatusMenuController: NSObject {
             } else {
                 DDLogError("Need set home directory first")
                 lomodTask = nil
+                preferencesWindow.showWindow(nil)
                 preferencesWindow.userTipsLabel.textColor = .red
                 preferencesWindow.userTipsLabel.stringValue = userTipsConfigureHomeDirAndWaitStart
-                preferencesWindow.showWindow(nil)
                 NSApp.activate(ignoringOtherApps: true)
             }
         }

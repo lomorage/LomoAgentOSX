@@ -345,9 +345,13 @@ class PreferencesWindow: NSWindowController, NSWindowDelegate {
                         self.userTipsLabel.stringValue = usedPortLocalized
                     } else {
                         self.userTipsLabel.textColor = .red
-                        self.userTipsLabel.stringValue = userTipsReportIssue
-                        if let logDir = getLogDir() {
-                            NSWorkspace.shared.open(URL(fileURLWithPath: logDir))
+                        if UserDefaults.standard.string(forKey: PREF_HOME_DIR) != nil {
+                            self.userTipsLabel.stringValue = userTipsReportIssue
+                            if let logDir = getLogDir() {
+                                NSWorkspace.shared.open(URL(fileURLWithPath: logDir))
+                            }
+                        } else {
+                            self.userTipsLabel.stringValue =  userTipsConfigureHomeDirAndWaitStart
                         }
                     }
                 }
