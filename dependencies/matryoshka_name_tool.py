@@ -22,6 +22,7 @@ __author__ = 'stsmith'
 
 import argparse as ap, errno, os, re, shutil, subprocess as sp
 import traceback
+from otool_rpath import *
 
 def make_sure_empty_path_exists(path):
     try:
@@ -65,14 +66,22 @@ class MatryoshkaName:
             line = line.decode('utf-8')
             libdir_match = self.libdir_pattern.match(line)
             loader_path = line.strip().startswith('@loader_path')
-            if libdir_match or loader_path:
+            rpath = line.strip().startswith('@rpath')
+            if libdir_match or loader_path or rpath:
                 if libdir_match:
                     dylib = self.dylib_pattern.sub(r'\1',line)
-                else:
+                elif loader_path:
                     dylib = line.strip().split(' ')[0].replace('@loader_path', self.args.libdir)
+                else:
+                    rpaths = otool_rpath([object])
+                    for rpath in rpaths:
+                        dylib = line.strip().split(' ')[0].replace('@rpath', rpath)
+                        if os.path.exists(dylib):
+                            break
 
                 if dylib not in self.dylibs_copied:
                     if not self.args.update and not os.path.isfile(self.args.install_libdir + os.path.basename(dylib)):
+                        print("copy %s to %s" % (dylib, self.args.install_libdir))
                         shutil.copy(dylib, self.args.install_libdir)
                     self.dylibs_copied.add(dylib)
                 target = self.args.install_libdir + os.path.basename(object) \

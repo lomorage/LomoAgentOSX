@@ -1,5 +1,15 @@
 #!/bin/bash
-set -e
+set -xe
+
+# set the env variable below first!
+
+: "${LOMOD_PATH:=/Users/jianfu/Work/playground/lomo-backend/cmd/lomod/lomod}"
+: "${LOMOC_PATH:=/Users/jianfu/Work/playground/lomo-backend/cmd/lomoc/lomoc}"
+
+# lomoupg and rsync has no dependencies, just copy binaries
+# following processing code for lomoupg, rsync, ffmpeg, exiftool are commented since they are in place and no changes
+: "${LOMOUPG_PATH:=/Users/jeromy/.go/src/github.com/lomorage/lomoUpdate/lomoupg}"
+: "${RSYNC_PATH:=/Users/jeromy/work/playground/rsync-3.1.3/rsync}"
 
 realpath() {
     [[ $1 = /* ]] && echo "$1" || echo "$PWD/${1#./}"
@@ -12,13 +22,6 @@ FFPROBE_PATH=$FFMPEG_HOME_ABS/ffprobe
 EXIFTOOL_HOME_ABS=$(realpath "deps/exiftool")
 EXIFTOOL_PATH=$EXIFTOOL_HOME_ABS/exiftool
 EXIFTOOL_LIB=$EXIFTOOL_HOME_ABS/lib
-
-LOMOD_PATH=/Users/jeromy/.go/src/bitbucket.org/lomoware/lomo-backend/cmd/lomod/lomod
-LOMOC_PATH=/Users/jeromy/.go/src/bitbucket.org/lomoware/lomo-backend/cmd/lomoc/lomoc
-
-# lomoupg and rsync has no dependencies, just copy binaries
-LOMOUPG_PATH=/Users/jeromy/.go/src/github.com/lomorage/lomoUpdate/lomoupg
-RSYNC_PATH=/Users/jeromy/work/playground/rsync-3.1.3/rsync
 
 FRAMEWORKS_DIR=lomod/Contents/Frameworks
 BINARY_DIR=lomod/Contents/MacOS
@@ -41,10 +44,10 @@ cp $LOMOC_PATH $BINARY_DIR
 #cp $RSYNC_PATH $BINARY_DIR
 
 cd $BINARY_DIR
-python ../../../matryoshka_name_tool.py  -L /usr/local/ -d ../Frameworks/lomod/ lomoc
-python ../../../matryoshka_name_tool.py  -L /usr/local/ -d ../Frameworks/lomod/ lomod
-#python ../../../matryoshka_name_tool.py  -L $FFMPEG_HOME_ABS -d ../Frameworks/ffmpeg/ ffmpeg
-#python ../../../matryoshka_name_tool.py  -L $FFMPEG_HOME_ABS -d ../Frameworks/ffmpeg/ ffprobe
+python3 ../../../matryoshka_name_tool.py  -L /opt/homebrew/ -d ../Frameworks/lomod/ lomoc
+python3 ../../../matryoshka_name_tool.py  -L /opt/homebrew/ -d ../Frameworks/lomod/ lomod
+#python3 ../../../matryoshka_name_tool.py  -L $FFMPEG_HOME_ABS -d ../Frameworks/ffmpeg/ ffmpeg
+#python3 ../../../matryoshka_name_tool.py  -L $FFMPEG_HOME_ABS -d ../Frameworks/ffmpeg/ ffprobe
 
 install_name_tool -add_rpath @executable_path/../Frameworks/lomod lomoc
 install_name_tool -add_rpath @executable_path/../Frameworks/lomod lomod
