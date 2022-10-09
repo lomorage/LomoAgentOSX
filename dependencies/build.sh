@@ -5,6 +5,7 @@ set -xe
 
 : "${LOMOD_PATH:=/Users/jianfu/Work/playground/lomo-backend/cmd/lomod/lomod}"
 : "${LOMOC_PATH:=/Users/jianfu/Work/playground/lomo-backend/cmd/lomoc/lomoc}"
+: "${BREW_LIB_PATH:=/opt/homebrew/}"
 
 # lomoupg and rsync has no dependencies, just copy binaries
 # following processing code for lomoupg, rsync, ffmpeg, exiftool are commented since they are in place and no changes
@@ -44,8 +45,8 @@ cp $LOMOC_PATH $BINARY_DIR
 #cp $RSYNC_PATH $BINARY_DIR
 
 cd $BINARY_DIR
-python3 ../../../matryoshka_name_tool.py  -L /opt/homebrew/ -d ../Frameworks/lomod/ lomoc
-python3 ../../../matryoshka_name_tool.py  -L /opt/homebrew/ -d ../Frameworks/lomod/ lomod
+python3 ../../../matryoshka_name_tool.py  -L $BREW_LIB_PATH -d ../Frameworks/lomod/ lomoc
+python3 ../../../matryoshka_name_tool.py  -L $BREW_LIB_PATH -d ../Frameworks/lomod/ lomod
 #python3 ../../../matryoshka_name_tool.py  -L $FFMPEG_HOME_ABS -d ../Frameworks/ffmpeg/ ffmpeg
 #python3 ../../../matryoshka_name_tool.py  -L $FFMPEG_HOME_ABS -d ../Frameworks/ffmpeg/ ffprobe
 
