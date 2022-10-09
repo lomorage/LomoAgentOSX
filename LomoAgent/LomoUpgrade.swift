@@ -207,7 +207,13 @@ class LomoUpgrade {
                     if httpresp.statusCode == 200, let jsonResult = try? JSONSerialization.jsonObject(with: data) as? [String: Any] {
                         DDLogInfo("needUpdateLomoupgAndLomoAgent, json response:  \(jsonResult!)")
 
-                        if let osxConf = jsonResult?["darwin"] as? [String: Any] {
+                        let hardwareType = GetMachineHardwareName()
+                        var configName = "darwin"
+                        if hardwareType == "arm64" {
+                            configName += "-m1"
+                        }
+
+                        if let osxConf = jsonResult?[configName] as? [String: Any] {
 
                             guard let agentSha256 = osxConf["SHA256"] as? String,
                                 let agentVer = osxConf["Version"] as? String,
