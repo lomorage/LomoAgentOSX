@@ -66,4 +66,4 @@ xcrun altool --notarize-app --primary-bundle-id lomoware.lomorage.$filename --us
 
 rm -rf build/LomoAgent.app.zip
 
-unzip LomoAgent.app.zip -d build/
+#unzip LomoAgent.app.zip -d build/
