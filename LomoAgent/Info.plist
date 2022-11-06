@@ -19,9 +19,9 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>0117cc0</string>
+	<string>1e206ec</string>
 	<key>CFBundleVersion</key>
-	<string>2022_10_09.10_51_09.0.0117cc0</string>
+	<string>2022_11_06.11_49_42.0.1e206ec</string>
 	<key>LSApplicationCategoryType</key>
 	<string>public.app-category.utilities</string>
 	<key>LSMinimumSystemVersion</key>
