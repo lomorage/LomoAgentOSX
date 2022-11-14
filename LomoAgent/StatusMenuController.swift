@@ -200,7 +200,7 @@ class StatusMenuController: NSObject {
 
     @objc func checkLomodState() {
         if let task = lomodTask, task.isRunning {
-            if lomodService!.systemInfo != nil {
+            if lomodService.getSystemInfo() != nil {
                 restartMenuItem.image = NSImage(named: NSImage.statusAvailableName)
             } else {
                 restartMenuItem.image = NSImage(named: NSImage.statusPartiallyAvailableName)
@@ -224,7 +224,7 @@ class StatusMenuController: NSObject {
 
                 if let info = systemInfo, info.systemStatus <= 0, !self.guideUrlPoped {
                     let preferredLang = getPerferredLangWithoutRegionAndScript()
-                    var url = URL(string: "https://lomosw.lomorage.com/index.html")
+                    var url = URL(string: "https://lomosw.lomorage.com/en/index.html")
                     if preferredLang == "zh" {
                         url = URL(string: "https://lomosw.lomorage.com/zh/index.html")
                     }

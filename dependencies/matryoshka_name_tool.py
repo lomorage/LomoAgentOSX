@@ -67,14 +67,14 @@ class MatryoshkaName:
             libdir_match = self.libdir_pattern.match(line)
             loader_path = line.strip().startswith('@loader_path')
             rpath = line.strip().startswith('@rpath')
-            # print("line: %s" % line)
-            # print("%s, libdir_match: %s" % (self.args.libdir, libdir_match))
+            print("line: %s" % line)
+            print("%s, libdir_match: %s" % (self.args.libdir, libdir_match))
             if libdir_match or loader_path or rpath:
                 if libdir_match:
                     dylib = self.dylib_pattern.sub(r'\1',line)
                 elif loader_path:
                     loader_path = os.path.dirname(os.path.realpath(object))
-                    # print("%s loader_path: %s" % (object, loader_path))
+                    print("%s loader_path: %s" % (object, loader_path))
                     dylib = line.strip().split(' ')[0].replace('@loader_path', loader_path)
                 else:
                     rpaths = otool_rpath([object])

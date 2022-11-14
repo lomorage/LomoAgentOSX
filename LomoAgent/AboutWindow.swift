@@ -27,7 +27,7 @@ class AboutWindow: NSWindowController {
         self.window?.level = .floating
         NSApp.activate(ignoringOtherApps: true)
 
-        if let lomodVer = getLomodService()?.systemInfo?.lomodVer.split(separator: ".").last {
+        if let lomodVer = getLomodService()?.getSystemInfo()?.lomodVer.split(separator: ".").last {
             versionLabel.stringValue = "lomod: \(lomodVer)"
         }
     }

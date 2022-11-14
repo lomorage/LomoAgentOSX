@@ -53,7 +53,15 @@ class LomodService
 
     private(set) var members = [Member]()
 
-    private(set) var systemInfo: SystemInfo?
+    private var systemInfo: SystemInfo?
+    private let recursiveLock = NSRecursiveLock()
+    public func getSystemInfo() -> SystemInfo? {
+        recursiveLock.lock()
+        defer {
+            recursiveLock.unlock()
+        }
+        return systemInfo
+    }
 
     private(set) public var finalBackupTime: String = ""
 
@@ -361,6 +369,10 @@ class LomodService
     }
 
     func getListenIPs() -> [String]? {
+        recursiveLock.lock()
+        defer {
+            recursiveLock.unlock()
+        }
         return self.systemInfo?.listenIPs
     }
 
@@ -406,7 +418,10 @@ class LomodService
     }
 
     func checkServerStatus(completionHandler: @escaping (SystemInfo?, Error?) -> Swift.Void) {
+        recursiveLock.lock()
         systemInfo = nil
+        recursiveLock.unlock()
+
         var networkError: Error?
         if let port = UserDefaults.standard.string(forKey: PREF_LOMOD_PORT) {
             if let url = URL(string: "http://\(LOCAL_HOST):\(port)/system"),
@@ -430,6 +445,10 @@ class LomodService
                                     let status = jsonResult["SystemStatus"] as? Int32,
                                     let timeZoneOffset = jsonResult["TimezoneOffset"] as? Int32
                                 {
+                                    self.recursiveLock.lock()
+                                    defer {
+                                        self.recursiveLock.unlock()
+                                    }
                                     self.systemInfo = SystemInfo(os: osSystem, lomodVer: lomodVer, apiVer: apiVer, timezoneOffset: timeZoneOffset, systemStatus: status)
 
                                     if let listenIPs = jsonResult["ListenIPs"] as? [String] {

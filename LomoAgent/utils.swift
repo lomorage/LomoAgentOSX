@@ -349,5 +349,8 @@ func GetMachineHardwareName() -> String? {
 
     guard retVal == EXIT_SUCCESS else { return nil }
 
-    return String(cString: &sysInfo.machine.0, encoding: .utf8)
+    let str = withUnsafePointer(to: &sysInfo.machine.0) { ptr in
+        return String(cString: ptr)
+    }
+    return str
 }
