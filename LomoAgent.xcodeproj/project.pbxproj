@@ -742,7 +742,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MARKETING_VERSION = 0.8;
 				OTHER_CODE_SIGN_FLAGS = "--deep --force";
 				PRODUCT_BUNDLE_IDENTIFIER = lomoware.lomorage.LomoAgent;
@@ -768,7 +768,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MARKETING_VERSION = 0.8;
 				OTHER_CODE_SIGN_FLAGS = "--deep --force";
 				PRODUCT_BUNDLE_IDENTIFIER = lomoware.lomorage.LomoAgent;
