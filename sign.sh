@@ -36,7 +36,7 @@ codesign --remove-signature "$RELEASE_APP_PATH/Contents/Frameworks/ffmpeg/"*.dyl
 codesign --timestamp --deep --force -s $IDENTITY -o runtime -v "$RELEASE_APP_PATH/Contents/Frameworks/ffmpeg/"*.dylib
 
 codesign --remove-signature "$RELEASE_APP_PATH/Contents/Frameworks/lomod/"*.dylib
-codesign --timestamp --deep --force -s $IDENTITY -o runtime -v "$RELEASE_APP_PATH/Contents/Frameworks/lomod/"*.dylib
+codesign --entitlements entitlements.plist --timestamp --deep --force -s $IDENTITY -o runtime -v "$RELEASE_APP_PATH/Contents/Frameworks/lomod/"*.dylib
 
 for item in Zip \
             Commands \
