@@ -8,6 +8,7 @@
 
 import Cocoa
 import CocoaLumberjack
+import CrashReporter
 
 let launcherAppId = "lomoware.lomorage.LomoAgentLauncher"
 
@@ -74,6 +75,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     private var fileLogger: DDFileLogger!
 
+    internal var isDebuggerAttached: Bool {
+      var info = kinfo_proc()
+      var mib : [Int32] = [CTL_KERN, KERN_PROC, KERN_PROC_PID, getpid()]
+      var size = MemoryLayout<kinfo_proc>.stride
+      let junk = sysctl(&mib, UInt32(mib.count), &info, &size, nil, 0)
+      assert(junk == 0, "sysctl failed")
+      return (info.kp_proc.p_flag & P_TRACED) != 0
+    }
+
     func setFileLoggerLevel(_ loglevel: DDLogLevel) {
         DDLogInfo("set log level to: \(loglevel.rawValue)")
         DDLog.remove(fileLogger)
@@ -105,6 +115,38 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         DDLogInfo("logging to \(String(describing: fileLogger.logFileManager.logsDirectory))")
     }
 
+    private func loadCrashLog() {
+        // Try loading the crash report.
+        let config = PLCrashReporterConfig(signalHandlerType: .mach, symbolicationStrategy: .all)
+        guard let crashReporter = PLCrashReporter(configuration: config) else {
+            DDLogWarn("Could not create an instance of PLCrashReporter")
+            return
+        }
+
+        if crashReporter.hasPendingCrashReport() {
+            do {
+                let data = try crashReporter.loadPendingCrashReportDataAndReturnError()
+
+                // Retrieving crash reporter data.
+                let report = try PLCrashReport(data: data)
+
+                // We could send the report from here, but we'll just print out some debugging info instead.
+                if let text = PLCrashReportTextFormatter.stringValue(for: report, with: PLCrashReportTextFormatiOS) {
+                    DDLogError("=============>CrashReport")
+                    DDLogError(text)
+                    DDLogError("CrashReport<=============")
+                } else {
+                    DDLogWarn("CrashReporter: can't convert report to text")
+                }
+            } catch let error {
+                DDLogWarn("CrashReporter failed to load and parse with error: \(error)")
+            }
+        }
+
+        // Purge the report.
+        crashReporter.purgePendingCrashReport()
+    }
+
     func applicationWillFinishLaunching(_ aNotification: Notification) {
         let version = Bundle.main.infoDictionary?["CFBundleVersion"] as! String
         let arguments = CommandLine.arguments
@@ -118,11 +160,30 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             }
         }
 
+        // Uncomment and implement isDebuggerAttached to safely run this code with a debugger.
+        // See: https://github.com/microsoft/plcrashreporter/blob/2dd862ce049e6f43feb355308dfc710f3af54c4d/Source/Crash%20Demo/main.m#L96
+        if !isDebuggerAttached {
+            // It is strongly recommended that local symbolication only be enabled for non-release builds.
+            // Use [] for release versions.
+            let config = PLCrashReporterConfig(signalHandlerType: .mach, symbolicationStrategy: .all)
+            guard let crashReporter = PLCrashReporter(configuration: config) else {
+                print("Could not create an instance of PLCrashReporter")
+                return
+            }
+
+            // Enable the Crash Reporter.
+            do {
+                try crashReporter.enableAndReturnError()
+            } catch let error {
+                print("Warning: Could not enable crash reporter: \(error)")
+            }
+        }
         if !exit {
             setupLogger()
+            loadCrashLog()
             DDLogInfo("LomoAgent version: \(version)")
             UserDefaults.standard.set(UUID().uuidString, forKey: PREF_ADMIN_TOKEN)
-            NotificationCenter.default.post(name: .NotifyStart, object: self)
+            // NotificationCenter.default.post(name: .NotifyStart, object: self)
         }
     }
 

@@ -4,20 +4,22 @@ PODS:
   - CocoaLumberjack/Swift (3.6.1):
     - CocoaLumberjack/Core
   - Commands (0.6.0)
+  - PLCrashReporter (1.11.0)
   - Zip (1.1.0)
 
 DEPENDENCIES:
   - CatCrypto (from `https://github.com/ImKcat/CatCrypto.git`)
   - CocoaLumberjack/Swift
   - Commands (~> 0.6.0)
+  - PLCrashReporter
   - Zip (~> 1.1)
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
-    - Zip
   trunk:
     - CocoaLumberjack
     - Commands
+    - PLCrashReporter
+    - Zip
 
 EXTERNAL SOURCES:
   CatCrypto:
@@ -32,8 +34,9 @@ SPEC CHECKSUMS:
   CatCrypto: a477899b6be4954e75be4897e732da098cc0a5a8
   CocoaLumberjack: b17ae15142558d08bbacf69775fa10c4abbebcc9
   Commands: d617aca4118b0f289144e9e93fb03847d9c48a61
+  PLCrashReporter: 7a9dff14a23ba5d2e28c6160f0bb6fada5e71a8d
   Zip: 8877eede3dda76bcac281225c20e71c25270774c
 
-PODFILE CHECKSUM: 89d9f9ab252ea8093c87db9b4f45beff668ff12c
+PODFILE CHECKSUM: f13744ecfefc51c15acb4c25f596d488a7d733ad
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.11.3

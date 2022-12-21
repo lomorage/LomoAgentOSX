@@ -343,12 +343,6 @@ class PreferencesWindow: NSWindowController, NSWindowDelegate {
                     if let lomodPort = UInt16(self.portTextField.stringValue), !isPortOpen(port: lomodPort) {
                         self.userTipsLabel.textColor = .red
                         self.userTipsLabel.stringValue = usedPortLocalized
-                    } else {
-                        self.userTipsLabel.textColor = .red
-                        self.userTipsLabel.stringValue = userTipsReportIssue
-                        if let logDir = getLogDir() {
-                            NSWorkspace.shared.open(URL(fileURLWithPath: logDir))
-                        }
                     }
                 }
             }

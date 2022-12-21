@@ -13,7 +13,7 @@ class StatusMenuController: NSObject {
 
     @IBOutlet weak var statusMenu: NSMenu!
     var settingsMenuItem: NSMenuItem!
-    var preferencesWindow: PreferencesWindow!
+    var preferencesWindow: PreferencesWindow?
     var userWindow: UserWindow!
     var aboutWindow: AboutWindow!
     var lomodTask: Process?
@@ -24,6 +24,8 @@ class StatusMenuController: NSObject {
     let pingReaptingTimer = RepeatingTimer(timeInterval: 5)
     static let autoUpdateHour = 4
     static let autoUpdateMinute = 0
+    static let pingTimeoutSec = 180.0
+    var pingTimeout = Date(timeIntervalSinceNow: pingTimeoutSec)
 
     var lomodService: LomodService!
 
@@ -36,7 +38,7 @@ class StatusMenuController: NSObject {
     @IBOutlet weak var restartMenuItem: NSMenuItem!
 
     @IBAction func settingsClicked(_ sender: Any) {
-        preferencesWindow.showWindow(nil)
+        preferencesWindow?.showWindow(nil)
         NSApp.activate(ignoringOtherApps: true)
     }
 
@@ -170,6 +172,10 @@ class StatusMenuController: NSObject {
         scheduleAutoUpdate()
 
         lomodService = getLomodService()
+
+        DispatchQueue.global().async {
+            NotificationCenter.default.post(name: .NotifyStart, object: self)
+        }
     }
 
     func getSecondsOffsetTo(hour: Int, minute: Int) -> Int {
@@ -217,6 +223,7 @@ class StatusMenuController: NSObject {
         lomodService.checkServerStatus { (systemInfo, connectErr) in
             if connectErr == nil {
                 DDLogError("pingLomod succ!")
+                self.pingTimeout = Date(timeIntervalSinceNow: StatusMenuController.pingTimeoutSec)
 
                 DispatchQueue.main.async {
                     self.lomodService.getUserList()
@@ -240,7 +247,32 @@ class StatusMenuController: NSObject {
                 }
             } else {
                 DDLogError("pingLomod error!")
+                if Date() >= self.pingTimeout && UserDefaults.standard.string(forKey: PREF_HOME_DIR) != nil {
+                    DispatchQueue.main.async {
+                        if let prefWindow = self.preferencesWindow,
+                           prefWindow.userTipsLabel.stringValue != userTipsReportIssue{
+                            prefWindow.showWindow(nil)
+                            prefWindow.userTipsLabel.textColor = .red
+                            prefWindow.userTipsLabel.stringValue = userTipsReportIssue
+                            if let logDir = getLogDir() {
+                                NSWorkspace.shared.open(URL(fileURLWithPath: logDir))
+                            }
+                            NSApp.activate(ignoringOtherApps: true)
+                        }
+                    }
+                }
             }
+        }
+    }
+
+    fileprivate func showWindowToSetHomeDir() {
+        DispatchQueue.main.async {
+            if let prefWindow = self.preferencesWindow {
+                prefWindow.showWindow(nil)
+                prefWindow.userTipsLabel.textColor = .red
+                prefWindow.userTipsLabel.stringValue = userTipsConfigureHomeDirAndWaitStart
+            }
+            NSApp.activate(ignoringOtherApps: true)
         }
     }
 
@@ -290,10 +322,7 @@ class StatusMenuController: NSObject {
             } else {
                 DDLogError("Need set home directory first")
                 lomodTask = nil
-                preferencesWindow.userTipsLabel.textColor = .red
-                preferencesWindow.userTipsLabel.stringValue = userTipsConfigureHomeDirAndWaitStart
-                preferencesWindow.showWindow(nil)
-                NSApp.activate(ignoringOtherApps: true)
+                showWindowToSetHomeDir()
             }
         }
     }

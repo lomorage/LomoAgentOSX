@@ -10,6 +10,7 @@ target 'LomoAgent' do
   pod 'Zip', '~> 1.1'
   pod 'CatCrypto', :git => 'https://github.com/ImKcat/CatCrypto.git'
   pod 'Commands', '~> 0.6.0'
+  pod 'PLCrashReporter'
 end
 
 target 'LomoAgentLauncher' do
