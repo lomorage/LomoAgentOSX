@@ -182,7 +182,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             setupLogger()
             loadCrashLog()
             DDLogInfo("LomoAgent version: \(version)")
-            UserDefaults.standard.set(UUID().uuidString, forKey: PREF_ADMIN_TOKEN)
             // NotificationCenter.default.post(name: .NotifyStart, object: self)
         }
     }

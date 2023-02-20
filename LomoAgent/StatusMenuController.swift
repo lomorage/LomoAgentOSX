@@ -288,6 +288,8 @@ class StatusMenuController: NSObject {
             let lomodPath = executablePath.path + "/lomod"
             DDLogInfo("lomod Path: \(lomodPath)")
 
+            UserDefaults.standard.set(UUID().uuidString, forKey: PREF_ADMIN_TOKEN)
+
             if let homeDir = UserDefaults.standard.string(forKey: PREF_HOME_DIR),
                 let baseDir = getBasePath(),
                 let logDir = getLogDir(),
