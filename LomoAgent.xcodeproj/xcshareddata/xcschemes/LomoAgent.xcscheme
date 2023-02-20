@@ -28,7 +28,7 @@
             ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
             <ActionContent
                title = "Run Script"
-               scriptText = "# Type a script or drag a script file from your workspace to insert its path.&#10;set -x&#10;&#10;echo $TARGET_BUILD_DIR&#10;echo $PROJECT_DIR&#10;echo $FULL_PRODUCT_NAME&#10;mkdir -p $PROJECT_DIR/build&#10;rm -rf $PROJECT_DIR/build/*&#10;cp -r $TARGET_BUILD_DIR/$FULL_PRODUCT_NAME $PROJECT_DIR/build&#10;#appdmg $PROJECT_DIR/LomoAgent/Assets.xcassets/dmg.json $PROJECT_DIR/build/LomoAgent.dmg&#10;">
+               scriptText = "# Type a script or drag a script file from your workspace to insert its path.&#10;set -x&#10;&#10;echo $TARGET_BUILD_DIR&#10;echo $PROJECT_DIR&#10;echo $FULL_PRODUCT_NAME&#10;mkdir -p &quot;$PROJECT_DIR/build&quot;&#10;rm -rf &quot;$PROJECT_DIR/build/*&quot;&#10;cp -r &quot;$TARGET_BUILD_DIR/$FULL_PRODUCT_NAME&quot; &quot;$PROJECT_DIR/build&quot;&#10;#appdmg $PROJECT_DIR/LomoAgent/Assets.xcassets/dmg.json $PROJECT_DIR/build/LomoAgent.dmg&#10;">
                <EnvironmentBuildable>
                   <BuildableReference
                      BuildableIdentifier = "primary"

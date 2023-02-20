@@ -68,7 +68,8 @@ class MatryoshkaName:
             loader_path = line.strip().startswith('@loader_path')
             rpath = line.strip().startswith('@rpath')
             print("line: %s" % line)
-            print("%s, libdir_match: %s" % (self.args.libdir, libdir_match))
+            install_libdir = os.path.abspath(self.args.install_libdir)
+            print("%s, libdir_match: %s, install_libdir: %s" % (self.args.libdir, libdir_match, install_libdir))
             if libdir_match or loader_path or rpath:
                 if libdir_match:
                     dylib = self.dylib_pattern.sub(r'\1',line)
@@ -85,18 +86,18 @@ class MatryoshkaName:
 
                 if dylib not in self.dylibs_copied:
                     if not self.args.update and not os.path.isfile(self.args.install_libdir + os.path.basename(dylib)):
-                        print("copy %s to %s" % (dylib, self.args.install_libdir))
-                        shutil.copy(dylib, self.args.install_libdir)
+                        print("copy %s to %s" % (dylib, install_libdir))
+                        shutil.copy(dylib, install_libdir)
                     self.dylibs_copied.add(dylib)
                 target = self.args.install_libdir + os.path.basename(object) \
                     if (os.path.splitext(os.path.basename(object))[1] == '.dylib') \
                     else object
                 if libdir_match:
-                    cmd = [ 'sudo', 'install_name_tool', '-change', dylib,
+                    cmd = [ 'install_name_tool', '-change', dylib,
                              '@executable_path/' + self.args.install_libdir + os.path.basename(dylib),
                              target ]
                 else:
-                    cmd = [ 'sudo', 'install_name_tool', '-change', line.strip().split(' ')[0],
+                    cmd = [ 'install_name_tool', '-change', line.strip().split(' ')[0],
                              '@executable_path/' + self.args.install_libdir + os.path.basename(dylib),
                              target ]
                 sp.call(cmd)

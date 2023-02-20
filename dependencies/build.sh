@@ -46,7 +46,7 @@ cp $LOMOC_PATH $BINARY_DIR
 
 cd $BINARY_DIR
 python3 ../../../matryoshka_name_tool.py  -L $BREW_LIB_PATH -d ../Frameworks/lomod/ lomoc
-python3 ../../../matryoshka_name_tool.py  -L $BREW_LIB_PATH -d ../Frameworks/lomod/ lomod
+python3 ../../../matryoshka_name_tool.py -u -L $BREW_LIB_PATH -d ../Frameworks/lomod/ lomod
 #python3 ../../../matryoshka_name_tool.py  -L $FFMPEG_HOME_ABS -d ../Frameworks/ffmpeg/ ffmpeg
 #python3 ../../../matryoshka_name_tool.py  -L $FFMPEG_HOME_ABS -d ../Frameworks/ffmpeg/ ffprobe
 
