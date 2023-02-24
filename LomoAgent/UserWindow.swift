@@ -160,7 +160,7 @@ class UserWindow: NSWindowController {
 
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(onLomodServiceChanged(_:)),
-                                               name: .NotifyIpChanged,
+                                               name: .NotifyRefresh,
                                                object: nil)
 
         NotificationCenter.default.addObserver(self,

@@ -20,7 +20,7 @@ let LOCAL_HOST = "127.0.0.1"
 
 extension Notification.Name {
     static let NotifySettingsChanged = NSNotification.Name("NotifySettingsChanged")
-    static let NotifyIpChanged = NSNotification.Name("NotifyIpChanged")
+    static let NotifyRefresh = NSNotification.Name("NotifyRefresh")
     static let NotifyUserChanged = NSNotification.Name("NotifyUserChanged")
     static let NotifyExit = NSNotification.Name("NotifyExit")
     static let NotifyStart = NSNotification.Name("NotifyStart")
@@ -133,7 +133,6 @@ class PreferencesWindow: NSWindowController, NSWindowDelegate {
         if oldPort != port {
             DDLogInfo("Save port: \(port)")
             UserDefaults.standard.set(port, forKey: PREF_LOMOD_PORT)
-            generateQRCode()
             NotificationCenter.default.post(name: .NotifySettingsChanged, object: self)
         }
     }
@@ -260,7 +259,7 @@ class PreferencesWindow: NSWindowController, NSWindowDelegate {
 
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(onIpChanged(_:)),
-                                               name: .NotifyIpChanged,
+                                               name: .NotifyRefresh,
                                                object: nil)
 
         // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.

@@ -26,6 +26,7 @@ class StatusMenuController: NSObject {
     static let autoUpdateMinute = 0
     static let pingTimeoutSec = 180.0
     var pingTimeout = Date(timeIntervalSinceNow: pingTimeoutSec)
+    var errLogShowed = false
 
     var lomodService: LomodService!
 
@@ -242,12 +243,14 @@ class StatusMenuController: NSObject {
                 if let ipList = self.lomodService.getListenIPs() {
                     if let firstIp = ipList.first, firstIp != self.listenIp {
                         self.listenIp = firstIp
-                        NotificationCenter.default.post(name: .NotifyIpChanged, object: self)
                     }
                 }
+
+                NotificationCenter.default.post(name: .NotifyRefresh, object: self)
             } else {
                 DDLogError("pingLomod error!")
-                if Date() >= self.pingTimeout && UserDefaults.standard.string(forKey: PREF_HOME_DIR) != nil {
+                if !self.errLogShowed && Date() >= self.pingTimeout && UserDefaults.standard.string(forKey: PREF_HOME_DIR) != nil {
+                    self.errLogShowed = true
                     DispatchQueue.main.async {
                         if let prefWindow = self.preferencesWindow,
                            prefWindow.userTipsLabel.stringValue != userTipsReportIssue{
