@@ -209,9 +209,6 @@ class LomoUpgrade {
 
                         let hardwareType = GetMachineHardwareName()
                         var configName = "darwin"
-                        if hardwareType == "arm64" {
-                            configName += "-m1"
-                        }
 
                         if let osxConf = jsonResult?[configName] as? [String: Any] {
 
